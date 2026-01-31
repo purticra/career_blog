@@ -1,0 +1,111 @@
+# -- Main Menu --
+# The main menu is displayed in the header at the top of the page.
+# Acceptable parameters are name, pageRef, page, url, title, weight.
+# 
+# The simplest menu configuration is to provide:
+#   name = The name to be displayed for this menu link
+#   pageRef = The identifier of the page or section to link to
+#
+# By default the menu is ordered alphabetically. This can be
+# overridden by providing a weight value. The menu will then be
+# ordered by weight from lowest to highest.
+
+[[main]]
+ name = "Info"
+ weight = 100
+
+[[main]]
+ name = "Post"
+ pageref = "post"
+ weight = 200
+
+[[main]]
+ name = "Project"
+ weight = 300
+
+[[main]]
+ name = "Career"
+ weight = 400
+
+[[main]]
+ name = "Experience"
+ parent = "Career"
+ pageRef = "experience"
+ weight = 100
+
+[[main]]
+ name = "Skills"
+ parent = "Career"
+ pageRef = "skills"
+ weight = 200
+
+[[main]]
+ name = "Education"
+ parent = "Career"
+ pageRef = "education"
+ weight = 300
+
+[[main]]
+ name = "Resume"
+ pageRef = "resume"
+ weight = 500
+
+[[main]]
+ name = "Frog"
+ parent = "Project"
+ pageRef = "posts"
+ weight = -100
+ 
+[[main]]
+ name = "μCHIMERA"
+ parent = "Project"
+ pageRef = "posts"
+ weight = -200
+ 
+[[main]]
+ name = "Tachy🪳Astroach"
+ parent = "Project"
+ pageRef = "posts"
+ weight = -300 
+
+#[[main]]
+#  name = "example sub-menu 2"
+#  parent = "Parent"
+#  pageRef = "posts"
+#  weight = 20
+
+# [[subnavigation]]
+ # name = "Why this site?"
+ # pageRef = "why_this_site"
+ # weight = 10
+
+[[subnavigation]]
+ name = "碎碎念"
+ url = "https://journal.purticra.icu"
+ weight = 20
+
+#[[main]]
+#  name = "Categories"
+#  pageRef = "categories"
+#  weight = 20
+
+#[[main]]
+#  name = "Tags"
+#  pageRef = "tags"
+#  weight = 30
+
+
+# -- Footer Menu --
+# The footer menu is displayed at the bottom of the page, just before
+# the copyright notice. Configure as per the main menu above.
+
+
+[[footer]]
+  name = ""
+  pageRef = "tags"
+  weight = 10
+
+# [[footer]]
+#   name = "Categories"
+#   pageRef = "categories"
+#   weight = 20
