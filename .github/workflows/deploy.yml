@@ -1,31 +1,28 @@
 name: Deploy Hugo site to GitHub Pages
-
 on:
   push:
     branches:
-      - main  # 只在 main 分支 push 时触发
-
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
         uses: actions/checkout@v3
-
+        
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
-
+          
       - name: Build
         run: hugo --minify
-
+        
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GH_PAGES_PAT }}
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: ./public
           external_repository: purticra/purticra.github.io
           publish_branch: main
           cname: journal.purticra.icu
-
