@@ -11,37 +11,43 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
- name = "Info"
+ identifier = "about"
+ name = "About"
+ pageRef = "/about"
  weight = 100
 
 [[main]]
- name = "Post"
- pageref = "post"
+ identifier = "posts"
+ name = "Posts"
+ pageref = "/posts"
  weight = 200
 
 [[main]]
- name = "Project"
+ identifier = "projects"
+ name = "Projects"
+ pageRef = "/projects"
  weight = 300
 
 [[main]]
+ identifier = "career"
  name = "Career"
  weight = 400
 
 [[main]]
  name = "Experience"
- parent = "Career"
+ parent = "career"
  pageRef = "experience"
  weight = 100
 
 [[main]]
  name = "Skills"
- parent = "Career"
+ parent = "career"
  pageRef = "skills"
  weight = 200
 
 [[main]]
  name = "Education"
- parent = "Career"
+ parent = "career"
  pageRef = "education"
  weight = 300
 
@@ -51,59 +57,38 @@
  weight = 500
 
 [[main]]
- name = "Frog"
- parent = "Project"
- pageRef = "posts"
+ name = "Bionic Frog"
+ parent = "projects"
+ pageRef = "frog"
  weight = -100
  
 [[main]]
  name = "μCHIMERA"
- parent = "Project"
- pageRef = "posts"
+ parent = "projects"
+ pageRef = "uCHIMERA"
  weight = -200
  
 [[main]]
- name = "Tachy🪳Astroach"
- parent = "Project"
+ name = "Tachy🪳Astroach: MoonLine"
+ parent = "projects"
  pageRef = "posts"
  weight = -300 
 
-#[[main]]
-#  name = "example sub-menu 2"
-#  parent = "Parent"
-#  pageRef = "posts"
-#  weight = 20
-
-# [[subnavigation]]
- # name = "Why this site?"
- # pageRef = "why_this_site"
- # weight = 10
-
 [[subnavigation]]
- name = "碎碎念"
+ identifier = "journal"
+ name = "◹"
  url = "https://journal.purticra.icu"
  weight = 20
-
-#[[main]]
-#  name = "Categories"
-#  pageRef = "categories"
-#  weight = 20
-
-#[[main]]
-#  name = "Tags"
-#  pageRef = "tags"
-#  weight = 30
-
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
 # the copyright notice. Configure as per the main menu above.
 
 
-[[footer]]
-  name = ""
-  pageRef = "tags"
-  weight = 10
+# [[footer]]
+  # name = ""
+  # pageRef = "tags"
+  # weight = 10
 
 # [[footer]]
 #   name = "Categories"

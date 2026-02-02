@@ -2,7 +2,7 @@ disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "Hongyi Lyu | Career Blog and Contents"
+title = "Hongyi Lyu"
 
 [params]
   displayName = "EN"
@@ -12,14 +12,14 @@ title = "Hongyi Lyu | Career Blog and Contents"
   # logo = "img/logo.png"
   # secondaryLogo = "img/secondary-logo.png"
   description = "Career portfolio, projects, and professional journey of Hongyi Lyu — Georgia Tech EE student."
-  copyright = "© {{ .Site.Params.Author.Name }} {{ now.Year }}. All rights reserved."
+  copyright = "Hongyi Lyu"
 
 [params.author]
   name = "Hongyi Lyu"
   email = "hlyu68@gatech.edu"
   image = "img/author.jpg"
   imageQuality = 96
-  headline = "Official Website of Hongyi Lyu"
+  headline = ""
   bio = "Georgia Tech Electrical Engineering Student. "
   links = [
     { email = "mailto:hlyu68@gatech.edu" },

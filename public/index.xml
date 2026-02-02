@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hongyi Lyu | Career Blog and Contents</title>
+    <title>Homepage on Hongyi Lyu</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on Hongyi Lyu | Career Blog and Contents</description>
+    <description>Recent content in Homepage on Hongyi Lyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>hlyu68@gatech.edu (Hongyi Lyu)</managingEditor>
     <webMaster>hlyu68@gatech.edu (Hongyi Lyu)</webMaster>
-    <copyright>© {{ .Site.Params.Author.Name }} {{ now.Year }}. All rights reserved.</copyright>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Hongyi Lyu</copyright>
+    <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title></title>
+      <title>About Me</title>
       <link>http://localhost:1313/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
       <guid>http://localhost:1313/about/</guid>
       <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Resume</title>
+      <link>http://localhost:1313/resume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:1313/resume/</guid>
+      <description>&lt;p&gt;Download or View my latest resume here:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/pdf/Lyu_Resume_Spring_2026.pdf&#34; &gt;Spring 2026 Resume&lt;/a&gt;&lt;/p&gt;</description>
       
     </item>
     
