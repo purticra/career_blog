@@ -33,23 +33,23 @@
  name = "Career"
  weight = 400
 
-[[main]]
- name = "Experience"
- parent = "career"
- pageRef = "experience"
- weight = 100
+# [[main]]
+#  name = "Experience"
+#  parent = "career"
+#  pageRef = "experience"
+#  weight = 100
 
-[[main]]
- name = "Skills"
- parent = "career"
- pageRef = "skills"
- weight = 200
+# [[main]]
+#  name = "Skills"
+#  parent = "career"
+#  pageRef = "skills"
+#  weight = 200
 
-[[main]]
- name = "Education"
- parent = "career"
- pageRef = "education"
- weight = 300
+# [[main]]
+#  name = "Education"
+#  parent = "career"
+#  pageRef = "education"
+#  weight = 300
 
 [[main]]
  name = "Resume"

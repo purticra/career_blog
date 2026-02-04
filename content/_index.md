@@ -8,7 +8,7 @@ layout: "card"
 
 This is the career homepage for Hongyi Lyu, includes the recent updates and current. 
 
-View my Resume: (Resume Page)[]
+View my Resume: [Resume Page](/resume)
 
 ## Contacts
 
