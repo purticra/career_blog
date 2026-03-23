@@ -59,20 +59,20 @@
 [[main]]
  name = "Bionic Frog"
  parent = "projects"
- pageRef = "frog"
+ pageRef = "/projects/frog"
  weight = -100
  
 [[main]]
  name = "μCHIMERA"
  parent = "projects"
- pageRef = "uCHIMERA"
+ pageRef = "/projects/uCHIMERA"
  weight = -200
  
 [[main]]
  name = "Tachy🪳Astroach: MoonLine"
  parent = "projects"
- pageRef = "posts"
- weight = -300 
+ pageRef = "/projects/tachyastroach"
+ weight = -300
 
 [[subnavigation]]
  identifier = "journal"
