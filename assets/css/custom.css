@@ -1,0 +1,18 @@
+/* Fix button contrast — slate theme primary-600/800 blends with background */
+a[role="button"] {
+  background-color: rgb(71, 85, 105) !important; /* slate-600, visible on dark bg */
+  border: 1px solid rgb(100, 116, 139) !important; /* slate-400 border for extra contrast */
+}
+a[role="button"]:hover {
+  background-color: rgb(100, 116, 139) !important; /* slate-400 on hover */
+}
+
+/* Light mode */
+html:not(.dark) a[role="button"] {
+  background-color: rgb(51, 65, 85) !important; /* slate-700 */
+  border: 1px solid rgb(71, 85, 105) !important;
+  color: #fff !important;
+}
+html:not(.dark) a[role="button"]:hover {
+  background-color: rgb(30, 41, 59) !important; /* slate-800 */
+}

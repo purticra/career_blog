@@ -4,7 +4,7 @@ description: "A collection of my projects"
 
 cascade:
   showDate: true
-  showAuthor: false
+  showAuthor: true
   showReadingTime: false
   showBreadcrumbs: true
 ---

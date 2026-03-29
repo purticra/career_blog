@@ -9,7 +9,27 @@
     <managingEditor>hlyu68@gatech.edu (Hongyi Lyu)</managingEditor>
     <webMaster>hlyu68@gatech.edu (Hongyi Lyu)</webMaster>
     <copyright>Hongyi Lyu</copyright>
-    <atom:link href="http://localhost:1313/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/series/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Career</title>
+      <link>http://localhost:1313/series/career/</link>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:1313/series/career/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>http://localhost:1313/series/projects/</link>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:1313/series/projects/</guid>
+      <description></description>
+      
+    </item>
     
   </channel>
 </rss>

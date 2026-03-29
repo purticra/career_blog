@@ -6,16 +6,18 @@ layout: "card"
 
 ## About
 
-This is the career homepage for Hongyi Lyu, includes the recent updates and current. 
+Welcome! This is the career portfolio of Hongyi Lyu, featuring recent updates, projects, and professional experience.
 
-View my Resume: [Resume Page](/resume)
+{{< button href="/resume" >}}
+Resume
+{{< /button >}}&nbsp;
+{{< button href="mailto:hlyu68@gatech.edu" >}}
+Email
+{{< /button >}}
 
-## Contacts
-
-Email: hlyu68@gatech.edu
-
-GitHub: [@purticra](https://github.com/purticra)  
-
-LinkedIn: [Hongyi Lyu](https://linkedin.com/in/lyu-hongyi)
-
-
+{{< button href="https://github.com/purticra" target="_blank" >}}
+GitHub
+{{< /button >}}&nbsp;
+{{< button href="https://linkedin.com/in/lyu-hongyi" target="_blank" >}}
+LinkedIn
+{{< /button >}}

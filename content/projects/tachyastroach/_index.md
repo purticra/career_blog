@@ -1,6 +1,6 @@
 ---
 title: "Tachy🪳Astroach: MoonLine"
-date: 2026-03-18
+date: 2026-02-15
 draft: false
 description: "A mother-daughter rover system built in 36 hours at GT IEEE Robotech Hackathon — 1st Place, $1,000 Prize"
 showTableOfContents: true

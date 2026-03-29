@@ -3,32 +3,38 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/projects/frog/</loc>
-    <lastmod>2026-03-18T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-03-29T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-03-18T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/posts/career-progression/yjsp-avionics-hitl/</loc>
+    <lastmod>2026-03-29T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-03-29T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/projects/</loc>
-    <lastmod>2026-03-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-02-15T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/technical-updates/tachyastroach-hackathon/</loc>
+    <lastmod>2026-02-15T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/projects/tachyastroach/</loc>
-    <lastmod>2026-03-18T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/projects/uchimera/</loc>
-    <lastmod>2026-03-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-02-15T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -39,8 +45,20 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/projects/uchimera/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/resume/</loc>
     <lastmod>2025-02-01T23:00:00-05:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/projects/frog/</loc>
+    <lastmod>2024-05-01T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
