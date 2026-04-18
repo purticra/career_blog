@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Hongyi Lyu</title>
-    <link>http://localhost:1313/series/projects/</link>
+    <link>http://localhost:13124/series/projects/</link>
     <description>Recent content in Projects on Hongyi Lyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>hlyu68@gatech.edu (Hongyi Lyu)</managingEditor>
     <webMaster>hlyu68@gatech.edu (Hongyi Lyu)</webMaster>
     <copyright>Hongyi Lyu</copyright>
-    <lastBuildDate>Sun, 15 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/series/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:13124/series/projects/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>TachyAstroach: 36 Hours from Raw Materials to 1st Place Rover</title>
-      <link>http://localhost:1313/posts/technical-updates/tachyastroach-hackathon/</link>
+      <link>http://localhost:13124/posts/technical-updates/tachyastroach-hackathon/</link>
       <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:1313/posts/technical-updates/tachyastroach-hackathon/</guid>
-      <description>&lt;p&gt;A 36-hour sprint.&lt;/p&gt;&#xA;&lt;p&gt;Immersed in a current of Tough 2000 resin, attitude control, ISO bolts, and bus communication — we turned raw materials into an extraterrestrial rover.&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img&#xA;    class=&#34;my-0 rounded-md&#34;&#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    fetchpriority=&#34;auto&#34;&#xA;    alt=&#34;The complete TachyAstroach rover system — mother rover, daughter sub-unit, and custom joystick controller&#34;&#xA;    width=&#34;1280&#34;&#xA;    height=&#34;1707&#34;&#xA;    src=&#34;http://localhost:1313/posts/technical-updates/tachyastroach-hackathon/rover-overview_hu_7eee1fca7ab17251.jpg&#34;&#xA;    srcset=&#34;http://localhost:1313/posts/technical-updates/tachyastroach-hackathon/rover-overview_hu_7eee1fca7ab17251.jpg 800w, http://localhost:1313/posts/technical-updates/tachyastroach-hackathon/rover-overview.jpg 1280w&#34;&#xA;    sizes=&#34;(min-width: 768px) 50vw, 65vw&#34;&#xA;    data-zoom-src=&#34;http://localhost:1313/posts/technical-updates/tachyastroach-hackathon/rover-overview.jpg&#34;&gt;&lt;/figure&gt;&#xA;&lt;p&gt;The GT IEEE Robotech Hackathon might not be the biggest event, but it was my first real dive into an intensive hackathon-style build. Despite freezing rain and wind, everyone showed up. Our four-member team, TachyAstroach, kicked off the mission.&lt;/p&gt;</description>
+      <guid>http://localhost:13124/posts/technical-updates/tachyastroach-hackathon/</guid>
+      <description>&lt;p&gt;A 36-hour sprint.&lt;/p&gt;&#xA;&lt;p&gt;Immersed in a current of Tough 2000 resin, attitude control, ISO bolts, and bus communication — we turned raw materials into an extraterrestrial rover.&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img&#xA;    class=&#34;my-0 rounded-md&#34;&#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    fetchpriority=&#34;auto&#34;&#xA;    alt=&#34;The complete TachyAstroach rover system — mother rover, daughter sub-unit, and custom joystick controller&#34;&#xA;    width=&#34;1280&#34;&#xA;    height=&#34;1707&#34;&#xA;    src=&#34;http://localhost:13124/posts/technical-updates/tachyastroach-hackathon/rover-overview_hu_7eee1fca7ab17251.jpg&#34;&#xA;    srcset=&#34;http://localhost:13124/posts/technical-updates/tachyastroach-hackathon/rover-overview_hu_7eee1fca7ab17251.jpg 800w, http://localhost:13124/posts/technical-updates/tachyastroach-hackathon/rover-overview.jpg 1280w&#34;&#xA;    sizes=&#34;(min-width: 768px) 50vw, 65vw&#34;&#xA;    data-zoom-src=&#34;http://localhost:13124/posts/technical-updates/tachyastroach-hackathon/rover-overview.jpg&#34;&gt;&lt;/figure&gt;&#xA;&lt;p&gt;The GT IEEE Robotech Hackathon might not be the biggest event, but it was my first real dive into an intensive hackathon-style build. Despite freezing rain and wind, everyone showed up. Our four-member team, TachyAstroach, kicked off the mission.&lt;/p&gt;</description>
       
     </item>
     

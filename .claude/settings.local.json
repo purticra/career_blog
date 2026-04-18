@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:1313/projects/ece-1100-media-control/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:1314/projects/ece-1100-media-control/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:1315/projects/ece-1100-media-control/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:1316/projects/ece-1100-media-control/)",
+      "Bash(netstat -ano)",
+      "Bash(hugo server *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:1320/projects/ece-1100-media-control/)",
+      "Bash(kill %1)"
+    ]
+  }
+}

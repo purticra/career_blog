@@ -2,15 +2,19 @@
 title: "Tachy🪳Astroach: MoonLine"
 date: 2026-02-15
 draft: false
-description: "A mother-daughter rover system built in 36 hours at GT IEEE Robotech Hackathon — 1st Place, $1,000 Prize"
+description: "A mother-daughter rover system built in 36 hours at GT IEEE Robotech Hackathon â€” 1st Place, $1,000 Prize"
 showTableOfContents: true
 showBreadcrumbs: true
 tags: ["Robotics", "Mechanical Design", "Hackathon", "Fusion 360"]
 ---
 
 {{< lead >}}
-A mother-daughter rover system designed for extraterrestrial exploration — built from raw materials in 36 hours at the Georgia Tech IEEE Robotech Hackathon.
+A mother-daughter rover system designed for extraterrestrial exploration built from raw materials in 36 hours at the Georgia Tech IEEE Robotech Hackathon.
 {{< /lead >}}
+
+{{< button href="https://devpost.com/software/moonline" target="_blank" >}}
+View on Devpost
+{{< /button >}}
 
 ## Overview
 
@@ -29,10 +33,10 @@ I led the **mechanical design** of the rover system using **Fusion 360**, collab
 
 ## Team
 
-- **Hongyi Lyu** — Mechanical Design Lead
-- **Peijie Liu** — Electronics
-- **Zerun Wang** — Control Algorithms
-- **Aimee Yu Ting Zheng** — Submission Documentation
+- **Hongyi Lyu** Mechanical Design Lead
+- **Peijie Liu** Electronics
+- **Zerun Wang** Control Algorithms
+- **Aimee Yu Ting Zheng** Submission Documentation
 
 ## Result
 

@@ -55,7 +55,7 @@
  name = "Resume"
  pageRef = "resume"
  weight = 500
-
+ 
 [[main]]
  name = "Bionic Frog"
  parent = "projects"
@@ -73,6 +73,12 @@
  parent = "projects"
  pageRef = "/projects/tachyastroach"
  weight = -300
+ 
+[[main]]
+ name = "Media Control Module [ECE1100]"
+ parent = "projects"
+ pageRef = "/projects/ece-1100-media-control"
+ weight = -400
 
 [[subnavigation]]
  identifier = "journal"
