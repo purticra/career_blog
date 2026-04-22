@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on Hongyi Lyu</title>
-    <link>http://localhost:13124/series/</link>
+    <link>http://localhost:6069/series/</link>
     <description>Recent content in Series on Hongyi Lyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>hlyu68@gatech.edu (Hongyi Lyu)</managingEditor>
     <webMaster>hlyu68@gatech.edu (Hongyi Lyu)</webMaster>
     <copyright>Hongyi Lyu</copyright>
-    <lastBuildDate>Sun, 29 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:13124/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:6069/series/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Career</title>
-      <link>http://localhost:13124/series/career/</link>
+      <link>http://localhost:6069/series/career/</link>
       <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:13124/series/career/</guid>
+      <guid>http://localhost:6069/series/career/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Projects</title>
-      <link>http://localhost:13124/series/projects/</link>
+      <link>http://localhost:6069/series/projects/</link>
       <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:13124/series/projects/</guid>
+      <guid>http://localhost:6069/series/projects/</guid>
       <description></description>
       
     </item>

@@ -76,4 +76,6 @@ Once paired, the main loop continuously polls the three button inputs. Each butt
 
 {{< figure src="product_photo.jpg" alt="Media Control Module" caption="The finished Media Control Module" >}}
 
+{{< model-viewer src="https://raw.githubusercontent.com/purticra/ESPKeyboard/main/CAD/assemble.glb" title="Media Control Module" height="500px" >}}
+
 The completed Media Control Module successfully pairs with a host machine over BLE and sends play/pause, next track, and previous track commands with reliable input response. Through this project, I gained hands-on experience in embedded programming with the ESP32, 3D modeling an enclosure in Fusion 360, and iterative hardware debugging — from the initial Unicode keyboard concept to a functional, pocket-sized media controller.

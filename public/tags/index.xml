@@ -2,191 +2,211 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Hongyi Lyu</title>
-    <link>http://localhost:13124/tags/</link>
+    <link>http://localhost:6069/tags/</link>
     <description>Recent content in Tags on Hongyi Lyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>hlyu68@gatech.edu (Hongyi Lyu)</managingEditor>
     <webMaster>hlyu68@gatech.edu (Hongyi Lyu)</webMaster>
     <copyright>Hongyi Lyu</copyright>
-    <lastBuildDate>Sat, 18 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:13124/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:6069/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>3D Printing</title>
+      <link>http://localhost:6069/tags/3d-printing/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:6069/tags/3d-printing/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>BLE</title>
+      <link>http://localhost:6069/tags/ble/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:6069/tags/ble/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>ECE</title>
-      <link>http://localhost:13124/tags/ece/</link>
+      <link>http://localhost:6069/tags/ece/</link>
       <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:13124/tags/ece/</guid>
+      <guid>http://localhost:6069/tags/ece/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Embedded Systems</title>
-      <link>http://localhost:13124/tags/embedded-systems/</link>
+      <link>http://localhost:6069/tags/embedded-systems/</link>
       <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:13124/tags/embedded-systems/</guid>
+      <guid>http://localhost:6069/tags/embedded-systems/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Hardware</title>
-      <link>http://localhost:13124/tags/hardware/</link>
+      <link>http://localhost:6069/tags/hardware/</link>
       <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:13124/tags/hardware/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>PCB Design</title>
-      <link>http://localhost:13124/tags/pcb-design/</link>
-      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
-      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:13124/tags/pcb-design/</guid>
+      <guid>http://localhost:6069/tags/hardware/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Altium</title>
-      <link>http://localhost:13124/tags/altium/</link>
+      <link>http://localhost:6069/tags/altium/</link>
       <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:13124/tags/altium/</guid>
+      <guid>http://localhost:6069/tags/altium/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Avionics</title>
-      <link>http://localhost:13124/tags/avionics/</link>
+      <link>http://localhost:6069/tags/avionics/</link>
       <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:13124/tags/avionics/</guid>
+      <guid>http://localhost:6069/tags/avionics/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>PCB Design</title>
+      <link>http://localhost:6069/tags/pcb-design/</link>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:6069/tags/pcb-design/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Rocketry</title>
-      <link>http://localhost:13124/tags/rocketry/</link>
+      <link>http://localhost:6069/tags/rocketry/</link>
       <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:13124/tags/rocketry/</guid>
+      <guid>http://localhost:6069/tags/rocketry/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>YJSP</title>
-      <link>http://localhost:13124/tags/yjsp/</link>
+      <link>http://localhost:6069/tags/yjsp/</link>
       <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:13124/tags/yjsp/</guid>
+      <guid>http://localhost:6069/tags/yjsp/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Fusion 360</title>
-      <link>http://localhost:13124/tags/fusion-360/</link>
+      <link>http://localhost:6069/tags/fusion-360/</link>
       <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:13124/tags/fusion-360/</guid>
+      <guid>http://localhost:6069/tags/fusion-360/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Hackathon</title>
-      <link>http://localhost:13124/tags/hackathon/</link>
+      <link>http://localhost:6069/tags/hackathon/</link>
       <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:13124/tags/hackathon/</guid>
+      <guid>http://localhost:6069/tags/hackathon/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Mechanical Design</title>
-      <link>http://localhost:13124/tags/mechanical-design/</link>
+      <link>http://localhost:6069/tags/mechanical-design/</link>
       <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:13124/tags/mechanical-design/</guid>
+      <guid>http://localhost:6069/tags/mechanical-design/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Robotics</title>
-      <link>http://localhost:13124/tags/robotics/</link>
+      <link>http://localhost:6069/tags/robotics/</link>
       <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:13124/tags/robotics/</guid>
+      <guid>http://localhost:6069/tags/robotics/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Energy Harvesting</title>
-      <link>http://localhost:13124/tags/energy-harvesting/</link>
+      <link>http://localhost:6069/tags/energy-harvesting/</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:13124/tags/energy-harvesting/</guid>
+      <guid>http://localhost:6069/tags/energy-harvesting/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>IoT</title>
-      <link>http://localhost:13124/tags/iot/</link>
+      <link>http://localhost:6069/tags/iot/</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:13124/tags/iot/</guid>
+      <guid>http://localhost:6069/tags/iot/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Bionic Design</title>
-      <link>http://localhost:13124/tags/bionic-design/</link>
+      <link>http://localhost:6069/tags/bionic-design/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:13124/tags/bionic-design/</guid>
+      <guid>http://localhost:6069/tags/bionic-design/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>ISEF</title>
-      <link>http://localhost:13124/tags/isef/</link>
+      <link>http://localhost:6069/tags/isef/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:13124/tags/isef/</guid>
+      <guid>http://localhost:6069/tags/isef/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Pneumatics</title>
-      <link>http://localhost:13124/tags/pneumatics/</link>
+      <link>http://localhost:6069/tags/pneumatics/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:13124/tags/pneumatics/</guid>
+      <guid>http://localhost:6069/tags/pneumatics/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Soft Robotics</title>
-      <link>http://localhost:13124/tags/soft-robotics/</link>
+      <link>http://localhost:6069/tags/soft-robotics/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:13124/tags/soft-robotics/</guid>
+      <guid>http://localhost:6069/tags/soft-robotics/</guid>
       <description></description>
       
     </item>
