@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hackathon on Hongyi Lyu</title>
-    <link>http://localhost:6069/tags/hackathon/</link>
+    <link>http://localhost:6782/tags/hackathon/</link>
     <description>Recent content in Hackathon on Hongyi Lyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>hlyu68@gatech.edu (Hongyi Lyu)</managingEditor>
     <webMaster>hlyu68@gatech.edu (Hongyi Lyu)</webMaster>
     <copyright>Hongyi Lyu</copyright>
-    <lastBuildDate>Sun, 15 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:6069/tags/hackathon/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:6782/tags/hackathon/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>TachyAstroach: 36 Hours from Raw Materials to 1st Place Rover</title>
-      <link>http://localhost:6069/posts/technical-updates/tachyastroach-hackathon/</link>
+      <link>http://localhost:6782/posts/technical-updates/tachyastroach-hackathon/</link>
       <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:6069/posts/technical-updates/tachyastroach-hackathon/</guid>
-      <description>&lt;p&gt;A 36-hour sprint.&lt;/p&gt;&#xA;&lt;p&gt;Immersed in a current of Tough 2000 resin, attitude control, ISO bolts, and bus communication — we turned raw materials into an extraterrestrial rover.&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img&#xA;    class=&#34;my-0 rounded-md&#34;&#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    fetchpriority=&#34;auto&#34;&#xA;    alt=&#34;The complete TachyAstroach rover system — mother rover, daughter sub-unit, and custom joystick controller&#34;&#xA;    width=&#34;1280&#34;&#xA;    height=&#34;1707&#34;&#xA;    src=&#34;http://localhost:6069/posts/technical-updates/tachyastroach-hackathon/rover-overview_hu_7eee1fca7ab17251.jpg&#34;&#xA;    srcset=&#34;http://localhost:6069/posts/technical-updates/tachyastroach-hackathon/rover-overview_hu_7eee1fca7ab17251.jpg 800w, http://localhost:6069/posts/technical-updates/tachyastroach-hackathon/rover-overview.jpg 1280w&#34;&#xA;    sizes=&#34;(min-width: 768px) 50vw, 65vw&#34;&#xA;    data-zoom-src=&#34;http://localhost:6069/posts/technical-updates/tachyastroach-hackathon/rover-overview.jpg&#34;&gt;&lt;/figure&gt;&#xA;&lt;p&gt;The GT IEEE Robotech Hackathon might not be the biggest event, but it was my first real dive into an intensive hackathon-style build. Despite freezing rain and wind, everyone showed up. Our four-member team, TachyAstroach, kicked off the mission.&lt;/p&gt;</description>
+      <guid>http://localhost:6782/posts/technical-updates/tachyastroach-hackathon/</guid>
+      <description>&lt;p&gt;A 36-hour sprint.&lt;/p&gt;&#xA;&lt;p&gt;Immersed in a current of Tough 2000 resin, attitude control, ISO bolts, and bus communication — we turned raw materials into an extraterrestrial rover.&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img&#xA;    class=&#34;my-0 rounded-md&#34;&#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    fetchpriority=&#34;auto&#34;&#xA;    alt=&#34;The complete TachyAstroach rover system — mother rover, daughter sub-unit, and custom joystick controller&#34;&#xA;    width=&#34;1280&#34;&#xA;    height=&#34;1707&#34;&#xA;    src=&#34;http://localhost:6782/posts/technical-updates/tachyastroach-hackathon/rover-overview_hu_7eee1fca7ab17251.jpg&#34;&#xA;    srcset=&#34;http://localhost:6782/posts/technical-updates/tachyastroach-hackathon/rover-overview_hu_7eee1fca7ab17251.jpg 800w, http://localhost:6782/posts/technical-updates/tachyastroach-hackathon/rover-overview.jpg 1280w&#34;&#xA;    sizes=&#34;(min-width: 768px) 50vw, 65vw&#34;&#xA;    data-zoom-src=&#34;http://localhost:6782/posts/technical-updates/tachyastroach-hackathon/rover-overview.jpg&#34;&gt;&lt;/figure&gt;&#xA;&lt;p&gt;The GT IEEE Robotech Hackathon might not be the biggest event, but it was my first real dive into an intensive hackathon-style build. Despite freezing rain and wind, everyone showed up. Our four-member team, TachyAstroach, kicked off the mission.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Tachy🪳Astroach: MoonLine</title>
-      <link>http://localhost:6069/projects/tachyastroach/</link>
+      <link>http://localhost:6782/projects/tachyastroach/</link>
       <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:6069/projects/tachyastroach/</guid>
+      <guid>http://localhost:6782/projects/tachyastroach/</guid>
       <description>&lt;div class=&#34;lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl&#34;&gt;&#xA;  A mother-daughter rover system designed for extraterrestrial exploration built from raw materials in 36 hours at the Georgia Tech IEEE Robotech Hackathon.&#xA;&lt;/div&gt;&#xA;&#xA;&lt;a&#xA;  class=&#34;!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700&#34;&#xA;  href=&#34;https://devpost.com/software/moonline&#34;&#xA;  target=&#34;_blank&#34;&#xA;  &#xA;  role=&#34;button&#34;&gt;&#xA;  &#xA;View on Devpost&#xA;&#xA;&lt;/a&gt;&#xA;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Overview&#xA;    &lt;div id=&#34;overview&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#overview&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;TachyAstroach: MoonLine is a mother-daughter rover system where the primary unit launches a secondary sub-unit, with both coordinated wirelessly through custom actuation mechanisms. The project was completed during a 36-hour intensive build at the &lt;strong&gt;GT IEEE Robotech Hackathon&lt;/strong&gt;, transforming raw materials into a functioning extraterrestrial rover prototype.&lt;/p&gt;</description>
       
     </item>
