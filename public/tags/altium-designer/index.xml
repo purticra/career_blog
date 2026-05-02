@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Altium Designer on Hongyi Lyu</title>
-    <link>http://localhost:8910/tags/altium-designer/</link>
+    <link>http://localhost:13828/tags/altium-designer/</link>
     <description>Recent content in Altium Designer on Hongyi Lyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>hlyu68@gatech.edu (Hongyi Lyu)</managingEditor>
     <webMaster>hlyu68@gatech.edu (Hongyi Lyu)</webMaster>
     <copyright>Hongyi Lyu</copyright>
-    <lastBuildDate>Fri, 01 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8910/tags/altium-designer/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:13828/tags/altium-designer/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Yellow Jacket Space Program: Avionics Onboarding</title>
-      <link>http://localhost:8910/projects/yjsp-onboarding/</link>
+      <link>http://localhost:13828/projects/yjsp-onboarding/</link>
       <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:8910/projects/yjsp-onboarding/</guid>
+      <guid>http://localhost:13828/projects/yjsp-onboarding/</guid>
       <description>&lt;div class=&#34;lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl&#34;&gt;&#xA;  Design of STM32 Dual Channel High Precision RTD Temperature Acquisition system for rocket hardware-in-the-loop (HITL) testing.&#xA;&lt;/div&gt;&#xA;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Overview&#xA;    &lt;div id=&#34;overview&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#overview&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This project is part of the Yellow Jacket Space Program (YJSP) Avionics Department onboarding program. The goal is to design a 2-layer rapid test board that integrates an STM32H573 microcontroller with an ADS114S06 high-precision ADC for four-wire PT100 RTD temperature measurement, along with a complete power regulation chain from a 24V input.&lt;/p&gt;</description>
       
     </item>

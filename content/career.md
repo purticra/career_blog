@@ -19,21 +19,26 @@ sharingLinks: false
 {{< timelineItem icon="pencil" header="YJSP Avionics Sensor & Valve Controller PCB" badge="Feb 2026 – Present" subheader="Yellow Jacket Space Program — Avionics Hardware Designer" >}}
 Designing a 4-layer PCB for rocket hardware-in-the-loop (HITL) testing using Altium Designer and Altium 365. Integrating STM32H573 MCU with ADS114S06 ADC for four-wire PT100 RTD temperature measurement. Implementing power regulation (24V Buck, LDO), relay driving, INA228 current monitoring, and PCF8575 GPIO expansion.
 <div style="margin-top:1rem;">
-{{< button href="projects/yjsp-onboarding" >}}
-YJSP Onboarding Project
-{{< /button >}}
+{{< article link="/projects/yjsp-onboarding/" showSummary=false compactSummary=true >}}
 {{< /timelineItem >}}
  
 {{< timelineItem icon="dev" header="ESP32 Bluetooth Media Control Keypad" badge="Mar – Apr 2026" subheader="Personal Project" >}}
 Built a pocket-sized BLE HID media controller using ESP32, tactile buttons, rotary encoder, and SSD1306 OLED. Developed firmware for BLE keyboard emulation. Designed and 3D-printed a custom enclosure in Fusion 360. Open-sourced on GitHub.
+<div style="margin-top:1rem;">
+{{< article link="/projects/ece-1100-media-control/" showSummary=false compactSummary=true >}}
 {{< /timelineItem >}}
  
 {{< timelineItem icon="lightbulb" header="GT IEEE Robotech Hackathon — 1st Place" badge="Jan 2026" subheader="Team TachyAstroach — Chief Mechanical Designer" >}}
-Chief mechanical designer of parent-subunit moon surface rover *MoonLine*.
+Chief mechanical designer of parent-subunit moon surface rover MoonLine. 
+<div style="margin-top:1rem;">
+<div style="margin-top:1rem;">
+{{< article link="/projects/tachyastroach/" showSummary=false compactSummary=true >}}
 {{< /timelineItem >}}
  
 {{< timelineItem icon="lightbulb" header="Inventure Prize 2026" badge="Jan 2026" subheader="μCHIMERA: Multimodal Nano-power Gathering Stackable Device" >}}
 Designer of PZT nano-power generating module and overall mechanical designer.
+<div style="margin-top:1rem;">
+{{< article link="/projects/uchimera/" showSummary=false compactSummary=true >}}
 {{< /timelineItem >}}
  
 {{< timelineItem icon="pencil" header="Hive Makerspace — Peer Instructor" badge="Fall 2026" subheader="Georgia Institute of Technology" >}}
@@ -62,6 +67,7 @@ Designed and fabricated substrate-integrated waveguide (SIW) microwave bandpass 
  
 {{< timelineItem icon="dev" header="Bionic Frog Robot" badge="Dec 2022 – May 2024" subheader="East China Normal University — Student Developer" >}}
 Individual guided project: water-surface robot using pneumatic flexible joint actuators. Built with Fusion 360 modeling, ABAQUS FEA simulation, and Arduino-based wireless control. Showcased at ISEF 2024 in Los Angeles.
+{{< article link="/projects/frog/" showSummary=false compactSummary=true >}}
 {{< /timelineItem >}}
  
 {{< /timeline >}}
