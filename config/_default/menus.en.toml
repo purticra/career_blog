@@ -34,24 +34,6 @@
  pageRef = "/career"
  weight = 400
 
-# [[main]]
-#  name = "Experience"
-#  parent = "career"
-#  pageRef = "experience"
-#  weight = 100
-
-# [[main]]
-#  name = "Skills"
-#  parent = "career"
-#  pageRef = "skills"
-#  weight = 200
-
-# [[main]]
-#  name = "Education"
-#  parent = "career"
-#  pageRef = "education"
-#  weight = 300
-
 [[main]]
  name = "Resume"
  pageRef = "resume"
@@ -80,6 +62,12 @@
  parent = "projects"
  pageRef = "/projects/ece-1100-media-control"
  weight = -400
+
+[[main]]
+ name = "Rapid Test Board for YJSP Onboarding"
+ parent = "projects"
+ pageRef = "/projects/yjsp-onboarding"
+ weight = -500
 
 [[subnavigation]]
  identifier = "journal"
