@@ -1,0 +1,1948 @@
+<!doctype html>
+<html
+  lang="zh-CN"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=8487&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-CN">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Yellow Jacket 太空计划：航电入职 &middot; Hongyi的职业作品集</title>
+    <meta name="title" content="Yellow Jacket 太空计划：航电入职 &middot; Hongyi的职业作品集">
+  
+
+  
+  
+    <meta name="description" content="STM32 双通道高精度 RTD 温度采集系统设计。">
+  
+  
+    <meta name="keywords" content="ECE,硬件,嵌入式系统,PCB 设计,Altium Designer,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:8487/zh/projects/yjsp-onboarding/">
+  
+    
+      <link rel="alternate" type="application/rss+xml" href="/zh/projects/yjsp-onboarding/index.xml" title="Hongyi的职业作品集" />
+  
+
+  
+  
+    <meta name="author" content="Hongyi Lyu">
+  
+  
+    
+      
+        
+      
+    
+      
+        
+          <link href="https://github.com/purticra" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://linkedin.com/in/lyu-hongyi" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:8487/zh/projects/yjsp-onboarding/">
+  <meta property="og:site_name" content="Hongyi的职业作品集">
+  <meta property="og:title" content="Yellow Jacket 太空计划：航电入职">
+  <meta property="og:description" content="STM32 双通道高精度 RTD 温度采集系统设计。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="website">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Yellow Jacket 太空计划：航电入职">
+  <meta name="twitter:description" content="STM32 双通道高精度 RTD 温度采集系统设计。">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.582c95d36a246fa4f393fd7be29053d2418705adb6fe91433d05f010f32256ca370d53558a122db7e2f9d47206db80e7e7e099caea6593803cd0371cd91861ed.css"
+    integrity="sha512-WCyV02okb6Tzk/174pBT0kGHBa22/pFDPQXwEPMiVso3DVNVihItt&#43;L51HIG24Dn5&#43;CZyuplk4A80Dcc2Rhh7Q==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.712c423dd585dfd031bf75a70aad3af4b3de24c6eec1fef682d92724b4026b842cf843c8535587e5096039348125c57ff1bea2d46b2b4af8124673ca085880c4.js"
+      integrity="sha512-cSxCPdWF39Axv3WnCq069LPeJMbuwf72gtknJLQCa4Qs&#43;EPIU1WH5QlgOTSBJcV/8b6i1GsrSvgSRnPKCFiAxA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "项目",
+    "name": "Yellow Jacket 太空计划：航电入职",
+    "headline": "Yellow Jacket 太空计划：航电入职",
+    "description": "STM32 双通道高精度 RTD 温度采集系统设计。",
+    "inLanguage": "zh-CN",
+    "url" : "http://localhost:8487/zh/projects/yjsp-onboarding/",
+    "author" : {
+      "@type": "Person",
+      "name": "Hongyi Lyu"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-05-01T00:00:00\u002b00:00",
+    "datePublished": "2026-05-01T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-05-01T00:00:00\u002b00:00",
+    
+    "keywords": ["ECE","硬件","嵌入式系统","PCB 设计","Altium Designer"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "850"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+            "@type": "ListItem",
+            "position":  1 ,
+            "name": "项目",
+            "item": "http://localhost:8487/zh/projects/"
+          },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "name": "Yellow Jacket 太空计划：航电入职",
+        "item": "http://localhost:8487/zh/projects/yjsp-onboarding/"
+      }
+    ]
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+    
+    
+      <div>
+        <a href="/zh/" class="flex">
+          <span class="sr-only">Hongyi的职业作品集</span>
+          
+            <img
+              src="/img/apple-touch-icon-next.png"
+              width="642"
+              height="642"
+              class="logo max-h-20 max-w-20 object-scale-down object-left nozoom"
+              alt="">
+          
+        </a>
+      </div>
+    
+  
+  
+    <a href="/zh/" class="text-base font-medium truncate min-w-0 shrink">
+      Hongyi的职业作品集
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/zh/about/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="关于"
+      title="关于我">
+      
+      
+        <span class="text-base font-medium break-normal">
+          关于
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/zh/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="文章"
+      title="文章">
+      
+      
+        <span class="text-base font-medium break-normal">
+          文章
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <div class="nested-menu">
+      <div class="cursor-pointer flex items-center">
+        <a
+          
+            href="/zh/projects/"
+            
+          
+          aria-label="项目"
+          class="flex items-center text-base font-medium bf-icon-color-hover"
+          title="项目">
+          
+          <span class="text-bg font-bg break-normal" title="项目">
+            项目
+          </span>
+          <span>
+            <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+          </span>
+        </a>
+      </div>
+      <div class="menuhide">
+        <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl bg-neutral/25 dark:bg-neutral-800/25">
+          <div class="flex flex-col space-y-3">
+            
+              <a
+                href="/zh/projects/yjsp-onboarding/"
+                
+                aria-label="YJSP 入职：快速测试系统"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="Yellow Jacket 太空计划：航电入职">
+                  YJSP 入职：快速测试系统
+                </span>
+              </a>
+            
+              <a
+                href="/zh/projects/ece-1100-media-control/"
+                
+                aria-label="媒体控制模块 [ECE1100]"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="ECE 1100：媒体控制模块">
+                  媒体控制模块 [ECE1100]
+                </span>
+              </a>
+            
+              <a
+                href="/zh/projects/tachyastroach/"
+                
+                aria-label="Tachy🪳Astroach：月际线"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="Tachy🪳Astroach：月际线">
+                  Tachy🪳Astroach：月际线
+                </span>
+              </a>
+            
+              <a
+                href="/zh/projects/uchimera/"
+                
+                aria-label="μCHIMERA 微功率发电模块"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="μCHIMERA">
+                  μCHIMERA 微功率发电模块
+                </span>
+              </a>
+            
+              <a
+                href="/zh/projects/frog/"
+                
+                aria-label="仿生蛙机器人"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="仿生蛙机器人">
+                  仿生蛙机器人
+                </span>
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+    
+      
+  
+    <a
+      href="/zh/career/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="经历"
+      title="职业经历">
+      
+      
+        <span class="text-base font-medium break-normal">
+          经历
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/zh/resume/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="简历"
+      title="简历">
+      
+      
+        <span class="text-base font-medium break-normal">
+          简历
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+  <div class="translation nested-menu">
+    <button class="cursor-pointer flex items-center">
+      <span class="me-1">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+    <path fill="currentColor" d="M0 128C0 92.7 28.7 64 64 64H256h48 16H576c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H320 304 256 64c-35.3 0-64-28.7-64-64V128zm320 0V384H576V128H320zM178.3 175.9c-3.2-7.2-10.4-11.9-18.3-11.9s-15.1 4.7-18.3 11.9l-64 144c-4.5 10.1 .1 21.9 10.2 26.4s21.9-.1 26.4-10.2l8.9-20.1h73.6l8.9 20.1c4.5 10.1 16.3 14.6 26.4 10.2s14.6-16.3 10.2-26.4l-64-144zM160 233.2L179 276H141l19-42.8zM448 164c11 0 20 9 20 20v4h44 16c11 0 20 9 20 20s-9 20-20 20h-2l-1.6 4.5c-8.9 24.4-22.4 46.6-39.6 65.4c.9 .6 1.8 1.1 2.7 1.6l18.9 11.3c9.5 5.7 12.5 18 6.9 27.4s-18 12.5-27.4 6.9l-18.9-11.3c-4.5-2.7-8.8-5.5-13.1-8.5c-10.6 7.5-21.9 14-34 19.4l-3.6 1.6c-10.1 4.5-21.9-.1-26.4-10.2s.1-21.9 10.2-26.4l3.6-1.6c6.4-2.9 12.6-6.1 18.5-9.8l-12.2-12.2c-7.8-7.8-7.8-20.5 0-28.3s20.5-7.8 28.3 0l14.6 14.6 .5 .5c12.4-13.1 22.5-28.3 29.8-45H448 376c-11 0-20-9-20-20s9-20 20-20h52v-4c0-11 9-20 20-20z"/></svg></span>
+      </span>
+      <span class="text-sm font-medium bf-icon-color-hover" title="Yellow Jacket 太空计划：航电入职">EN</span>
+    </button>
+    <ul class="menuhide">
+      <li class="rounded-xl backdrop-blur shadow-2xl p-2 flex flex-col gap-1">
+        
+          <a href="/projects/yjsp-onboarding/" class="flex items-center bf-icon-color-hover px-3 py-1">
+            <span class="text-sm font-sm" title="Yellow Jacket Space Program: Avionics Onboarding">
+              EN
+            </span>
+          </a>
+        
+          <a href="/zh/projects/yjsp-onboarding/" class="flex items-center bf-icon-color-hover px-3 py-1">
+            <span class="text-sm font-sm" title="Yellow Jacket 太空计划：航电入职">
+              中文
+            </span>
+          </a>
+        
+      </li>
+    </ul>
+  </div>
+
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/zh/about/"
+        aria-label="关于"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="关于我" class="text-2xl font-bold tracking-tight">
+          关于
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/zh/posts/"
+        aria-label="文章"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="文章" class="text-2xl font-bold tracking-tight">
+          文章
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/zh/projects/"
+        aria-label="项目"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="项目" class="text-2xl font-bold tracking-tight">
+          项目
+        </span>
+        
+          <label
+            for="fullscreen-submenu-projects"
+            class="ms-auto flex items-center justify-center h-10 w-10 cursor-pointer rounded-lg bf-icon-color-hover border bf-border-color bf-border-color-hover">
+            <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+          </label>
+        
+      </a>
+
+      
+        <input checked type="checkbox" id="fullscreen-submenu-projects" autocomplete="off" class="hidden peer/full">
+
+        <div
+          class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 peer-checked/full:grid-rows-[1fr]">
+          <div class="overflow-hidden">
+            <div class="ms-7 mt-4">
+              
+                <a
+                  href="/zh/projects/yjsp-onboarding/"
+                  aria-label="YJSP 入职：快速测试系统"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="Yellow Jacket 太空计划：航电入职" class="text-lg">
+                    YJSP 入职：快速测试系统
+                  </span>
+                </a>
+              
+                <a
+                  href="/zh/projects/ece-1100-media-control/"
+                  aria-label="媒体控制模块 [ECE1100]"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="ECE 1100：媒体控制模块" class="text-lg">
+                    媒体控制模块 [ECE1100]
+                  </span>
+                </a>
+              
+                <a
+                  href="/zh/projects/tachyastroach/"
+                  aria-label="Tachy🪳Astroach：月际线"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="Tachy🪳Astroach：月际线" class="text-lg">
+                    Tachy🪳Astroach：月际线
+                  </span>
+                </a>
+              
+                <a
+                  href="/zh/projects/uchimera/"
+                  aria-label="μCHIMERA 微功率发电模块"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="μCHIMERA" class="text-lg">
+                    μCHIMERA 微功率发电模块
+                  </span>
+                </a>
+              
+                <a
+                  href="/zh/projects/frog/"
+                  aria-label="仿生蛙机器人"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="仿生蛙机器人" class="text-lg">
+                    仿生蛙机器人
+                  </span>
+                </a>
+              
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/zh/career/"
+        aria-label="经历"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="职业经历" class="text-2xl font-bold tracking-tight">
+          经历
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/zh/resume/"
+        aria-label="简历"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="简历" class="text-2xl font-bold tracking-tight">
+          简历
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+    <div class="flex flex-wrap gap-4 mt-8 pt-8 border-t bf-border-color">
+      
+        <a
+          href="https://journal.purticra.icu"
+          aria-label="◹"
+          class="inline-flex items-center gap-2 px-2 py-2 bf-icon-color-hover rounded-full text-sm">
+          
+          <span title="">◹</span>
+        </a>
+      
+    </div>
+  
+
+        
+  
+    <div
+      class="flex flex-wrap items-center [&_span]:text-2xl [&_.translation_button_.icon]:text-4xl! [&_.translation_button_span]:text-base! [&_.translation_.menuhide_span]:text-sm! gap-x-6 ps-2 mt-8 pt-8 border-t bf-border-color">
+      
+  <div class="translation nested-menu">
+    <button class="cursor-pointer flex items-center">
+      <span class="me-1">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+    <path fill="currentColor" d="M0 128C0 92.7 28.7 64 64 64H256h48 16H576c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H320 304 256 64c-35.3 0-64-28.7-64-64V128zm320 0V384H576V128H320zM178.3 175.9c-3.2-7.2-10.4-11.9-18.3-11.9s-15.1 4.7-18.3 11.9l-64 144c-4.5 10.1 .1 21.9 10.2 26.4s21.9-.1 26.4-10.2l8.9-20.1h73.6l8.9 20.1c4.5 10.1 16.3 14.6 26.4 10.2s14.6-16.3 10.2-26.4l-64-144zM160 233.2L179 276H141l19-42.8zM448 164c11 0 20 9 20 20v4h44 16c11 0 20 9 20 20s-9 20-20 20h-2l-1.6 4.5c-8.9 24.4-22.4 46.6-39.6 65.4c.9 .6 1.8 1.1 2.7 1.6l18.9 11.3c9.5 5.7 12.5 18 6.9 27.4s-18 12.5-27.4 6.9l-18.9-11.3c-4.5-2.7-8.8-5.5-13.1-8.5c-10.6 7.5-21.9 14-34 19.4l-3.6 1.6c-10.1 4.5-21.9-.1-26.4-10.2s.1-21.9 10.2-26.4l3.6-1.6c6.4-2.9 12.6-6.1 18.5-9.8l-12.2-12.2c-7.8-7.8-7.8-20.5 0-28.3s20.5-7.8 28.3 0l14.6 14.6 .5 .5c12.4-13.1 22.5-28.3 29.8-45H448 376c-11 0-20-9-20-20s9-20 20-20h52v-4c0-11 9-20 20-20z"/></svg></span>
+      </span>
+      <span class="text-sm font-medium bf-icon-color-hover" title="Yellow Jacket 太空计划：航电入职">EN</span>
+    </button>
+    <ul class="menuhide">
+      <li class="rounded-xl backdrop-blur shadow-2xl p-2 flex flex-col gap-1">
+        
+          <a href="/projects/yjsp-onboarding/" class="flex items-center bf-icon-color-hover px-3 py-1">
+            <span class="text-sm font-sm" title="Yellow Jacket Space Program: Avionics Onboarding">
+              EN
+            </span>
+          </a>
+        
+          <a href="/zh/projects/yjsp-onboarding/" class="flex items-center bf-icon-color-hover px-3 py-1">
+            <span class="text-sm font-sm" title="Yellow Jacket 太空计划：航电入职">
+              中文
+            </span>
+          </a>
+        
+      </li>
+    </ul>
+  </div>
+
+
+
+      
+    </div>
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+  <div
+    class="main-menu flex pb-3 flex-col items-end justify-between md:justify-start space-x-3 
+      -mt-[15px]
+    ">
+    <div class="hidden md:flex items-center space-x-5">
+      
+        <a
+          href="https://journal.purticra.icu"
+          
+            target="_blank"
+          
+          class="flex items-center bf-icon-color-hover">
+          
+          <span class="text-xs font-light" title="">
+            ◹
+          </span>
+        </a>
+      
+    </div>
+  </div>
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  
+  
+
+  
+  
+
+  
+  <header>
+    
+      <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/zh/"
+      >主页</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/zh/projects/"
+      >项目</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/zh/projects/yjsp-onboarding/"
+      >Yellow Jacket 太空计划：航电入职</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+    
+    <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">Yellow Jacket 太空计划：航电入职</h1>
+    <div class="mt-1 mb-2 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+  </div>
+
+
+    </div>
+    
+    
+      
+      
+        
+        
+      
+        
+        
+      
+      
+      
+      <script
+        type="text/javascript"
+        src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+        integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+        data-oid="views_projects\yjsp-onboarding\_index.md"
+        data-oid-likes="likes_projects\yjsp-onboarding\_index.md"></script>
+    
+  </header>
+
+  
+  
+  
+  <section class="mt-12 prose flex max-w-full flex-col dark:prose-invert lg:flex-row mb-10">
+    
+      <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+        <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+          <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#概述">概述</a></li>
+    <li><a href="#系统架构">系统架构</a></li>
+    <li><a href="#电源设计">电源设计</a>
+      <ul>
+        <li><a href="#输入保护">输入保护</a></li>
+        <li><a href="#接地与噪声泄放">接地与噪声泄放</a></li>
+        <li><a href="#降压转换器24v--33v">降压转换器（24V → 3.3V）</a></li>
+        <li><a href="#电源状态指示">电源状态指示</a></li>
+      </ul>
+    </li>
+    <li><a href="#mcustm32h573rit6">MCU：STM32H573RIT6</a>
+      <ul>
+        <li><a href="#电源与去耦">电源与去耦</a></li>
+        <li><a href="#时钟源">时钟源</a></li>
+        <li><a href="#复位与启动配置">复位与启动配置</a></li>
+        <li><a href="#jtag-调试接口">JTAG 调试接口</a></li>
+        <li><a href="#spi-总线接口">SPI 总线接口</a></li>
+      </ul>
+    </li>
+    <li><a href="#adcads114s06ipbs">ADC：ADS114S06IPBS</a>
+      <ul>
+        <li><a href="#电源域">电源域</a></li>
+        <li><a href="#spi-与控制接口">SPI 与控制接口</a></li>
+        <li><a href="#参考配置">参考配置</a></li>
+        <li><a href="#模拟输入通道与-rtd-前端">模拟输入通道与 RTD 前端</a></li>
+      </ul>
+    </li>
+    <li><a href="#连接器">连接器</a></li>
+    <li><a href="#pcb-设计">PCB 设计</a>
+      <ul>
+        <li><a href="#层叠结构">层叠结构</a></li>
+        <li><a href="#布局策略">布局策略</a></li>
+        <li><a href="#设计规则">设计规则</a></li>
+      </ul>
+    </li>
+    <li><a href="#erc-与设计审查">ERC 与设计审查</a></li>
+    <li><a href="#工具与技能">工具与技能</a></li>
+    <li><a href="#收获">收获</a></li>
+    <li><a href="#下一步">下一步</a></li>
+    <li><a href="#参考资料">参考资料</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#概述">概述</a></li>
+    <li><a href="#系统架构">系统架构</a></li>
+    <li><a href="#电源设计">电源设计</a>
+      <ul>
+        <li><a href="#输入保护">输入保护</a></li>
+        <li><a href="#接地与噪声泄放">接地与噪声泄放</a></li>
+        <li><a href="#降压转换器24v--33v">降压转换器（24V → 3.3V）</a></li>
+        <li><a href="#电源状态指示">电源状态指示</a></li>
+      </ul>
+    </li>
+    <li><a href="#mcustm32h573rit6">MCU：STM32H573RIT6</a>
+      <ul>
+        <li><a href="#电源与去耦">电源与去耦</a></li>
+        <li><a href="#时钟源">时钟源</a></li>
+        <li><a href="#复位与启动配置">复位与启动配置</a></li>
+        <li><a href="#jtag-调试接口">JTAG 调试接口</a></li>
+        <li><a href="#spi-总线接口">SPI 总线接口</a></li>
+      </ul>
+    </li>
+    <li><a href="#adcads114s06ipbs">ADC：ADS114S06IPBS</a>
+      <ul>
+        <li><a href="#电源域">电源域</a></li>
+        <li><a href="#spi-与控制接口">SPI 与控制接口</a></li>
+        <li><a href="#参考配置">参考配置</a></li>
+        <li><a href="#模拟输入通道与-rtd-前端">模拟输入通道与 RTD 前端</a></li>
+      </ul>
+    </li>
+    <li><a href="#连接器">连接器</a></li>
+    <li><a href="#pcb-设计">PCB 设计</a>
+      <ul>
+        <li><a href="#层叠结构">层叠结构</a></li>
+        <li><a href="#布局策略">布局策略</a></li>
+        <li><a href="#设计规则">设计规则</a></li>
+      </ul>
+    </li>
+    <li><a href="#erc-与设计审查">ERC 与设计审查</a></li>
+    <li><a href="#工具与技能">工具与技能</a></li>
+    <li><a href="#收获">收获</a></li>
+    <li><a href="#下一步">下一步</a></li>
+    <li><a href="#参考资料">参考资料</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+
+        </div>
+      </div>
+    
+    <div class="min-w-0 min-h-0 max-w-prose w-full">
+      <div class="lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl">
+  为火箭硬件在环（HITL）测试设计的 STM32 双通道高精度 RTD 温度采集系统。
+</div>
+
+
+<h2 class="relative group">概述
+    <div id="概述" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a6%82%e8%bf%b0" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>本项目是 Yellow Jacket 太空计划（YJSP）航电部门入职项目的一部分。目标是设计一块 2 层快速测试板，将 STM32H573 微控制器与 ADS114S06 高精度 ADC 集成，用于四线制 PT100 RTD 温度测量，并配套从 24V 输入的完整电源调节链路。</p>
+<p>该板作为使用 Altium Designer 培训航电 PCB 设计技能的平台，也是进入硬件在环（HITL）部门的跳板。</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="板卡 3D 渲染"
+    width="1500"
+    height="1500"
+    src="/projects/yjsp-onboarding/images/board-3d-render_hu_53bebb14c7554fd6.png"
+    srcset="/projects/yjsp-onboarding/images/board-3d-render_hu_53bebb14c7554fd6.png 800w, /projects/yjsp-onboarding/images/board-3d-render_hu_23ab1f87238cdcc2.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/projects/yjsp-onboarding/images/board-3d-render.png"></figure>
+
+<h2 class="relative group">系统架构
+    <div id="系统架构" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%b3%bb%e7%bb%9f%e6%9e%b6%e6%9e%84" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>设计采用 Altium Designer 的层次化原理图结构，组织为由顶层图管理的四个子图：</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="顶层原理图"
+    width="3450"
+    height="2280"
+    src="/projects/yjsp-onboarding/images/top-level-schematic_hu_3b8a1adb65a6c4a8.png"
+    srcset="/projects/yjsp-onboarding/images/top-level-schematic_hu_3b8a1adb65a6c4a8.png 800w, /projects/yjsp-onboarding/images/top-level-schematic_hu_17d183aca187a255.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/projects/yjsp-onboarding/images/top-level-schematic.png"></figure>
+<p><strong>电源（Power.SchDoc）</strong> — 24V 输入配保险丝过流保护、TVS 二极管用于 ESD 和过压/反接保护、GND 到 CGND 噪声泄放网络，以及 MAX17503 降压 DC-DC 转换器，提供 3.3V（主轨）和 5V LDO（模拟电源）。24V 和 3.3V 轨的电源状态 LED 指示。</p>
+<p><strong>MCU（MCU.SchDoc）</strong> — STM32H573RIT6（ARM Cortex-M33，250 MHz），配完整去耦网络（VDD/VSS 上六个 100nF 电容，VDDA 上 10nF，VCAP 上 2.2µF），32 MHz 外部晶振（TG2520SMN32.0000M-MCGNNM3），经 FTSH-107-01-F-DV-K-P-TR 14 针连接器的 JTAG 调试接口，以及 SPI 总线上串接 47Ω 电阻（CS、MOSI、SCLK、ECLK、MISO、DRDY）用于信号完整性。</p>
+<p><strong>ADC（ADC.SchDoc）</strong> — ADS114S06IPBS 16 位 delta-sigma ADC，双电源域（IOVDD/DVDD 用 3.3V 数字电源，AVDD 用 5V LDO 模拟电源），独立 AGND 平面，两路四线制 RTD 前端电路，每路模拟输入配 RC 滤波（1kΩ + 10nF/100nF），以及 0Ω 电阻（R30）桥接 AGND 至 GND。</p>
+<p><strong>连接器（Connectors.SchDoc）</strong> — MOLEX 430450400 4 针连接器，分别用于 24V 电源输入（J1）、RTD 通道 A（J2）和 RTD 通道 B（J3）。每个 RTD 连接器引出 IDAC、IDACRTN、RTD_P 和 RTD_N 信号。</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="框图"
+    width="846"
+    height="926"
+    src="/projects/yjsp-onboarding/images/block-diagram_hu_7c775885fc909394.png"
+    srcset="/projects/yjsp-onboarding/images/block-diagram_hu_7c775885fc909394.png 800w, /projects/yjsp-onboarding/images/block-diagram.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/projects/yjsp-onboarding/images/block-diagram.png"></figure>
+
+<h2 class="relative group">电源设计
+    <div id="电源设计" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%94%b5%e6%ba%90%e8%ae%be%e8%ae%a1" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="电源保护原理图"
+    width="3450"
+    height="2280"
+    src="/projects/yjsp-onboarding/images/power-protection-schematic_hu_bef4c01ac25df65f.png"
+    srcset="/projects/yjsp-onboarding/images/power-protection-schematic_hu_bef4c01ac25df65f.png 800w, /projects/yjsp-onboarding/images/power-protection-schematic_hu_d274e7598a8d9694.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/projects/yjsp-onboarding/images/power-protection-schematic.png"></figure>
+
+<h3 class="relative group">输入保护
+    <div id="输入保护" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%be%93%e5%85%a5%e4%bf%9d%e6%8a%a4" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>24V 输入通过 BEL 0ZCG0150BF2C 保险丝（F1）进行过流保护，然后经过两个 TVS 二极管：</p>
+<p><strong>D1（SMAJ26A）</strong> — 箝位在 24V 输入到 GND 之间。提供过压箝位和反接错误保护。若输入电压超过击穿阈值或反接，D1 箝位电压并熔断保险丝，保护下游电路。</p>
+<p><strong>D4（SMAJ5.0A）</strong> — 箝位在 3V3 轨到 GND 之间。专为 3.3V 电源域提供 ESD 保护和过压/反接错误保护。</p>
+
+<h3 class="relative group">接地与噪声泄放
+    <div id="接地与噪声泄放" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%8e%a5%e5%9c%b0%e4%b8%8e%e5%99%aa%e5%a3%b0%e6%b3%84%e6%94%be" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>接地网络在电源地（GND）和机壳地（CGND）之间提供静电泄放和高频噪声滤波：</p>
+<p><strong>R1（1MΩ）</strong> — 连接 GND 至 CGND，为静电泄放提供受控路径，同时在直流下保持两个地域的隔离。</p>
+<p><strong>C2（4.7nF）</strong> — 与 R1 并联，为 GND 和 CGND 之间的高频噪声提供低阻抗路径，将瞬态能量分流至机壳。</p>
+
+<h3 class="relative group">降压转换器（24V → 3.3V）
+    <div id="降压转换器24v--33v" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%99%8d%e5%8e%8b%e8%bd%ac%e6%8d%a2%e5%99%a824v--33v" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Maxim MAX17503 降压 DC-DC 转换器直接将 24V 输入转换为 3.3V 输出。原理图遵循数据手册参考设计。关键元器件：</p>
+<p><strong>输入级</strong> — C3（2.2µF，50V）提供输入去耦。EN/UVLO 引脚设置输入欠压锁定阈值。引脚 12（VCC）的 5V LDO 输出为内部栅极驱动和控制逻辑供电，C4（2.2µF）为旁路电容。</p>
+<p><strong>输出级</strong> — L1（XGL3530-682MEC，6.8µH）为连接至 Lx 开关输出（引脚 17-19）的功率电感。C7（47µF）为大容量输出电容。输出电压通过 FB 引脚上由 R4（100kΩ）和 R5（37.4kΩ）组成的反馈分压电阻设置为 3.3V。</p>
+<p><strong>辅助</strong> — BST 引脚上的 C6（100nF，50V）为自举电容，高侧 MOSFET 栅极驱动所需。SS 引脚上的 C5（10nF）设置软启动斜坡时间，限制上电时的浪涌电流。RT 引脚悬空（使用内部默认开关频率）。CF 引脚电容用于环路稳定性补偿。</p>
+
+<h3 class="relative group">电源状态指示
+    <div id="电源状态指示" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%94%b5%e6%ba%90%e7%8a%b6%e6%80%81%e6%8c%87%e7%a4%ba" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>两个 LED 提供可视电源状态指示：D2（红色）在 24V 输入存在时点亮，D3（绿色）在 3.3V 输出激活时点亮。R2（2.2kΩ）和 R3（100Ω）分别为对应的限流电阻。</p>
+
+<h2 class="relative group">MCU：STM32H573RIT6
+    <div id="mcustm32h573rit6" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#mcustm32h573rit6" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="MCU 原理图"
+    width="3450"
+    height="2280"
+    src="/projects/yjsp-onboarding/images/mcu-schematic_hu_3f79a04168fbc2e9.png"
+    srcset="/projects/yjsp-onboarding/images/mcu-schematic_hu_3f79a04168fbc2e9.png 800w, /projects/yjsp-onboarding/images/mcu-schematic_hu_7176d0d5ac3ca4cc.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/projects/yjsp-onboarding/images/mcu-schematic.png"></figure>
+
+<h3 class="relative group">电源与去耦
+    <div id="电源与去耦" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%94%b5%e6%ba%90%e4%b8%8e%e5%8e%bb%e8%80%a6" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>MCU 电源网络遵循数据手册建议，对每个电源域仔细处理。每个 VDD 引脚（引脚 19、32、48、64）就近布置 100nF 陶瓷电容（C8-C10、C13）。VDDA 模拟电源（引脚 13）通过 100nF（C11）和 10nF（C14）双电容额外滤波，抑制内部 ADC 参考的高频噪声耦合。VCAP 引脚（引脚 30、62）需要 2.2µF 电容（C15、C16）用于内部稳压器。VBAT（引脚 1）通过 R6（100Ω）连接至 3.3V，并配 C12（100nF）用于备份域滤波。MCU_PWR 网络标注提醒每个端口需独立的 100nF 去耦电容，且 VDDA 额外受益于 10nF 滤波。</p>
+
+<h3 class="relative group">时钟源
+    <div id="时钟源" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%97%b6%e9%92%9f%e6%ba%90" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>外部 32 MHz 晶振（TG2520SMN32.0000M-MCGNNM3，标记为 Y1）提供系统时钟，连接至 PH0-OSC_IN（引脚 5）和 PH1-OSC_OUT（引脚 6）。晶振从 3.3V（VCC，引脚 3）供电，C18（100nF）为旁路电容。可选的 32 kHz 辅助振荡器输入在 PC14-OSC32_IN（引脚 3）和 PC15-OSC32_OUT（引脚 4）上可用，但在本设计中悬空。</p>
+
+<h3 class="relative group">复位与启动配置
+    <div id="复位与启动配置" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a4%8d%e4%bd%8d%e4%b8%8e%e5%90%af%e5%8a%a8%e9%85%8d%e7%bd%ae" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>NRST 引脚（引脚 7）连接 C17（100nF）到 GND，用于上电复位滤波。BOOT0 引脚（引脚 60）通过 R7（10kΩ）拉至 GND，确保 MCU 在正常运行时从内部 Flash 启动。</p>
+
+<h3 class="relative group">JTAG 调试接口
+    <div id="jtag-调试接口" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#jtag-%e8%b0%83%e8%af%95%e6%8e%a5%e5%8f%a3" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>使用 FTSH-107-01-F-DV-K-P-TR 14 针连接器（J4）实现完整 JTAG 接口，同时支持 JTAG 和 SWD 协议。JTMS、JTCK、JTDO、JTDI 和 NRST 信号通过 10kΩ 串联电阻（R8-R11 用于信号线，R9 用于 NRST）进行 ESD 保护和信号调理。C19（100nF）为 T_VCC 电源引脚提供本地去耦。连接器还包含用于调试器存在检测的 GND_DETECT，以及追踪端口功能的 T_VCPRX/T_VCPTX。</p>
+
+<h3 class="relative group">SPI 总线接口
+    <div id="spi-总线接口" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#spi-%e6%80%bb%e7%ba%bf%e6%8e%a5%e5%8f%a3" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>连接至 ADS114S06 的 SPI1 总线信号通过 47Ω 串联电阻（R12-R16）进行阻抗匹配和信号完整性处理。信号映射如下：</p>
+<table>
+  <thead>
+      <tr>
+          <th>MCU 网络</th>
+          <th>串联电阻</th>
+          <th>ADC 信号</th>
+          <th>方向</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>SPI1_NSS</td>
+          <td>R12 (47Ω)</td>
+          <td>CS</td>
+          <td>MCU → ADC</td>
+      </tr>
+      <tr>
+          <td>SPI1_MOSI</td>
+          <td>R13 (47Ω)</td>
+          <td>MOSI</td>
+          <td>MCU → ADC</td>
+      </tr>
+      <tr>
+          <td>SPI1_SCK</td>
+          <td>R14 (47Ω)</td>
+          <td>SCLK</td>
+          <td>MCU → ADC</td>
+      </tr>
+      <tr>
+          <td>ADC_CLK</td>
+          <td>R15 (47Ω)</td>
+          <td>ECLK</td>
+          <td>MCU → ADC</td>
+      </tr>
+      <tr>
+          <td>SPI1_MISO</td>
+          <td>R16 (47Ω)</td>
+          <td>MISO</td>
+          <td>ADC → MCU</td>
+      </tr>
+      <tr>
+          <td>ADC_RDY</td>
+          <td>R17 (47Ω)</td>
+          <td>DRDY</td>
+          <td>ADC → MCU</td>
+      </tr>
+  </tbody>
+</table>
+<p>ADC_CLK 线由 MCU 的 PC9 引脚（引脚 40）驱动，为 ADS114S06 提供外部时钟源。R28 和 R29（0Ω，占位符，待选值）为可选上拉配置，连接 3.3V 轨至 ADC SPI 接口。PD2（引脚 54）标注为可用备用 GPIO。</p>
+
+<h2 class="relative group">ADC：ADS114S06IPBS
+    <div id="adcads114s06ipbs" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#adcads114s06ipbs" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="ADC 原理图"
+    width="3450"
+    height="2280"
+    src="/projects/yjsp-onboarding/images/adc-schematic_hu_94b6b653753778d9.png"
+    srcset="/projects/yjsp-onboarding/images/adc-schematic_hu_94b6b653753778d9.png 800w, /projects/yjsp-onboarding/images/adc-schematic_hu_7f4d2ed2374d1893.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/projects/yjsp-onboarding/images/adc-schematic.png"></figure>
+
+<h3 class="relative group">电源域
+    <div id="电源域" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%94%b5%e6%ba%90%e5%9f%9f" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>ADS114S06 采用分离电源域运行，将数字噪声与敏感模拟前端隔离。IOVDD（引脚 15）和 DVDD（引脚 16）由 3.3V 数字轨供电，C1（100nF，10% 容差）为本地旁路电容。DGND（引脚 14）连接至数字 GND 平面。模拟电源 AVDD（引脚 26）由 MAX17503 的 5V LDO 输出供电，C20（100nF）和 C22（2.2µF）旁路。AVSS（引脚 27-28）连接至专用 AGND 平面，该平面通过 R30（0Ω）单点连接桥接至 GND。此星形接地拓扑防止数字回流电流流经模拟地平面。</p>
+
+<h3 class="relative group">SPI 与控制接口
+    <div id="spi-与控制接口" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#spi-%e4%b8%8e%e6%8e%a7%e5%88%b6%e6%8e%a5%e5%8f%a3" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>数字接口信号（CS、MOSI、SCLK、MISO、DRDY、ECLK）通过层次化图连接器从 MCU 图引入，每路在 MCU 侧均已通过 47Ω 串联电阻预处理。START/SYNC 引脚（引脚 8）直接连接，RESET 引脚（引脚 18）直接连接用于 MCU 控制复位。DRDY 输出（引脚 13）低电平有效中断，直接有效。引脚 12（DOUT/DRDY）在单引脚上提供多路复用数据输出和准备信号。</p>
+
+<h3 class="relative group">参考配置
+    <div id="参考配置" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8f%82%e8%80%83%e9%85%8d%e7%bd%ae" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>ADC 对 RTD 测量使用外部比率参考。两路 RTD 通道使用两组独立参考对：REFP1/REFN1（引脚 32/31）用于 RTD 通道 A，REFP0/REFN0（引脚 30/29）用于 RTD 通道 B。REFOUT（引脚 23）和 REFCOM（引脚 24）内部参考输出通过 C21（2.2µF）旁路，但主测量参考来源于流过 RTD 前端电路参考电阻的 IDAC 激励电流。</p>
+
+<h3 class="relative group">模拟输入通道与 RTD 前端
+    <div id="模拟输入通道与-rtd-前端" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a8%a1%e6%8b%9f%e8%be%93%e5%85%a5%e9%80%9a%e9%81%93%e4%b8%8e-rtd-%e5%89%8d%e7%ab%af" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>每路 RTD 通道使用专用模拟前端电路，在每条信号路径上进行 RC 滤波，在到达 ADC 输入之前滤除高频干扰。</p>
+<p><strong>通道 A（RTD_A）</strong> 使用 AIN3/AIN4 进行电压检测，AIN5 用于 IDAC 激励，REFP1/REFN1 为参考对：</p>
+<table>
+  <thead>
+      <tr>
+          <th>信号</th>
+          <th>ADC 引脚</th>
+          <th>滤波器</th>
+          <th>功能</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>RTD_P → AIN3</td>
+          <td>引脚 4</td>
+          <td>R18 (1kΩ) + C24 (10nF) + C25 (100nF)</td>
+          <td>正电压检测</td>
+      </tr>
+      <tr>
+          <td>RTD_N → AIN4</td>
+          <td>引脚 3</td>
+          <td>R19 (1kΩ) + C23 (10nF)</td>
+          <td>负电压检测</td>
+      </tr>
+      <tr>
+          <td>IDAC → AIN5</td>
+          <td>引脚 2</td>
+          <td>—</td>
+          <td>激励电流输出</td>
+      </tr>
+      <tr>
+          <td>IDACRTN → REFP1</td>
+          <td>R21 (1kΩ) + C27 (10nF)</td>
+          <td>激励电流回路 / 参考正端</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>AGND → REFN1</td>
+          <td>R22 (1kΩ) + C26 (100nF) + C28 (10nF)</td>
+          <td>参考负端</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>通道 B（RTD_B）</strong> 使用 AIN0/AIN1 进行电压检测，AIN2 用于 IDAC 激励，REFP0/REFN0 为参考对：</p>
+<table>
+  <thead>
+      <tr>
+          <th>信号</th>
+          <th>ADC 引脚</th>
+          <th>滤波器</th>
+          <th>功能</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>RTD_P → AIN0</td>
+          <td>引脚 7</td>
+          <td>R24 (1kΩ) + C29 (10nF) + C34 (100nF)</td>
+          <td>正电压检测</td>
+      </tr>
+      <tr>
+          <td>RTD_N → AIN1</td>
+          <td>引脚 6</td>
+          <td>R25 (1kΩ) + C30 (10nF)</td>
+          <td>负电压检测</td>
+      </tr>
+      <tr>
+          <td>IDAC → AIN2</td>
+          <td>引脚 5</td>
+          <td>—</td>
+          <td>激励电流输出</td>
+      </tr>
+      <tr>
+          <td>IDACRTN → REFP0</td>
+          <td>R26 (1kΩ) + C32 (10nF)</td>
+          <td>激励电流回路 / 参考正端</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>AGND → REFN0</td>
+          <td>R27 (1kΩ) + C31 (100nF) + C33 (10nF)</td>
+          <td>参考负端</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<p>RTD 激励回路中的 R20/R23（1kΩ）限制电流并提供额外滤波节点。前端电路中的所有模拟地连接均接至 AGND，与数字 GND 域保持隔离。</p>
+
+<h2 class="relative group">连接器
+    <div id="连接器" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%bf%9e%e6%8e%a5%e5%99%a8" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="连接器原理图"
+    width="3450"
+    height="2280"
+    src="/projects/yjsp-onboarding/images/connectors-schematic_hu_fd3a7323604a97ed.png"
+    srcset="/projects/yjsp-onboarding/images/connectors-schematic_hu_fd3a7323604a97ed.png 800w, /projects/yjsp-onboarding/images/connectors-schematic_hu_e0f14910d3c3aa9a.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/projects/yjsp-onboarding/images/connectors-schematic.png"></figure>
+<p>三个 MOLEX 430450400 4 针连接器提供外部接口：</p>
+<p><strong>J1（电源输入）</strong> — 通过电源图的 VIN_PRE 网络接收 24V 电源。引脚 1 承载 VIN_PRE，引脚 2-4 并联接地，提供稳健的低阻抗电源连接。</p>
+<p><strong>J2（RTD 通道 A）</strong> — 引出四线制 RTD_A 接口。引脚定义为 IDAC（引脚 1）、IDACRTN（引脚 2）、RTD_P（引脚 3）和 RTD_N（引脚 4），与标准四线制 RTD 线缆组件匹配。</p>
+<p><strong>J3（RTD 通道 B）</strong> — 与 J2 引脚定义相同，用于 RTD_B，实现第二路独立温度测量通道。</p>
+
+<h2 class="relative group">PCB 设计
+    <div id="pcb-设计" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#pcb-%e8%ae%be%e8%ae%a1" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">层叠结构
+    <div id="层叠结构" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b1%82%e5%8f%a0%e7%bb%93%e6%9e%84" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>为降低成本（也借此练习在有限尺寸下布线），本板采用 2 层设计。</p>
+<table>
+  <thead>
+      <tr>
+          <th>层</th>
+          <th>功能</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>顶层</td>
+          <td>信号布线、元器件放置</td>
+      </tr>
+      <tr>
+          <td>底层</td>
+          <td>地平面、次级布线</td>
+      </tr>
+  </tbody>
+</table>
+<p>底层完整地平面提供低阻抗回流路径并减少电磁干扰。</p>
+
+<h3 class="relative group">布局策略
+    <div id="布局策略" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b8%83%e5%b1%80%e7%ad%96%e7%95%a5" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>PCB 布局遵循与信号流对齐的模块化放置策略：</p>
+<ol>
+<li><strong>电源输入与保护</strong> — 板卡左上侧，靠近 24V 连接器</li>
+<li><strong>Buck 转换器与电源</strong> — IC、电感和电容紧凑布局，宽铜皮走线以最小化开关回路面积</li>
+<li><strong>MCU</strong> — 板卡中央，去耦电容紧贴每个 VDD 引脚放置</li>
+<li><strong>ADC</strong> — 靠近 MCU 以缩短 SPI 走线，模拟输入走线远离数字开关噪声；AGND 平面通过单点 0Ω 桥接与数字 GND 隔离</li>
+<li><strong>传感器连接器</strong> — 板边缘，便于线缆接入</li>
+<li><strong>SWD/JTAG 接头</strong> — 板边缘，便于编程访问</li>
+</ol>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="PCB 布局顶视图"
+    width="1052"
+    height="1050"
+    src="/projects/yjsp-onboarding/images/pcb-layout-top_hu_645a49a292dddec8.png"
+    srcset="/projects/yjsp-onboarding/images/pcb-layout-top_hu_645a49a292dddec8.png 800w, /projects/yjsp-onboarding/images/pcb-layout-top.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/projects/yjsp-onboarding/images/pcb-layout-top.png"></figure>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="PCB 布局底视图"
+    width="1057"
+    height="1053"
+    src="/projects/yjsp-onboarding/images/pcb-layout-bottom_hu_7e7879df63467f3f.png"
+    srcset="/projects/yjsp-onboarding/images/pcb-layout-bottom_hu_7e7879df63467f3f.png 800w, /projects/yjsp-onboarding/images/pcb-layout-bottom.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/projects/yjsp-onboarding/images/pcb-layout-bottom.png"></figure>
+
+<h3 class="relative group">设计规则
+    <div id="设计规则" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%ae%be%e8%ae%a1%e8%a7%84%e5%88%99" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<table>
+  <thead>
+      <tr>
+          <th>参数</th>
+          <th>数值</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>最小走线宽度</td>
+          <td>0.203mm（8mil）</td>
+      </tr>
+      <tr>
+          <td>最小间距</td>
+          <td>0.254mm（10mil）</td>
+      </tr>
+      <tr>
+          <td>过孔孔径</td>
+          <td>0.3mm</td>
+      </tr>
+      <tr>
+          <td>过孔焊盘</td>
+          <td>0.6mm</td>
+      </tr>
+      <tr>
+          <td>电源走线宽度</td>
+          <td>≥0.5mm（20mil）</td>
+      </tr>
+  </tbody>
+</table>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="PCB 3D 视图"
+    width="965"
+    height="966"
+    src="/projects/yjsp-onboarding/images/pcb-3d-view_hu_befbf86d1e221c88.png"
+    srcset="/projects/yjsp-onboarding/images/pcb-3d-view_hu_befbf86d1e221c88.png 800w, /projects/yjsp-onboarding/images/pcb-3d-view.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/projects/yjsp-onboarding/images/pcb-3d-view.png"></figure>
+
+<h2 class="relative group">ERC 与设计审查
+    <div id="erc-与设计审查" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#erc-%e4%b8%8e%e8%ae%be%e8%ae%a1%e5%ae%a1%e6%9f%a5" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>原理图通过了电气规则检查（ERC），所有错误均已解决。审查过程中遇到的主要问题包括：</p>
+<ul>
+<li>MCU 上未连接的电源引脚需要添加明确的无连接标记</li>
+<li>层次化图之间的网络标签不匹配</li>
+<li>团队评审人员标记的缺失去耦电容</li>
+</ul>
+<p>设计在 Altium 365 上经历了多轮团队审查迭代，融入了元器件选型、布局间距和走线布设方面的反馈。</p>
+
+<h2 class="relative group">工具与技能
+    <div id="工具与技能" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b7%a5%e5%85%b7%e4%b8%8e%e6%8a%80%e8%83%bd" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="flex flex-row flex-wrap items-center space-x-2">
+<div class="flex mt-2">
+  <span
+    class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal">
+    <span class="flex flex-row items-center"><span>Altium Designer</span>
+    </span>
+  </span>
+</div>
+<div class="flex mt-2">
+  <span
+    class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal">
+    <span class="flex flex-row items-center"><span>Altium 365</span>
+    </span>
+  </span>
+</div>
+<div class="flex mt-2">
+  <span
+    class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal">
+    <span class="flex flex-row items-center"><span>STM32CubeIDE</span>
+    </span>
+  </span>
+</div>
+<div class="flex mt-2">
+  <span
+    class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal">
+    <span class="flex flex-row items-center"><span>SPI 协议</span>
+    </span>
+  </span>
+</div>
+<div class="flex mt-2">
+  <span
+    class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal">
+    <span class="flex flex-row items-center"><span>层次化原理图设计</span>
+    </span>
+  </span>
+</div>
+<div class="flex mt-2">
+  <span
+    class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal">
+    <span class="flex flex-row items-center"><span>Buck 转换器设计</span>
+    </span>
+  </span>
+</div>
+<div class="flex mt-2">
+  <span
+    class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal">
+    <span class="flex flex-row items-center"><span>分离电源域 / 星形接地</span>
+    </span>
+  </span>
+</div>
+<div class="flex mt-2">
+  <span
+    class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal">
+    <span class="flex flex-row items-center"><span>四线制 RTD 测量</span>
+    </span>
+  </span>
+</div>
+<div class="flex mt-2">
+  <span
+    class="rounded-full bg-primary-500 dark:bg-primary-400 text-neutral-50 dark:text-neutral-800 px-1.5 py-[1px] text-xs font-normal">
+    <span class="flex flex-row items-center"><span>ERC / DRC</span>
+    </span>
+  </span>
+</div>
+</div>
+
+
+<h2 class="relative group">收获
+    <div id="收获" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%94%b6%e8%8e%b7" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>这个入职项目是我从 LCEDA（EasyEDA）迁移到 Altium Designer 生态系统的过渡。最大的调整在于层次化原理图结构（四张子图由顶层图与图间连接器管理）、网表同步工作流（ECO 流程）、每个元器件的手动符号-封装-3D 模型关联，以及更复杂的层管理系统。</p>
+<p>从 24V 开始，使用 MAX17503 开关稳压器完整设计一条降至 3.3V 的电源链路——包括保险丝保护、TVS 箝位和 GND/CGND 隔离——是相比我以往项目的重大进步，那些项目通常从 USB 5V 或电池供电开始。学习阅读并实现数据手册参考设计（选择反馈电阻以设定目标输出电压，确定自举和软启动电容的容值，选择功率电感）是我通过这个项目培养的核心技能。</p>
+<p>模拟设计方面同样很有价值。为 ADS114S06 实现分离电源域（3.3V 数字 / 5V LDO 模拟），设计 AGND 到 GND 的单点星形接地拓扑（使用 0Ω 桥接电阻），以及在每条 SPI 线上添加 47Ω 串联电阻用于信号完整性——这些都让我明白，精密模拟电路与纯数字系统需要根本不同的设计理念。理解四线制 RTD 测量架构——IDAC 激励、比率参考和 RC 输入滤波如何协同实现高精度温度测量——加深了我对电路设计与测量理论相互关联的理解。</p>
+
+<h2 class="relative group">下一步
+    <div id="下一步" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%8b%e4%b8%80%e6%ad%a5" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>完成这块入职板后，我进入了 YJSP HITL 部门，工作范围扩展至：</p>
+<ul>
+<li>带专用电源和地平面的 4 层 PCB 设计</li>
+<li>基于 LMR36015 的 24V→6V 降压转换器，配 INA228 电流监测</li>
+<li>PCF8575 GPIO 扩展驱动 ULN2803A 继电器阵列用于阀门控制</li>
+<li>多轨电源分配，分离 AGND/GND/CGND 域并使用磁珠隔离</li>
+</ul>
+
+<h2 class="relative group">参考资料
+    <div id="参考资料" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ol>
+<li><a href="https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6660/STM32H573.pdf"  target="_blank" rel="noreferrer">STM32H573RI 数据手册</a></li>
+<li><a href="https://www.analog.com/media/en/technical-documentation/data-sheets/MAX17503.pdf"  target="_blank" rel="noreferrer">MAX17503 数据手册</a></li>
+<li><a href="https://www.ti.com/lit/ds/symlink/ads114s06.pdf?ts=1772256421293"  target="_blank" rel="noreferrer">ADS114S0x 数据手册</a></li>
+<li><a href="https://www.ti.com/lit/an/sbaa336b/sbaa336b.pdf"  target="_blank" rel="noreferrer">四线制 PT100 RTD 低侧参考测量电路</a></li>
+<li><a href="https://www.ti.com/lit/an/sbaa275a/sbaa275a.pdf"  target="_blank" rel="noreferrer">RTD 测量基础指南</a></li>
+</ol>
+
+    </div>
+  </section>
+
+  
+  
+    <section class="mt-10 prose dark:prose-invert">
+      <p class="py-8 border-t">
+        <em>There are no articles to list here yet.</em>
+      </p>
+    </section>
+  
+  
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          Hongyi
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:8487/zh/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

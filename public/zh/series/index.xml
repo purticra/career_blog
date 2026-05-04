@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on Hongyi的职业作品集</title>
+    <link>http://localhost:8487/zh/series/</link>
+    <description>Recent content in Series on Hongyi的职业作品集</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>hlyu68@gatech.edu (Hongyi Lyu)</managingEditor>
+    <webMaster>hlyu68@gatech.edu (Hongyi Lyu)</webMaster>
+    <copyright>Hongyi</copyright>
+    <lastBuildDate>Sun, 29 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8487/zh/series/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Career</title>
+      <link>http://localhost:8487/zh/series/career/</link>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/series/career/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>http://localhost:8487/zh/series/projects/</link>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/series/projects/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+disabled = false
+languageCode = "zh-CN"
+languageName = "中文"
+weight = 2
+title = "Hongyi的职业作品集"
+
+[params]
+  displayName = "中文"
+  isoCode = "zh-CN"
+  rtl = false
+  dateFormat = "2006年1月2日"
+  logo = "img/apple-touch-icon-next.png"
+  description = "Hongyi的职业作品集——佐治亚理工学院电气工程学生的项目与职业历程。"
+  copyright = "Hongyi"
+
+[params.author]
+  name = "Hongyi Lyu"
+  email = "hlyu68@gatech.edu"
+  image = "img/author.jpg"
+  imageQuality = 96
+  headline = ""
+  bio = "佐治亚理工学院（Georgia Tech）电气工程学生。"
+  links = [
+    { email = "mailto:hlyu68@gatech.edu" },
+    { github = "https://github.com/purticra" },
+    { linkedin = "https://linkedin.com/in/lyu-hongyi" },
+  ]

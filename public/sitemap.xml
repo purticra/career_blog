@@ -1,83 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <url>
-    <loc>http://localhost:13828/</loc>
-    <lastmod>2026-05-01T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:13828/projects/</loc>
-    <lastmod>2026-05-01T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:13828/projects/yjsp-onboarding/</loc>
-    <lastmod>2026-05-01T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:13828/projects/ece-1100-media-control/</loc>
-    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:13828/posts/career-progression/yjsp-avionics-hitl/</loc>
-    <lastmod>2026-03-29T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:13828/posts/</loc>
-    <lastmod>2026-03-29T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:13828/posts/technical-updates/tachyastroach-hackathon/</loc>
-    <lastmod>2026-02-15T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:13828/projects/tachyastroach/</loc>
-    <lastmod>2026-02-15T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:13828/about/</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:13828/projects/uchimera/</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:13828/career/</loc>
-    <lastmod>2025-05-01T19:00:00-04:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:13828/resume/</loc>
-    <lastmod>2025-02-01T23:00:00-05:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:13828/projects/frog/</loc>
-    <lastmod>2024-05-01T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <sitemap>
+    <loc>http://localhost:8487/en/sitemap.xml</loc>
+    
+      <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>http://localhost:8487/zh/sitemap.xml</loc>
+    
+      <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+</sitemapindex>

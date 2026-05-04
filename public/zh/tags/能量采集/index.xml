@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>能量采集 on Hongyi的职业作品集</title>
+    <link>http://localhost:8487/zh/tags/%E8%83%BD%E9%87%8F%E9%87%87%E9%9B%86/</link>
+    <description>Recent content in 能量采集 on Hongyi的职业作品集</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>hlyu68@gatech.edu (Hongyi Lyu)</managingEditor>
+    <webMaster>hlyu68@gatech.edu (Hongyi Lyu)</webMaster>
+    <copyright>Hongyi</copyright>
+    <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8487/zh/tags/%E8%83%BD%E9%87%8F%E9%87%87%E9%9B%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>μCHIMERA</title>
+      <link>http://localhost:8487/zh/projects/uchimera/</link>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/projects/uchimera/</guid>
+      <description>&lt;div class=&#34;lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl&#34;&gt;&#xA;  无充电器。无线缆。无需维护。&#xA;&lt;/div&gt;&#xA;&#xA;&lt;figure&gt;&lt;img&#xA;    class=&#34;my-0 rounded-md&#34;&#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    fetchpriority=&#34;auto&#34;&#xA;    alt=&#34;μCHIMERA 系统概览——热电、太阳能、压电发电机及储能模块&#34;&#xA;    width=&#34;2880&#34;&#xA;    height=&#34;2160&#34;&#xA;    src=&#34;http://localhost:8487/projects/uchimera/system-overview_hu_854f71cc5dcccb46.jpg&#34;&#xA;    srcset=&#34;http://localhost:8487/projects/uchimera/system-overview_hu_854f71cc5dcccb46.jpg 800w, http://localhost:8487/projects/uchimera/system-overview_hu_7219f9aee7a40263.jpg 1280w&#34;&#xA;    sizes=&#34;(min-width: 768px) 50vw, 65vw&#34;&#xA;    data-zoom-src=&#34;http://localhost:8487/projects/uchimera/system-overview.jpg&#34;&gt;&lt;/figure&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;什么是 μCHIMERA？&#xA;    &lt;div id=&#34;什么是-μchimera&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e4%bb%80%e4%b9%88%e6%98%af-%ce%bcchimera&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;μCHIMERA&lt;/strong&gt;（微型复合能量采集集成模块化能量再生阵列）将环境能量转化为可靠电源，使设备无需充电、无线缆、无维护即可持续运行。&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

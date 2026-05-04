@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Hongyi的职业作品集</title>
+    <link>http://localhost:8487/zh/tags/</link>
+    <description>Recent content in Tags on Hongyi的职业作品集</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>hlyu68@gatech.edu (Hongyi Lyu)</managingEditor>
+    <webMaster>hlyu68@gatech.edu (Hongyi Lyu)</webMaster>
+    <copyright>Hongyi</copyright>
+    <lastBuildDate>Fri, 01 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8487/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Altium Designer</title>
+      <link>http://localhost:8487/zh/tags/altium-designer/</link>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/tags/altium-designer/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>ECE</title>
+      <link>http://localhost:8487/zh/tags/ece/</link>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/tags/ece/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>PCB 设计</title>
+      <link>http://localhost:8487/zh/tags/pcb-%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/tags/pcb-%E8%AE%BE%E8%AE%A1/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>嵌入式系统</title>
+      <link>http://localhost:8487/zh/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>硬件</title>
+      <link>http://localhost:8487/zh/tags/%E7%A1%AC%E4%BB%B6/</link>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/tags/%E7%A1%AC%E4%BB%B6/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>3D 打印</title>
+      <link>http://localhost:8487/zh/tags/3d-%E6%89%93%E5%8D%B0/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/tags/3d-%E6%89%93%E5%8D%B0/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>BLE</title>
+      <link>http://localhost:8487/zh/tags/ble/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/tags/ble/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Altium</title>
+      <link>http://localhost:8487/zh/tags/altium/</link>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/tags/altium/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>YJSP</title>
+      <link>http://localhost:8487/zh/tags/yjsp/</link>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/tags/yjsp/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>航电</title>
+      <link>http://localhost:8487/zh/tags/%E8%88%AA%E7%94%B5/</link>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/tags/%E8%88%AA%E7%94%B5/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>火箭</title>
+      <link>http://localhost:8487/zh/tags/%E7%81%AB%E7%AE%AD/</link>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/tags/%E7%81%AB%E7%AE%AD/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Fusion 360</title>
+      <link>http://localhost:8487/zh/tags/fusion-360/</link>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/tags/fusion-360/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>黑客马拉松</title>
+      <link>http://localhost:8487/zh/tags/%E9%BB%91%E5%AE%A2%E9%A9%AC%E6%8B%89%E6%9D%BE/</link>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/tags/%E9%BB%91%E5%AE%A2%E9%A9%AC%E6%8B%89%E6%9D%BE/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>机器人</title>
+      <link>http://localhost:8487/zh/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/</link>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>机械设计</title>
+      <link>http://localhost:8487/zh/tags/%E6%9C%BA%E6%A2%B0%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/tags/%E6%9C%BA%E6%A2%B0%E8%AE%BE%E8%AE%A1/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>能量采集</title>
+      <link>http://localhost:8487/zh/tags/%E8%83%BD%E9%87%8F%E9%87%87%E9%9B%86/</link>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/tags/%E8%83%BD%E9%87%8F%E9%87%87%E9%9B%86/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>物联网</title>
+      <link>http://localhost:8487/zh/tags/%E7%89%A9%E8%81%94%E7%BD%91/</link>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/tags/%E7%89%A9%E8%81%94%E7%BD%91/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>ISEF</title>
+      <link>http://localhost:8487/zh/tags/isef/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/tags/isef/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>仿生设计</title>
+      <link>http://localhost:8487/zh/tags/%E4%BB%BF%E7%94%9F%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/tags/%E4%BB%BF%E7%94%9F%E8%AE%BE%E8%AE%A1/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>气动</title>
+      <link>http://localhost:8487/zh/tags/%E6%B0%94%E5%8A%A8/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/tags/%E6%B0%94%E5%8A%A8/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>软体机器人</title>
+      <link>http://localhost:8487/zh/tags/%E8%BD%AF%E4%BD%93%E6%9C%BA%E5%99%A8%E4%BA%BA/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/tags/%E8%BD%AF%E4%BD%93%E6%9C%BA%E5%99%A8%E4%BA%BA/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

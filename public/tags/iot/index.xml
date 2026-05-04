@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>IoT on Hongyi Lyu</title>
-    <link>http://localhost:13828/tags/iot/</link>
+    <link>http://localhost:8487/tags/iot/</link>
     <description>Recent content in IoT on Hongyi Lyu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>hlyu68@gatech.edu (Hongyi Lyu)</managingEditor>
     <webMaster>hlyu68@gatech.edu (Hongyi Lyu)</webMaster>
     <copyright>Hongyi Lyu</copyright>
-    <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:13828/tags/iot/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8487/tags/iot/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>μCHIMERA</title>
-      <link>http://localhost:13828/projects/uchimera/</link>
+      <link>http://localhost:8487/projects/uchimera/</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
       <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
-      <guid>http://localhost:13828/projects/uchimera/</guid>
-      <description>&lt;div class=&#34;lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl&#34;&gt;&#xA;  No chargers. No cables. No maintenance.&#xA;&lt;/div&gt;&#xA;&#xA;&lt;figure&gt;&lt;img&#xA;    class=&#34;my-0 rounded-md&#34;&#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    fetchpriority=&#34;auto&#34;&#xA;    alt=&#34;μCHIMERA system overview — thermal, solar, piezoelectric generators and energy storage module&#34;&#xA;    width=&#34;2880&#34;&#xA;    height=&#34;2160&#34;&#xA;    src=&#34;http://localhost:13828/projects/uchimera/system-overview_hu_854f71cc5dcccb46.jpg&#34;&#xA;    srcset=&#34;http://localhost:13828/projects/uchimera/system-overview_hu_854f71cc5dcccb46.jpg 800w, http://localhost:13828/projects/uchimera/system-overview_hu_7219f9aee7a40263.jpg 1280w&#34;&#xA;    sizes=&#34;(min-width: 768px) 50vw, 65vw&#34;&#xA;    data-zoom-src=&#34;http://localhost:13828/projects/uchimera/system-overview.jpg&#34;&gt;&lt;/figure&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;What is μCHIMERA?&#xA;    &lt;div id=&#34;what-is-μchimera&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#what-is-%ce%bcchimera&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;μCHIMERA&lt;/strong&gt; (micro Composite Harvesting Integrated Modular Energy Regeneration Array) turns ambient energy into a reliable power supply, so devices can stay on without charging, wires, or maintenance.&lt;/p&gt;</description>
+      <guid>http://localhost:8487/projects/uchimera/</guid>
+      <description>&lt;div class=&#34;lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl&#34;&gt;&#xA;  No chargers. No cables. No maintenance.&#xA;&lt;/div&gt;&#xA;&#xA;&lt;figure&gt;&lt;img&#xA;    class=&#34;my-0 rounded-md&#34;&#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    fetchpriority=&#34;auto&#34;&#xA;    alt=&#34;μCHIMERA system overview — thermal, solar, piezoelectric generators and energy storage module&#34;&#xA;    width=&#34;2880&#34;&#xA;    height=&#34;2160&#34;&#xA;    src=&#34;http://localhost:8487/projects/uchimera/system-overview_hu_854f71cc5dcccb46.jpg&#34;&#xA;    srcset=&#34;http://localhost:8487/projects/uchimera/system-overview_hu_854f71cc5dcccb46.jpg 800w, http://localhost:8487/projects/uchimera/system-overview_hu_7219f9aee7a40263.jpg 1280w&#34;&#xA;    sizes=&#34;(min-width: 768px) 50vw, 65vw&#34;&#xA;    data-zoom-src=&#34;http://localhost:8487/projects/uchimera/system-overview.jpg&#34;&gt;&lt;/figure&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;What is μCHIMERA?&#xA;    &lt;div id=&#34;what-is-μchimera&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#what-is-%ce%bcchimera&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;μCHIMERA&lt;/strong&gt; (micro Composite Harvesting Integrated Modular Energy Regeneration Array) turns ambient energy into a reliable power supply, so devices can stay on without charging, wires, or maintenance.&lt;/p&gt;</description>
       
     </item>
     

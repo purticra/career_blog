@@ -1,0 +1,66 @@
+# -- 主导航菜单 --
+
+[[main]]
+ identifier = "about"
+ name = "关于"
+ pageRef = "/about"
+ weight = 100
+
+[[main]]
+ identifier = "posts"
+ name = "文章"
+ pageref = "/posts"
+ weight = 200
+
+[[main]]
+ identifier = "projects"
+ name = "项目"
+ pageRef = "/projects"
+ weight = 300
+
+[[main]]
+ identifier = "career"
+ name = "经历"
+ pageRef = "/career"
+ weight = 400
+
+[[main]]
+ name = "简历"
+ pageRef = "resume"
+ weight = 500
+
+[[main]]
+ name = "仿生蛙机器人"
+ parent = "projects"
+ pageRef = "/projects/frog"
+ weight = -100
+
+[[main]]
+ name = "μCHIMERA 微功率发电模块"
+ parent = "projects"
+ pageRef = "/projects/uCHIMERA"
+ weight = -200
+
+[[main]]
+ name = "Tachy🪳Astroach：月际线"
+ parent = "projects"
+ pageRef = "/projects/tachyastroach"
+ weight = -300
+
+[[main]]
+ name = "媒体控制模块 [ECE1100]"
+ parent = "projects"
+ pageRef = "/projects/ece-1100-media-control"
+ weight = -400
+
+[[main]]
+ name = "YJSP 入职：快速测试系统"
+ parent = "projects"
+ pageRef = "/projects/yjsp-onboarding"
+ weight = -500
+
+[[subnavigation]]
+ identifier = "journal"
+ name = "◹"
+ url = "https://journal.purticra.icu"
+ weight = 20

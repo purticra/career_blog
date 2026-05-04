@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>黑客马拉松 on Hongyi的职业作品集</title>
+    <link>http://localhost:8487/zh/tags/%E9%BB%91%E5%AE%A2%E9%A9%AC%E6%8B%89%E6%9D%BE/</link>
+    <description>Recent content in 黑客马拉松 on Hongyi的职业作品集</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>hlyu68@gatech.edu (Hongyi Lyu)</managingEditor>
+    <webMaster>hlyu68@gatech.edu (Hongyi Lyu)</webMaster>
+    <copyright>Hongyi</copyright>
+    <lastBuildDate>Sun, 15 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:8487/zh/tags/%E9%BB%91%E5%AE%A2%E9%A9%AC%E6%8B%89%E6%9D%BE/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>TachyAstroach：36 小时，从原材料到第一名月球车</title>
+      <link>http://localhost:8487/zh/posts/technical-updates/tachyastroach-hackathon/</link>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/posts/technical-updates/tachyastroach-hackathon/</guid>
+      <description>&lt;p&gt;36 小时的冲刺。&lt;/p&gt;&#xA;&lt;p&gt;沉浸在 Tough 2000 树脂、姿态控制、ISO 螺栓和总线通信的世界里——我们将原材料变成了一辆外星漫游车。&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img&#xA;    class=&#34;my-0 rounded-md&#34;&#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    fetchpriority=&#34;auto&#34;&#xA;    alt=&#34;完整的 TachyAstroach 漫游车系统——母车、子单元及定制操纵杆控制器&#34;&#xA;    width=&#34;1280&#34;&#xA;    height=&#34;1707&#34;&#xA;    src=&#34;http://localhost:8487/posts/technical-updates/tachyastroach-hackathon/rover-overview_hu_7eee1fca7ab17251.jpg&#34;&#xA;    srcset=&#34;http://localhost:8487/posts/technical-updates/tachyastroach-hackathon/rover-overview_hu_7eee1fca7ab17251.jpg 800w, http://localhost:8487/posts/technical-updates/tachyastroach-hackathon/rover-overview.jpg 1280w&#34;&#xA;    sizes=&#34;(min-width: 768px) 50vw, 65vw&#34;&#xA;    data-zoom-src=&#34;http://localhost:8487/posts/technical-updates/tachyastroach-hackathon/rover-overview.jpg&#34;&gt;&lt;/figure&gt;&#xA;&lt;p&gt;GT IEEE Robotech 黑客马拉松或许不是规模最大的赛事，但它是我第一次真正投身于高强度黑客马拉松式的构建。尽管外面冻雨和大风肆虐，大家都到场了。我们的四人团队 TachyAstroach 正式开启任务。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;计划：&lt;/strong&gt; 构建一个母子漫游车系统——&amp;ldquo;母车&amp;quot;发射&amp;quot;子单元&amp;rdquo;，两者通过定制驱动和弹射机构进行无线协调。&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img&#xA;    class=&#34;my-0 rounded-md&#34;&#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    fetchpriority=&#34;auto&#34;&#xA;    alt=&#34;子单元机器人——基于 ESP32 的移动子单元，配备 nRF24L01&amp;#43; 无线通信、舵机转向和 IMU 遥测&#34;&#xA;    width=&#34;1154&#34;&#xA;    height=&#34;642&#34;&#xA;    src=&#34;http://localhost:8487/posts/technical-updates/tachyastroach-hackathon/kid-robot_hu_c7087c526476ea2e.jpg&#34;&#xA;    srcset=&#34;http://localhost:8487/posts/technical-updates/tachyastroach-hackathon/kid-robot_hu_c7087c526476ea2e.jpg 800w, http://localhost:8487/posts/technical-updates/tachyastroach-hackathon/kid-robot.jpg 1280w&#34;&#xA;    sizes=&#34;(min-width: 768px) 50vw, 65vw&#34;&#xA;    data-zoom-src=&#34;http://localhost:8487/posts/technical-updates/tachyastroach-hackathon/kid-robot.jpg&#34;&gt;&lt;/figure&gt;&#xA;&lt;p&gt;我主导了大部分 Fusion 360 机械设计工作，与负责电子、控制算法和通信接口的队友密切协作。（更多细节可查看我们的 &lt;a href=&#34;https://devpost.com&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;DevPost 页面&lt;/a&gt;。）&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Tachy🪳Astroach：月际线</title>
+      <link>http://localhost:8487/zh/projects/tachyastroach/</link>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+      <author>hlyu68@gatech.edu (Hongyi Lyu)</author>
+      <guid>http://localhost:8487/zh/projects/tachyastroach/</guid>
+      <description>&lt;div class=&#34;lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl&#34;&gt;&#xA;  在佐治亚理工学院 IEEE Robotech 黑客马拉松上，用 36 小时从原材料构建的外星探索母子漫游车系统。&#xA;&lt;/div&gt;&#xA;&#xA;&lt;a&#xA;  class=&#34;!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700&#34;&#xA;  href=&#34;https://devpost.com/software/moonline&#34;&#xA;  target=&#34;_blank&#34;&#xA;  &#xA;  role=&#34;button&#34;&gt;&#xA;  &#xA;在 Devpost 上查看&#xA;&#xA;&lt;/a&gt;&#xA;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;概述&#xA;    &lt;div id=&#34;概述&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%a6%82%e8%bf%b0&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;TachyAstroach：月际线是一套母子漫游车系统，主单元发射辅助子单元，两者通过定制驱动机构进行无线协调。项目在 &lt;strong&gt;GT IEEE Robotech 黑客马拉松&lt;/strong&gt; 36 小时高强度构建中完成，将原材料转变为可运行的外星漫游车原型。&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
