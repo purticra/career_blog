@@ -69,11 +69,11 @@
  pageRef = "/projects/yjsp-onboarding"
  weight = -500
 
-[[subnavigation]]
- identifier = "journal"
- name = "◹"
- url = "https://journal.purticra.icu"
- weight = 20
+# [[subnavigation]]
+ # identifier = "journal"
+ # name = "◹"
+ # url = "https://journal.purticra.icu"
+ # weight = 20
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
