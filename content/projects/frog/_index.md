@@ -12,6 +12,8 @@ tags: ["Robotics", "Soft Robotics", "Pneumatics", "ISEF", "Bionic Design"]
 Another Way to Swim: A Lightweight Bionic Frog Robot Based on Pneumatic System
 {{< /lead >}}
 
+{{< github repo="purticra/bionic-frog" >}}
+
 ![Bionic frog robot prototype — pneumatic soft-body limbs with control electronics](robot-photo.jpg)
 
 ## Overview
