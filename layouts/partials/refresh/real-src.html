@@ -1,0 +1,16 @@
+{{- /* The camera photo behind a page's AI render — front matter `photoReal`:
+         "file.jpg"                  a resource of the page's own bundle
+         "/section/page/file.jpg"    a resource of another page's bundle
+       Returns the image resource, or false. */ -}}
+{{- $p := . -}}
+{{- $img := false -}}
+{{- with $p.Params.photoReal -}}
+  {{- $ref := . -}}
+  {{- if strings.HasPrefix $ref "/" -}}
+    {{- with site.GetPage (path.Dir $ref) }}{{ with .Resources.Get (path.Base $ref) }}{{ $img = . }}{{ end }}{{ end -}}
+  {{- else -}}
+    {{- with $p.Resources.Get $ref }}{{ $img = . }}{{ end -}}
+  {{- end -}}
+  {{- if not $img }}{{ warnf "photoReal %q not found (%s)" $ref $p.Path }}{{ end -}}
+{{- end -}}
+{{- return $img -}}

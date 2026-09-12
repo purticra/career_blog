@@ -1,0 +1,7 @@
+{{- /* Renders the enclosed markdown — a list or run of paragraphs whose items start with a
+       **bold lead** — as a two-column hairline table (bold lead = key column).
+       The wrapped text itself is not changed. Usage: {{< rows >}} … {{< /rows >}} */ -}}
+{{- $html := .Inner | strings.TrimSpace | .Page.RenderString -}}
+{{- $html = replaceRE `(?s)<(?:li|p)>\s*<strong>(.*?)</strong>\s*(.*?)</(?:li|p)>` `<div class="rf-trow"><div class="rf-tkey">${1}</div><div class="rf-tval">${2}</div></div>` $html -}}
+{{- $html = replaceRE `</?(?:ul|ol)>` "" $html -}}
+<div class="rf-table">{{ $html | safeHTML }}</div>

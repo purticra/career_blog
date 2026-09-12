@@ -16,6 +16,9 @@ buildFuture = false
 
 enableEmoji = true
 
+# Count CJK characters as words so 中文 word counts / reading times are meaningful.
+hasCJKLanguage = true
+
 googleAnalytics = "G-M53WTKNFER"
 
 [pagination]

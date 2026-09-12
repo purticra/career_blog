@@ -1,0 +1,24 @@
+{{- /* Returns the project pages (the branch bundles under content/projects) of the current
+       language, newest first. Projects that share a date keep the order of the Projects
+       dropdown in config/_default/menus.*.toml, so numbering is identical in EN and 中文. */ -}}
+{{- $menuWeight := dict -}}
+{{- range site.Menus.main -}}
+  {{- range $entry := .Children -}}
+    {{- with $entry.Page -}}
+      {{- $menuWeight = merge $menuWeight (dict .RelPermalink $entry.Weight) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $keyed := slice -}}
+{{- with site.GetPage "/projects" -}}
+  {{- range .Pages -}}
+    {{- $w := int (index $menuWeight .RelPermalink | default 0) -}}
+    {{- $key := printf "%s-%07d" (.Date.Format "20060102") (sub 1000000 $w) -}}
+    {{- $keyed = $keyed | append (dict "key" $key "page" .) -}}
+  {{- end -}}
+{{- end -}}
+{{- $pages := slice -}}
+{{- range sort $keyed "key" "desc" -}}
+  {{- $pages = $pages | append .page -}}
+{{- end -}}
+{{- return $pages -}}

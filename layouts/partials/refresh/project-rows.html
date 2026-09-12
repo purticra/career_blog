@@ -1,0 +1,12 @@
+{{- /* Project index rows (homepage + Projects page). Context: ordered slice of project pages. */ -}}
+<div class="rf-rows">
+  {{- range $i, $p := . }}
+    <a class="rf-row" href="{{ $p.RelPermalink }}">
+      <span class="rf-row-no">{{ printf "%02d" (add $i 1) }}</span>
+      <span class="rf-row-date">{{ $p.Date.Format "2006.01" }}</span>
+      <span class="rf-row-title">{{ $p.Title | emojify }}</span>
+      <span class="rf-row-sum">{{ $p.Description }}</span>
+      <span class="rf-row-kind">{{ $p.Params.kindLabel }}</span>
+    </a>
+  {{- end }}
+</div>

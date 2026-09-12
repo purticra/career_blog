@@ -1,0 +1,30 @@
+{{- /* Responsive <img> for the aspect-ratio image contract:
+         assets/img/projects/<slug>-<ratio>.webp   (ratio: 3x1 | 5x4 | 16x9 | 3x2)
+       Params: slug, ratio, widths (slice of ints), sizes, alt, class, eager (bool);
+               or img (an image resource) instead of slug + ratio; position (object-position).
+       Renders nothing when the file does not exist. */ -}}
+{{- $ctx := . -}}
+{{- $img := .img -}}
+{{- if not $img }}{{ with .slug }}{{ $img = resources.Get (printf "img/projects/%s-%s.webp" . $ctx.ratio) }}{{ end }}{{ end -}}
+{{- with $img -}}
+  {{- $src := . -}}
+  {{- $set := slice -}}
+  {{- $first := "" -}}
+  {{- range $ctx.widths -}}
+    {{- $w := cond (gt . $src.Width) $src.Width . -}}
+    {{- $r := $src.Resize (printf "%dx webp q80" $w) -}}
+    {{- if not $first }}{{ $first = $r }}{{ end -}}
+    {{- $set = $set | append (printf "%s %dw" $r.RelPermalink $r.Width) -}}
+  {{- end -}}
+  <img
+    class="nozoom {{ $ctx.class }}"
+    src="{{ $first.RelPermalink }}"
+    srcset="{{ delimit (uniq $set) ", " }}"
+    sizes="{{ $ctx.sizes | default "100vw" }}"
+    width="{{ $first.Width }}"
+    height="{{ $first.Height }}"
+    alt="{{ $ctx.alt }}"
+    {{ with $ctx.position }}style="{{ printf "object-position: %s" . | safeCSS }}"{{ end }}
+    {{ if $ctx.eager }}fetchpriority="high"{{ else }}loading="lazy"{{ end }}
+    decoding="async">
+{{- end -}}

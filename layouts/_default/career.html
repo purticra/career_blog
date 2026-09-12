@@ -1,0 +1,35 @@
+{{/* Visual refresh — Career (2a). Selected with `layout: "career"` in content/career*.md.
+     The timeline shortcodes render the year groups; this template adds the page header and
+     the category filter (wired client-side in assets/js/refresh.js). Header figures are read
+     from the raw markdown so they never depend on shortcode render order. */}}
+{{ define "main" }}
+  {{ $raw := .RawContent }}
+  {{ $count := len (findRE `\{\{<\s*timelineItem\s` $raw) }}
+  {{ $years := slice }}
+  {{ range findRE `badge="[^"]*"` $raw }}
+    {{ range findRE `\d{4}` . }}{{ $years = $years | append (int .) }}{{ end }}
+  {{ end }}
+  {{ $years = sort $years }}
+
+  {{ partial "refresh/pagehead.html" (dict
+      "label" (partial "refresh/t.html" "career")
+      "title" .Title
+      "meta" (slice
+        (printf "%02d %s" $count (partial "refresh/t.html" (cond (eq $count 1) "entry" "entries")))
+        (printf "%v — %s" (index $years 0 | default "") (partial "refresh/t.html" "present"))
+        (printf "%s %s" (partial "refresh/t.html" "updated") (.Lastmod.Format "2006.01.02")))) }}
+
+  <div class="rf-filter" data-rf-filter>
+    <div class="rf-filter-label">{{ partial "refresh/t.html" "filter" }}</div>
+    <div class="rf-filter-chips" role="group" aria-label="{{ partial "refresh/t.html" "filter" }}">
+      <button type="button" class="rf-chip is-selected" data-cat="all" aria-pressed="true">{{ partial "refresh/t.html" "all" }} {{ printf "%02d" $count }}</button>
+      {{ range slice "research" "teams" "competition" "industry" "education" "personal" }}
+        <button type="button" class="rf-chip rf-cat-{{ . }}" data-cat="{{ . }}" aria-pressed="false">
+          <span class="rf-swatch" aria-hidden="true"></span>{{ partial "refresh/t.html" (printf "cat_%s" .) }}
+        </button>
+      {{ end }}
+    </div>
+  </div>
+
+  {{ .Content }}
+{{ end }}

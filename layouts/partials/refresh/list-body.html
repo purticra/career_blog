@@ -1,0 +1,28 @@
+{{- /* Shared list body (sections and taxonomy terms): page header, optional intro, then
+       posts grouped by year in a 200px year rail + rows grid. Params: page, label. */ -}}
+{{- $p := .page -}}
+{{- $pages := $p.Pages -}}
+{{- $years := slice -}}
+{{- range $pages }}{{ $years = $years | append .Date.Year }}{{ end -}}
+{{- $years = sort $years -}}
+{{- $meta := slice (printf "%02d %s" (len $pages) (partial "refresh/t.html" "items")) -}}
+{{- with $years }}{{ $meta = $meta | append (printf "%v — %v" (index . 0) (index . (sub (len .) 1))) }}{{ end -}}
+
+{{ partial "refresh/pagehead.html" (dict "label" .label "title" ($p.Title | emojify) "meta" $meta) }}
+
+{{ with $p.Content }}
+  <div class="rf-listintro rf-prose">{{ . }}</div>
+{{ end }}
+
+{{ if $pages }}
+  {{ $paginator := $p.Paginate ($pages.GroupByDate "2006") }}
+  {{ range $paginator.PageGroups }}
+    <section class="rf-yearlist">
+      <div class="rf-yearlist-rail"><div class="rf-year-num rf-year-num--sm">{{ .Key }}</div></div>
+      <div class="rf-yearlist-items">{{ partial "refresh/post-rows.html" .Pages }}</div>
+    </section>
+  {{ end }}
+  {{ partial "pagination.html" $p }}
+{{ else }}
+  <p class="rf-empty">{{ i18n "list.no_articles" | emojify }}</p>
+{{ end }}

@@ -1,0 +1,12 @@
+{{- /* Three-cell page header: mono label | H1 (+ optional deck) | mono meta lines.
+       Params: label, title, deck (HTML), meta (slice of HTML strings), class. */ -}}
+<div class="rf-pagehead {{ .class }}">
+  <div class="rf-pagehead-label">{{ .label }}</div>
+  <div class="rf-pagehead-main">
+    <h1 class="rf-h1">{{ .title }}</h1>
+    {{ with .deck }}<div class="rf-deck">{{ . }}</div>{{ end }}
+  </div>
+  <div class="rf-pagehead-meta">
+    {{ range .meta }}<div>{{ . }}</div>{{ end }}
+  </div>
+</div>

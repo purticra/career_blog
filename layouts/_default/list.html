@@ -1,0 +1,5 @@
+{{/* Visual refresh — section lists (Posts). Projects has its own layouts/projects/list.html. */}}
+{{ define "main" }}
+  {{ $label := cond (eq .Section "posts") (partial "refresh/t.html" "posts") (partial "refresh/upper.html" .Title) }}
+  {{ partial "refresh/list-body.html" (dict "page" . "label" $label) }}
+{{ end }}

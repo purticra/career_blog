@@ -11,6 +11,9 @@ autoSwitchAppearance = true
 
 enableA11y = false
 enableSearch = true
+# Visual refresh: the EN | 中文 switch in the header and mobile menu. Temporarily off —
+# the Chinese pages are still built (/zh/...), just not linked. Set true to restore.
+showLanguageSwitcher = false
 enableCodeCopy = false
 enableStructuredBreadcrumbs = true
 enableStyledScrollbar = true # disable to use native scrollbar style (defaults to true)
@@ -51,7 +54,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showScrollToTop = true
 
 [homepage]
-  layout = "card" # valid options: page, profile, hero, card, background, custom
+  layout = "custom" # valid options: page, profile, hero, card, background, custom — "custom" = layouts/partials/home/custom.html (visual refresh); set back to "card" to revert
   homepageImage = "img/homepage.jpg" # used in: hero, and card
   showRecent = true
   showRecentItems = 8

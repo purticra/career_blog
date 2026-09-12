@@ -1,0 +1,65 @@
+{{/* Visual refresh header (1b): 56px bar of full-height cells separated by hairlines.
+     Active item is a filled accent cell. Projects keeps its dropdown of project pages.
+     Search / appearance buttons keep Blowfish's element ids so its scripts still bind. */}}
+{{ $page := . }}
+<header class="rf-header">
+  <a class="rf-logo" href="{{ "" | relLangURL }}">
+    <span aria-hidden="true">{{ site.Params.wordmark | default "H. LYU" }}</span>
+    <span class="sr-only">{{ site.Title }}</span>
+  </a>
+
+  <nav class="rf-nav" aria-label="Main">
+    {{ range site.Menus.main }}
+      {{ $active := or ($page.IsMenuCurrent "main" .) ($page.HasMenuCurrent "main" .) }}
+      {{ $external := or (strings.HasPrefix .URL "http:") (strings.HasPrefix .URL "https:") }}
+      {{ if .HasChildren }}
+        <div class="rf-nav-item rf-has-sub{{ if $active }} is-active{{ end }}">
+          <a class="rf-nav-link" href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name | markdownify }}</a>
+          <div class="rf-sub">
+            {{ range .Children }}
+              <a href="{{ .URL }}"{{ if $page.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name | markdownify }}</a>
+            {{ end }}
+          </div>
+        </div>
+      {{ else }}
+        <a class="rf-nav-link{{ if $active }} is-active{{ end }}" href="{{ .URL }}"
+          {{- if $active }} aria-current="page"{{ end }}
+          {{- if $external }} target="_blank" rel="noopener"{{ end }}>{{ .Name | markdownify }}</a>
+      {{ end }}
+    {{ end }}
+  </nav>
+
+  <div class="rf-tools">
+    {{ if and hugo.IsMultilingual (site.Params.showLanguageSwitcher | default true) }}
+      <div class="rf-lang">
+        {{ range $i, $lang := site.Languages }}
+          {{ if $i }}<span class="rf-lang-sep" aria-hidden="true">|</span>{{ end }}
+          {{ if eq $lang.Lang $page.Language.Lang }}
+            <span class="rf-lang-current" aria-current="true">{{ $lang.Params.displayName | default $lang.Lang }}</span>
+          {{ else }}
+            {{ $target := index (where $page.AllTranslations "Lang" $lang.Lang) 0 }}
+            {{ if not $target }}{{ $target = index (where site.Home.AllTranslations "Lang" $lang.Lang) 0 }}{{ end }}
+            {{ with $target }}
+              <a href="{{ .RelPermalink }}" hreflang="{{ $lang.Lang }}" lang="{{ $lang.Lang }}">{{ $lang.Params.displayName | default $lang.Lang }}</a>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      </div>
+    {{ end }}
+    {{ if site.Params.enableSearch | default false }}
+      <button id="search-button" class="rf-tool" type="button" aria-label="Search" title="{{ i18n "search.open_button_title" }}">
+        {{ partial "icon.html" "search" }}
+      </button>
+    {{ end }}
+    {{ if site.Params.footer.showAppearanceSwitcher | default false }}
+      <button id="appearance-switcher" class="rf-tool" type="button" aria-label="Dark mode switcher">
+        <span class="flex dark:hidden">{{ partial "icon.html" "moon" }}</span>
+        <span class="hidden dark:flex">{{ partial "icon.html" "sun" }}</span>
+      </button>
+    {{ end }}
+  </div>
+
+  <div class="rf-mobile">
+    {{ partial "header/components/mobile-menu.html" . }}
+  </div>
+</header>

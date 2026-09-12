@@ -1,0 +1,100 @@
+{{/* Visual refresh homepage (1b "dense & gridded").
+     Hero copy comes from content/_index*.md: front matter `hero` (eyebrow, headline, stats,
+     imageAlt, imagePosition) and `buttons`; the markdown body is the existing welcome text.
+     The hero photo is `hero.image` (an assets/ path) or params.toml homepage.homepageImage. */}}
+{{ $projects := partial "refresh/projects.html" . }}
+{{ $hero := .Params.hero | default dict }}
+{{ $heroImg := false }}
+{{ with $hero.image | default site.Params.homepage.homepageImage }}{{ $heroImg = resources.Get . }}{{ end }}
+
+<section class="rf-hero">
+  <div class="rf-hero-text">
+    {{ with $hero.eyebrow }}<div class="rf-eyebrow">{{ . }}</div>{{ end }}
+    <h1 class="rf-hero-h1">{{ with $hero.headline }}{{ . | safeHTML }}{{ else }}{{ site.Title }}{{ end }}</h1>
+    <div class="rf-hero-intro">{{ .Content }}</div>
+
+    {{ with $hero.stats }}
+      <div class="rf-stats">
+        {{ range . }}
+          {{ $value := .value }}
+          {{ if eq $value "auto" }}{{ $value = printf "%02d" (len $projects) }}{{ end }}
+          <div class="rf-stat">
+            <div class="rf-key">{{ .key }}</div>
+            {{ if .note }}
+              <div class="rf-stat-now">{{ $value }}<br><span>{{ .note }}</span></div>
+            {{ else }}
+              <div class="rf-stat-value">{{ $value }}</div>
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+
+    {{ with .Params.buttons }}
+      <div class="rf-btnbar">
+        {{ range . }}
+          {{ $external := or (strings.HasPrefix .url "http:") (strings.HasPrefix .url "https:") }}
+          <a href="{{ if strings.HasPrefix .url "/" }}{{ .url | relLangURL }}{{ else }}{{ .url }}{{ end }}"
+            {{- if $external }} target="_blank" rel="noopener"{{ end }}>{{ .label }}</a>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+
+  <div class="rf-hero-media">
+    {{ with $heroImg }}
+      {{ partial "refresh/photo.html" (dict "img" . "widths" (slice 640 960 1280 1920) "sizes" "(min-width: 1100px) 860px, 100vw" "alt" ($hero.imageAlt | default site.Title) "position" $hero.imagePosition "class" "rf-cover" "eager" true) }}
+    {{ else }}
+      <div class="rf-pending"><span>{{ partial "refresh/t.html" "photo_pending" }}</span></div>
+    {{ end }}
+  </div>
+</section>
+
+<section class="rf-index" aria-labelledby="rf-project-index">
+  <div class="rf-index-head">
+    <h2 id="rf-project-index" class="rf-label rf-label--ink">{{ partial "refresh/t.html" "project_index" }}</h2>
+    <span class="rf-meta">{{ printf "%02d" (len $projects) }} {{ partial "refresh/t.html" "items" }}</span>
+  </div>
+  {{ partial "refresh/project-rows.html" $projects }}
+</section>
+
+{{ $thumbs := where $projects "Params.featured" true }}
+{{ with $thumbs }}
+  <section class="rf-thumbs">
+    {{ range . }}
+      {{ $real := partial "refresh/real-src.html" . }}
+      <a class="rf-thumb" href="{{ .RelPermalink }}">
+        <div class="rf-thumb-media{{ if $real }} rf-swap{{ end }}">
+          {{ with .Params.photo }}
+            {{ partial "refresh/photo.html" (dict "slug" . "ratio" "16x9" "widths" (slice 400 800) "sizes" "(min-width: 768px) 20vw, 50vw" "alt" "" "class" "rf-cover rf-thumb-img") }}
+            {{ with $real }}{{ partial "refresh/real.html" (dict "img" . "ratio" "16x9" "widths" (slice 400 800) "sizes" "(min-width: 768px) 20vw, 50vw") }}{{ end }}
+            {{ partial "refresh/chip.html" (dict "real" $real) }}
+          {{ else }}
+            <div class="rf-pending"><span>{{ partial "refresh/t.html" "photo_pending" }}</span></div>
+          {{ end }}
+        </div>
+        <div class="rf-thumb-text">
+          <div class="rf-thumb-title">{{ .Title | emojify }}</div>
+          <div class="rf-thumb-meta">{{ .Date.Format "2006" }}{{ with .Params.field }} · {{ . }}{{ end }}</div>
+        </div>
+      </a>
+    {{ end }}
+  </section>
+{{ end }}
+
+{{ if site.Params.homepage.showRecent | default false }}
+  {{ $posts := where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{ with first (site.Params.homepage.showRecentItems | default 5) $posts }}
+    <section class="rf-recent">
+      <div class="rf-recent-label">
+        <h2 class="rf-label rf-label--ink">{{ partial "refresh/t.html" "recent" }}</h2>
+        {{ if site.Params.homepage.showMoreLink | default false }}
+          <a class="rf-link" href="{{ site.Params.homepage.showMoreLinkDest | default "/posts/" | relLangURL }}">{{ partial "refresh/t.html" "all_posts" }}</a>
+        {{ end }}
+      </div>
+      <div class="rf-recent-list">
+        {{ partial "refresh/post-rows.html" . }}
+      </div>
+    </section>
+  {{ end }}
+{{ end }}

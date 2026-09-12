@@ -1,0 +1,3 @@
+{{- /* Upper-cases a title for mono labels without turning μ/µ into a capital Mu
+       ("μCHIMERA" must not become "ΜCHIMERA"). */ -}}
+{{- return replace (upper .) "Μ" "μ" -}}

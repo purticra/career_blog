@@ -1,0 +1,30 @@
+{{- /* Visual refresh override of Blowfish's timeline: year groups with a sticky year rail.
+       Entries keep their order from the markdown inside each year. */ -}}
+{{- $noop := .Inner -}}
+{{- $items := .Store.Get "items" | default slice -}}
+{{- $years := slice -}}
+{{- range $items -}}
+  {{- if not (in $years .year) }}{{ $years = $years | append .year }}{{ end -}}
+{{- end -}}
+<div class="rf-career" data-rf-career>
+  {{- range $y := sort $years "value" "desc" }}
+    {{- $group := where $items "year" $y }}
+    {{- $last := $y }}
+    {{- range $group }}{{ if gt .last $last }}{{ $last = .last }}{{ end }}{{ end }}
+    {{- $count := len $group }}
+    <section class="rf-year" data-rf-year>
+      <div class="rf-year-rail">
+        <div class="rf-year-sticky">
+          <div class="rf-year-num">{{ $y }}</div>
+          <div class="rf-year-count">
+            {{- printf "%02d" $count }} {{ partial "refresh/t.html" (cond (eq $count 1) "entry" "entries") }}
+            {{- if gt $last $y }} · {{ partial "refresh/t.html" "through" }} {{ $last }}{{ end -}}
+          </div>
+        </div>
+      </div>
+      <div class="rf-year-items">
+        {{- range $group }}{{ .html }}{{ end }}
+      </div>
+    </section>
+  {{- end }}
+</div>

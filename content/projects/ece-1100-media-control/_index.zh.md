@@ -6,6 +6,23 @@ description: "作为 ECE 1100 课程的一部分设计并构建的硬件媒体�
 showTableOfContents: true
 showBreadcrumbs: true
 tags: ["ECE", "硬件", "嵌入式系统", "BLE", "3D 打印"]
+# 视觉改版（见 layouts/projects/list.html）
+photo: "media-module"
+photoReal: "product_photo.jpg"
+photoRealCaption: "完成品媒体控制模块"
+featured: true
+kindLabel: "课程项目"
+field: "嵌入式"
+status: "已开源"
+fig1: "三键媒体控制器：上一曲、播放 / 暂停、下一曲"
+fig2: "手写标注的按键近景"
+specs:
+  - { k: "角色", v: "个人项目" }
+  - { k: "周期", v: "2026年3月 – 4月" }
+  - { k: "背景", v: "ECE 1100 探索项目" }
+  - { k: "工具", v: "ESP32、Fusion 360、3D 打印" }
+  - { k: "状态", v: "已开源" }
+cta: { label: "GitHub 源码", url: "https://github.com/purticra/ESPKeyboard" }
 ---
 
 {{< lead >}}
@@ -19,6 +36,8 @@ tags: ["ECE", "硬件", "嵌入式系统", "BLE", "3D 打印"]
 佐治亚理工学院以其密集的职业导向课程著称，跟上学院的节奏需要切实的适应。对于电子工程系的大一新生，**ECE 1100** 就是这个入口：这门课程旨在通过引导校园探索和早期职业规划，帮助新生顺利过渡。
 
 本页面记录了其中一项探索任务——**探索项目**。
+
+{{< plate >}}
 
 ## 项目路线图
 

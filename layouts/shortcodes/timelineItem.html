@@ -1,0 +1,29 @@
+{{- /* Visual refresh override of Blowfish's timelineItem (used by content/career*.md).
+       Params: header, badge, subheader (as before), plus
+         cat   research | teams | competition | industry | education | personal
+         link  path of a related page, e.g. "/projects/frog/" (a /zh/ prefix is accepted)
+       The entry is rendered here but emitted by the parent {{< timeline >}}, which groups
+       entries by the first year found in `badge`. `icon` is accepted and ignored. */ -}}
+{{- $badge := .Get "badge" | default "" -}}
+{{- $cat := .Get "cat" | default "personal" -}}
+{{- $years := findRE `\d{4}` $badge -}}
+{{- $year := 0 -}}
+{{- $last := 0 -}}
+{{- range $years -}}
+  {{- $y := int . -}}
+  {{- if not $year }}{{ $year = $y }}{{ end -}}
+  {{- if gt $y $last }}{{ $last = $y }}{{ end -}}
+{{- end -}}
+{{- $target := false -}}
+{{- with .Get "link" -}}
+  {{- $target = site.GetPage (strings.TrimSuffix "/" (replaceRE `^/zh/` "/" .)) -}}
+{{- end -}}
+{{- $html := partial "refresh/career-entry.html" (dict
+    "header" (.Get "header")
+    "badge" $badge
+    "sub" (.Get "subheader")
+    "cat" $cat
+    "body" (.Inner | strings.TrimSpace | .Page.RenderString)
+    "target" $target) -}}
+{{- $items := .Parent.Store.Get "items" | default slice -}}
+{{- .Parent.Store.Set "items" ($items | append (dict "year" $year "last" $last "cat" $cat "html" $html)) -}}

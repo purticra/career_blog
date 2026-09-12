@@ -1,0 +1,10 @@
+{{- /* Post rows: date and title on one baseline, summary below. Context: slice of pages. */ -}}
+{{- range . }}
+  <article class="rf-post">
+    <div class="rf-post-head">
+      <span class="rf-post-date">{{ .Date.Format "2006.01.02" }}</span>
+      <a class="rf-post-title" href="{{ .RelPermalink }}">{{ .Title | emojify }}</a>
+    </div>
+    {{ with .Description | default .Summary }}<p class="rf-post-sum">{{ . | plainify }}</p>{{ end }}
+  </article>
+{{- end }}

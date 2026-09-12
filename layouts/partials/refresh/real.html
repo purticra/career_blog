@@ -1,0 +1,38 @@
+{{- /* A camera photo layered over an AI render; refresh.css fades it in while the enclosing
+       .rf-swap is hovered. Params:
+         img     image resource (see refresh/real-src.html)
+         ratio   shape of the slot it sits in: "3x1", "16x9", "3x2", "3x4", …
+         widths  slot widths to build for (ints), sizes  the slot's sizes attribute
+         fit     "cover" | "contain" (default: cover when the photo is close to the slot's
+                 shape, otherwise contain — shown whole on the paper ground)
+         pclass  class for the <picture> (default "rf-real", the absolutely placed layer)
+       Each file is sized for the slot width it serves, so the srcset `w` descriptors name that
+       slot width. Touch screens (no hover) get a 1px placeholder instead of the download. */ -}}
+{{- $ctx := . -}}
+{{- with .img -}}
+  {{- $src := . -}}
+  {{- $r := split $ctx.ratio "x" -}}
+  {{- $target := div (float (index $r 0)) (float (index $r 1)) -}}
+  {{- $m := div (div (float $src.Width) (float $src.Height)) $target -}}
+  {{- $contain := or (lt $m 0.74) (gt $m 1.35) -}}
+  {{- with $ctx.fit }}{{ $contain = eq . "contain" }}{{ end -}}
+  {{- /* displayed width ÷ slot width */ -}}
+  {{- $k := cond $contain (math.Min $m 1.0) (math.Max $m 1.0) -}}
+  {{- $set := slice -}}
+  {{- $seen := slice -}}
+  {{- $first := false -}}
+  {{- range $ctx.widths -}}
+    {{- $w := int (math.Min (math.Round (mul (float .) $k)) (float $src.Width)) -}}
+    {{- $f := $src.Resize (printf "%dx webp q80" $w) -}}
+    {{- if not $first }}{{ $first = $f }}{{ end -}}
+    {{- if not (in $seen $f.RelPermalink) -}}
+      {{- $seen = $seen | append $f.RelPermalink -}}
+      {{- $set = $set | append (printf "%s %dw" $f.RelPermalink .) -}}
+    {{- end -}}
+  {{- end -}}
+  <picture class="{{ $ctx.pclass | default "rf-real" }}{{ if $contain }} rf-real--contain{{ end }}" aria-hidden="true">
+    <source media="(hover: none)" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+    <img class="nozoom" src="{{ $first.RelPermalink }}" srcset="{{ delimit $set ", " }}" sizes="{{ $ctx.sizes | default "100vw" }}"
+      width="{{ $first.Width }}" height="{{ $first.Height }}" alt="" loading="lazy" decoding="async">
+  </picture>
+{{- end -}}

@@ -6,6 +6,22 @@ description: "Micro Composite Harvesting Integrated Modular Energy Regeneration 
 showTableOfContents: true
 showBreadcrumbs: true
 tags: ["Energy Harvesting", "PCB Design", "IoT", "Hardware"]
+# Visual refresh (see layouts/projects/list.html)
+photo: "uchimera"
+photoReal: "pcb-boards.jpg"
+photoRealCaption: "μCHIMERA PCB family — motherboard, daughter boards, and development modules"
+featured: true
+kindLabel: "ENERGY"
+field: "Energy harvesting"
+status: "INVENTURE PRIZE 2026"
+fig1: "Stackable harvester modules and control PCBs"
+fig2: "Harvester modules with solar and thermal tops"
+specs:
+  - { k: "ROLE", v: "PZT module and overall mechanical design" }
+  - { k: "EVENT", v: "Inventure Prize 2026" }
+  - { k: "SOURCES", v: "Thermal, solar, piezoelectric" }
+  - { k: "STORAGE", v: "Up to 4 stackable channels" }
+  - { k: "PCB DESIGN", v: "Peijie Liu" }
 ---
 
 {{< lead >}}
@@ -19,6 +35,8 @@ No chargers. No cables. No maintenance.
 **μCHIMERA** (micro Composite Harvesting Integrated Modular Energy Regeneration Array) turns ambient energy into a reliable power supply, so devices can stay on without charging, wires, or maintenance.
 
 Every "always-on" device has the same hidden failure point: not the sensor, not the chip — but the energy supply. The structural inefficiencies of charging infrastructure for industrial systems, wearables, and medical implants cause downtime and safety risks. μCHIMERA eliminates that dependency entirely.
+
+{{< plate >}}
 
 ## The Problem
 
