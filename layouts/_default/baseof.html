@@ -1,0 +1,42 @@
+<!doctype html>
+{{/* Override of themes/blowfish/layouts/_default/baseof.html for the visual refresh.
+     `data-refresh` scopes every rule in assets/css/refresh.css — delete the attribute to fall
+     back to Blowfish's own styling. The body keeps Blowfish's ids and scripts; only the layout
+     classes are replaced by the 1280px hairline page frame. */}}
+<html
+  lang="{{ with site.Params.isoCode | default (site.LanguageCode | default `en`) }}{{- . -}}{{ end }}"
+  dir="{{ cond (site.Params.rtl | default false) `rtl` `ltr` }}"
+  class="scroll-smooth"
+  data-refresh
+  data-default-appearance="{{ site.Params.defaultAppearance | default `light` }}"
+  data-auto-appearance="{{ site.Params.autoSwitchAppearance | default `true` }}">
+  {{- partial "head.html" . -}}
+  {{- partialCached "init.html" . -}}
+
+  <body class="rf-body {{ if site.Params.enableStyledScrollbar | default true }}bf-scrollbar{{ end }}">
+    <div id="the-top" class="absolute flex self-center">
+      <a class="rf-skip" href="#main-content">
+        <span class="pe-2">&darr;</span>
+        {{ i18n "nav.skip_to_main" }}
+      </a>
+    </div>
+    <div class="rf-frame">
+      {{ $header := print "header/" site.Params.header.layout ".html" }}
+      {{ if templates.Exists ( printf "partials/%s" $header ) }}
+        {{ partial $header . }}
+      {{ else }}
+        {{ partial "header/basic.html" . }}
+      {{ end }}
+      <main id="main-content" class="rf-main">
+        {{ block "main" . }}{{ end }}
+        {{ if and (site.Params.footer.showScrollToTop | default true) }}
+          {{- partial "scroll-to-top.html" . -}}
+        {{ end }}
+      </main>
+      {{- partial "footer.html" . -}}
+    </div>
+    {{ if site.Params.enableSearch | default false }}
+      {{- partial "search.html" . -}}
+    {{ end }}
+  </body>
+</html>

@@ -1,0 +1,159 @@
+{{/* Visual refresh — regular pages.
+     `layout: "page"` (content/about*.md) renders the 1b About template; everything else
+     (posts) renders the detail pattern without a spec table. */}}
+{{ define "main" }}
+  {{ if eq .Layout "page" }}
+    {{ template "rf-about" . }}
+  {{ else }}
+    {{ template "rf-article" . }}
+  {{ end }}
+{{ end }}
+
+{{ define "rf-about" }}
+  {{ partial "refresh/pagehead.html" (dict
+      "class" "rf-pagehead--about"
+      "label" (partial "refresh/t.html" "about")
+      "title" (.Title | emojify)
+      "meta" (slice
+        (.Date.Format "2006.01.02")
+        (printf "%d %s · %d %s" .WordCount (partial "refresh/t.html" "words") .ReadingTime (partial "refresh/t.html" "min")))) }}
+
+  <div class="rf-about">
+    <nav class="rf-secnav" aria-label="{{ partial "refresh/t.html" "contents" }}">
+      <div class="rf-secnav-inner" data-rf-toc>{{ .TableOfContents | emojify }}</div>
+    </nav>
+    <div class="rf-about-body">
+      <div class="rf-prose rf-prose--about">{{ .Content }}</div>
+      {{ if .Params.showAuthor | default (site.Params.article.showAuthor | default true) }}
+        <div class="rf-after">{{ partial "author.html" . }}</div>
+      {{ end }}
+    </div>
+    <aside class="rf-rail rf-rail--about">
+      <div class="rf-rail-inner">
+        {{ with site.Params.Author.links }}
+          <div class="rf-rail-label">{{ partial "refresh/t.html" "contact" }}</div>
+          <div class="rf-contact">
+            {{ range . }}
+              {{ range $name, $url := . }}
+                {{ $external := strings.HasPrefix $url "http" }}
+                <a href="{{ $url }}"{{ if $external }} target="_blank" rel="noopener me"{{ end }}>
+                  {{- replaceRE `^(mailto:|https?://(www\.)?)` "" $url -}}
+                </a>
+              {{ end }}
+            {{ end }}
+          </div>
+        {{ end }}
+        {{ with .Params.lookingFor }}
+          <div class="rf-rail-label">{{ partial "refresh/t.html" "looking_for" }}</div>
+          <p class="rf-rail-note">{{ . }}</p>
+        {{ end }}
+      </div>
+    </aside>
+  </div>
+{{ end }}
+
+{{ define "rf-article" }}
+  {{ $p := . }}
+  <nav class="rf-crumbs" aria-label="Breadcrumb">
+    <a href="{{ site.Home.RelPermalink }}">{{ partial "refresh/t.html" "home" }}</a>
+    {{ with .Parent }}
+      {{ if not .IsHome }}
+        <span aria-hidden="true">/</span>
+        <a href="{{ .RelPermalink }}">{{ partial "refresh/upper.html" .Title }}</a>
+      {{ end }}
+    {{ end }}
+    <span aria-hidden="true">/</span>
+    <span class="rf-crumbs-current" aria-current="page">{{ partial "refresh/upper.html" .Title }}</span>
+  </nav>
+
+  <div class="rf-titleblock">
+    <div class="rf-titleblock-label">{{ partial "refresh/t.html" "post" }}</div>
+    <div class="rf-titleblock-main">
+      <h1 class="rf-h1 rf-h1--detail">{{ .Title | emojify }}</h1>
+      {{ with .Description }}<div class="rf-deck rf-deck--detail">{{ . }}</div>{{ end }}
+    </div>
+    <div class="rf-titleblock-meta">
+      <div>{{ .Date.Format "2006.01.02" }}</div>
+      {{ if .Params.showReadingTime | default (site.Params.article.showReadingTime | default true) }}
+        <div>{{ .ReadingTime }} {{ partial "refresh/t.html" "min" }}</div>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="rf-detail">
+    <aside class="rf-specs">
+      {{ with .GetTerms "series" }}
+        <div class="rf-spec">
+          <div class="rf-key">{{ partial "refresh/t.html" "series" }}</div>
+          <div class="rf-spec-value">{{ range . }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a> {{ end }}</div>
+        </div>
+      {{ end }}
+      {{ if .Params.showWordCount | default (site.Params.article.showWordCount | default false) }}
+        <div class="rf-spec">
+          <div class="rf-key">{{ partial "refresh/t.html" "words" }}</div>
+          <div class="rf-spec-value">{{ .WordCount }}</div>
+        </div>
+      {{ end }}
+      <div class="rf-spec">
+        <div class="rf-key">{{ partial "refresh/t.html" "date" }}</div>
+        <div class="rf-spec-value">{{ partial "functions/date.html" .Date }}</div>
+      </div>
+    </aside>
+
+    <div class="rf-detail-body">
+      <div class="rf-prose rf-prose--detail">
+        {{ .Content }}
+      </div>
+      <div class="rf-after">
+        {{ partial "sharing-links.html" . }}
+        {{ if .Params.showAuthor | default (site.Params.article.showAuthor | default true) }}
+          {{ partial "author.html" . }}
+        {{ end }}
+        {{ partial "series/series-closed.html" . }}
+        {{ if .Params.showRelatedContent | default (site.Params.article.showRelatedContent | default false) }}
+          {{ with site.RegularPages.Related . | first (site.Params.article.relatedContentLimit | default 3) }}
+            <div class="rf-related">
+              <h2 class="rf-label">{{ i18n "article.related_articles" | emojify }}</h2>
+              {{ partial "refresh/post-rows.html" . }}
+            </div>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+
+    <aside class="rf-rail">
+      <div class="rf-rail-inner">
+        {{ partial "refresh/rail.html" . }}
+      </div>
+    </aside>
+  </div>
+
+  {{ $siblings := slice }}
+  {{ with .CurrentSection }}{{ $siblings = .RegularPagesRecursive }}{{ end }}
+  {{ $idx := -1 }}
+  {{ range $i, $x := $siblings }}{{ if eq $x.RelPermalink $p.RelPermalink }}{{ $idx = $i }}{{ end }}{{ end }}
+  {{ if and (ge $idx 0) (gt (len $siblings) 1) }}
+    {{ $prev := false }}
+    {{ $next := false }}
+    {{ if gt $idx 0 }}{{ $prev = index $siblings (sub $idx 1) }}{{ end }}
+    {{ if lt (add $idx 1) (len $siblings) }}{{ $next = index $siblings (add $idx 1) }}{{ end }}
+    <nav class="rf-prevnext">
+      {{ with $prev }}
+        <a class="rf-pn rf-pn--prev" href="{{ .RelPermalink }}">
+          <div class="rf-pn-kicker">← {{ partial "refresh/t.html" "prev" }}</div>
+          <div class="rf-pn-title">{{ .Title | emojify }}</div>
+        </a>
+      {{ else }}
+        <span class="rf-pn rf-pn--prev rf-pn--empty"></span>
+      {{ end }}
+      {{ with $next }}
+        <a class="rf-pn rf-pn--next" href="{{ .RelPermalink }}">
+          <div class="rf-pn-kicker">{{ partial "refresh/t.html" "next" }} →</div>
+          <div class="rf-pn-title">{{ .Title | emojify }}</div>
+        </a>
+      {{ else }}
+        <span class="rf-pn rf-pn--next rf-pn--empty"></span>
+      {{ end }}
+    </nav>
+  {{ end }}
+{{ end }}

@@ -6,6 +6,24 @@ description: "A lightweight bionic frog robot based on pneumatic soft-body actua
 showTableOfContents: true
 showBreadcrumbs: true
 tags: ["Robotics", "Soft Robotics", "Pneumatics", "ISEF", "Bionic Design"]
+# Visual refresh (see layouts/projects/list.html)
+photo: "frog"
+photoReal: "robot-photo.jpg"
+photoRealCaption: "Bionic frog robot prototype — pneumatic soft-body limbs with control electronics"
+featured: true
+kindLabel: "ISEF 2024"
+field: "Soft robotics"
+status: "ISEF 2024 · ROBO029"
+fig1: "Pneumatic body, syringe reservoirs, and louvered flippers"
+fig2: "Control electronics and air lines inside the body"
+specs:
+  - { k: "ROLE", v: "Student Developer" }
+  - { k: "PERIOD", v: "Dec 2022 – May 2024" }
+  - { k: "INSTITUTION", v: "School of Physics, ECNU" }
+  - { k: "EVENT", v: "ISEF 2024, Los Angeles" }
+  - { k: "TOOLS", v: "Fusion 360, ABAQUS FEA, Arduino" }
+  - { k: "SPEED", v: "≈ 0.04 m/s on still water" }
+cta: { label: "Source on GitHub", url: "https://github.com/purticra/bionic-frog" }
 ---
 
 {{< lead >}}
@@ -29,6 +47,8 @@ Water-floating robots with surface maneuverability can serve as effective platfo
 - **Compliance** — safe interaction with aquatic environments
 - **Lightweight construction** — suitable for surface operation
 - **Biomimetic locomotion** — efficient swimming gait inspired by real frogs
+
+{{< plate >}}
 
 ## System Architecture
 

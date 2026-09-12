@@ -1,0 +1,19 @@
+{{/* Visual refresh: fonts + refresh.css + refresh.js. Loaded after Blowfish's bundle so the
+     html[data-refresh] rules win on source order as well as specificity.
+     Google Fonts is requested non-blocking: where fonts.googleapis.com is unreachable the page
+     renders immediately with the system fallbacks in --font-sans / --font-mono. */}}
+{{ $fonts := "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="{{ $fonts }}" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ $fonts }}"></noscript>
+
+{{ $alg := site.Params.fingerprintAlgorithm | default "sha512" }}
+{{ with resources.Get "css/refresh.css" }}
+  {{ $css := . | resources.Minify | resources.Fingerprint $alg }}
+  <link type="text/css" rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{ end }}
+{{ with resources.Get "js/refresh.js" }}
+  {{ $js := . | resources.Minify | resources.Fingerprint $alg }}
+  <script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+{{ end }}

@@ -1,0 +1,7 @@
+{{- /* Label lookup for the refresh templates: data/rf.yaml[<language key>][<key>],
+       falling back to `en`, then to the key itself. Usage: partial "refresh/t.html" "contents" */ -}}
+{{- $key := . -}}
+{{- $v := "" -}}
+{{- with index site.Data.rf site.Language.Lang }}{{ $v = index . $key }}{{ end -}}
+{{- if not $v }}{{ with site.Data.rf.en }}{{ $v = index . $key }}{{ end }}{{ end -}}
+{{- return $v | default $key -}}

@@ -6,6 +6,17 @@ description: "STM32 双通道高精度 RTD 温度采集系统设计。"
 showTableOfContents: true
 showBreadcrumbs: true
 tags: ["ECE", "硬件", "嵌入式系统", "PCB 设计", "Altium Designer"]
+# 视觉改版（见 layouts/projects/list.html）——暂无照片
+kindLabel: "PCB"
+field: "航电"
+status: "已通过设计评审"
+specs:
+  - { k: "项目", v: "YJSP 航电部门入职项目" }
+  - { k: "板卡", v: "2 层快速测试板" }
+  - { k: "MCU", v: "STM32H573RIT6" }
+  - { k: "ADC", v: "ADS114S06，四线制 PT100 RTD" }
+  - { k: "电源", v: "24V 输入，MAX17503 降压至 3.3V" }
+  - { k: "工具", v: "Altium Designer、Altium 365" }
 ---
 
 {{< lead >}}

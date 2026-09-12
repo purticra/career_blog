@@ -1,0 +1,8 @@
+{{- /* "AI RENDER" corner chip; when the image has a camera photo layered over it (real = true),
+       the chip also carries "PHOTO", which refresh.css swaps in on hover. */ -}}
+{{- $ai := partial "refresh/t.html" "ai_render" -}}
+{{- if .real -}}
+  <span class="rf-ai-chip rf-src"><span class="rf-src-ai">{{ $ai }}</span><span class="rf-src-real" aria-hidden="true">{{ partial "refresh/t.html" "photo" }}</span></span>
+{{- else -}}
+  <span class="rf-ai-chip">{{ $ai }}</span>
+{{- end -}}

@@ -1,0 +1,41 @@
+{{/* Visual refresh footer (1b): one mono line between strong rules.
+     Keeps id="site-footer" and the Blowfish scripts the theme loads from here. */}}
+<footer id="site-footer" class="rf-footer print:hidden">
+  {{ if and (site.Params.footer.showMenu | default true) site.Menus.footer }}
+    <nav class="rf-footer-menu">
+      {{ range site.Menus.footer }}
+        <a href="{{ .URL }}" title="{{ .Title }}">{{ .Name | markdownify }}</a>
+      {{ end }}
+    </nav>
+  {{ end }}
+  <div class="rf-footer-line">
+    {{ if site.Params.footer.showCopyright | default true }}
+      <span>&copy; {{ now.Format "2006" }} {{ site.Params.copyright | default site.Params.Author.name }}</span>
+    {{ end }}
+    {{ if site.Params.footer.showThemeAttribution | default true }}
+      <span>
+        <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>
+        &middot;
+        <a href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </span>
+    {{ end }}
+  </div>
+  {{ if not .Site.Params.disableImageZoom | default true }}
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  {{ end }}
+  {{ $jsProcess := resources.Get "js/process.js" }}
+  {{ $jsProcess = $jsProcess | resources.Minify | resources.Fingerprint (.Site.Params.fingerprintAlgorithm | default "sha512") }}
+  <script
+    type="text/javascript"
+    src="{{ $jsProcess.RelPermalink }}"
+    integrity="{{ $jsProcess.Data.Integrity }}"></script>
+  {{ if templates.Exists "partials/extend-footer.html" }}
+    {{ partialCached "extend-footer.html" . }}
+  {{ end }}
+</footer>

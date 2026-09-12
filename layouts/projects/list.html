@@ -1,0 +1,187 @@
+{{/* Visual refresh — Projects.
+     content/projects/_index.md renders the index (3a); every project is a branch bundle
+     (content/projects/<slug>/_index.md) and renders the detail page (2b / 3b).
+
+     Project front matter used here (all optional):
+       photo   slug of the image set in assets/img/projects/<photo>-{3x1,5x4,16x9,3x2}.webp
+       photoReal         camera photo shown over the AI render on hover (refresh/real-src.html)
+       photoRealCaption  its caption, swapped into the FIG line on hover
+       kindLabel  right-aligned index label     field   thumbnail meta
+       status  accent line in the title block   specs   [{k, v}] left spec rail
+       fig1    banner caption  (fig2 is used by the {{< plate >}} shortcode)
+       cta     {label, url} right-rail button    featured  show in the homepage strip */}}
+{{ define "main" }}
+  {{ $projects := partial "refresh/projects.html" . }}
+  {{ if .Parent.IsHome }}
+    {{ template "rf-project-index" (dict "page" . "projects" $projects) }}
+  {{ else }}
+    {{ template "rf-project-detail" (dict "page" . "projects" $projects) }}
+  {{ end }}
+{{ end }}
+
+{{ define "rf-project-index" }}
+  {{ $p := .page }}
+  {{ $projects := .projects }}
+  {{ $ai := partial "refresh/t.html" "ai_render" }}
+
+  {{/* On hover the bench render gives way to a contact sheet of every project's camera photo. */}}
+  {{ with $p.Params.banner }}
+    {{ $reals := slice }}
+    {{ range $projects }}{{ with partial "refresh/real-src.html" . }}{{ $reals = $reals | append . }}{{ end }}{{ end }}
+    <figure class="rf-banner rf-banner--plain">
+      <div class="rf-media{{ if $reals }} rf-swap{{ end }}">
+        {{ partial "refresh/photo.html" (dict "slug" . "ratio" "3x1" "widths" (slice 1280 1920 2560) "sizes" "(min-width: 1280px) 1280px, 100vw" "alt" (printf "%s — %s" $p.Title $ai) "class" "rf-banner-img" "eager" true) }}
+        {{ with $reals }}
+          {{ $n := len . }}
+          <div class="rf-real rf-real--sheet" aria-hidden="true">
+            {{ range . }}
+              {{ partial "refresh/real.html" (dict "img" . "ratio" (printf "3x%d" $n) "fit" "cover" "pclass" "rf-sheet-cell" "widths" (slice 320 480 640) "sizes" (printf "(min-width: 1280px) %dpx, %.2fvw" (div 1280 $n) (div 100.0 $n))) }}
+            {{ end }}
+          </div>
+        {{ end }}
+        {{ partial "refresh/chip.html" (dict "real" (gt (len $reals) 0)) }}
+      </div>
+    </figure>
+  {{ end }}
+
+  {{ $years := slice }}
+  {{ $updated := $p.Lastmod }}
+  {{ range $projects }}
+    {{ $years = $years | append .Date.Year }}
+    {{ if .Lastmod.After $updated }}{{ $updated = .Lastmod }}{{ end }}
+  {{ end }}
+  {{ $years = sort $years }}
+
+  <div class="rf-listhead">
+    <div class="rf-listhead-main">
+      <h1 class="rf-h1">{{ $p.Title }}</h1>
+      <div class="rf-deck rf-deck--list">
+        {{ $p.Content }}
+        {{ with $p.Params.deck }}<span class="rf-deck-more">{{ . }}</span>{{ end }}
+      </div>
+    </div>
+    <div class="rf-listhead-meta">
+      <div>{{ printf "%02d" (len $projects) }} {{ partial "refresh/t.html" "projects_count" }}</div>
+      {{ with $years }}<div>{{ index . 0 }} — {{ index . (sub (len .) 1) }}</div>{{ end }}
+      <div>{{ partial "refresh/t.html" "updated" }} {{ $updated.Format "2006.01.02" }}</div>
+    </div>
+  </div>
+
+  <section class="rf-index" aria-labelledby="rf-all-projects">
+    <div class="rf-index-head rf-index-head--list">
+      <h2 id="rf-all-projects" class="rf-label rf-label--ink">{{ partial "refresh/t.html" "all_projects" }}</h2>
+      <span class="rf-meta">{{ partial "refresh/t.html" "by_date" }}</span>
+    </div>
+    {{ partial "refresh/project-rows.html" $projects }}
+  </section>
+{{ end }}
+
+{{ define "rf-project-detail" }}
+  {{ $p := .page }}
+  {{ $projects := .projects }}
+  {{ $ai := partial "refresh/t.html" "ai_render" }}
+
+  {{ $idx := 0 }}
+  {{ range $i, $x := $projects }}
+    {{ if eq $x.RelPermalink $p.RelPermalink }}{{ $idx = $i }}{{ end }}
+  {{ end }}
+
+  {{/* The deck is the page's own {{< lead >}} text; the in-body copy is then hidden by CSS. */}}
+  {{ $lead := "" }}
+  {{ with findRESubmatch `(?s)\{\{<\s*lead\s*>\}\}(.*?)\{\{<\s*/lead\s*>\}\}` $p.RawContent 1 }}
+    {{ $lead = index (index . 0) 1 | strings.TrimSpace | markdownify }}
+  {{ end }}
+
+  <nav class="rf-crumbs" aria-label="Breadcrumb">
+    <a href="{{ site.Home.RelPermalink }}">{{ partial "refresh/t.html" "home" }}</a>
+    <span aria-hidden="true">/</span>
+    <a href="{{ $p.Parent.RelPermalink }}">{{ partial "refresh/upper.html" $p.Parent.Title }}</a>
+    <span aria-hidden="true">/</span>
+    <span class="rf-crumbs-current" aria-current="page">{{ partial "refresh/upper.html" $p.Title }}</span>
+  </nav>
+
+  <div class="rf-titleblock">
+    <div class="rf-titleblock-label">{{ partial "refresh/t.html" "project" }} {{ printf "%02d" (add $idx 1) }}</div>
+    <div class="rf-titleblock-main">
+      <h1 class="rf-h1 rf-h1--detail">{{ $p.Title | emojify }}</h1>
+      {{ with $lead | default $p.Description }}<div class="rf-deck rf-deck--detail">{{ . }}</div>{{ end }}
+    </div>
+    <div class="rf-titleblock-meta">
+      <div>{{ $p.Date.Format "2006.01.02" }}</div>
+      {{ with $p.Params.status }}<div class="rf-accent">{{ . }}</div>{{ end }}
+    </div>
+  </div>
+
+  {{ with $p.Params.photo }}
+    {{ $real := partial "refresh/real-src.html" $p }}
+    <figure class="rf-banner">
+      <div class="rf-media{{ if $real }} rf-swap{{ end }}">
+        {{ partial "refresh/photo.html" (dict "slug" . "ratio" "3x1" "widths" (slice 1280 1920 2560) "sizes" "(min-width: 1280px) 1280px, 100vw" "alt" (printf "%s — %s" $p.Title $ai) "class" "rf-banner-img" "eager" true) }}
+        {{ with $real }}{{ partial "refresh/real.html" (dict "img" . "ratio" "3x1" "widths" (slice 1280 1920 2560) "sizes" "(min-width: 1280px) 1280px, 100vw") }}{{ end }}
+      </div>
+      {{ if $real }}
+        <figcaption class="rf-caption rf-cap">
+          <span class="rf-cap-no">{{ partial "refresh/t.html" "fig" }} 01 —</span>
+          <span class="rf-src-ai">{{ with $p.Params.fig1 }}{{ partial "refresh/upper.html" . }} · {{ end }}{{ $ai }}</span>
+          <span class="rf-src-real" aria-hidden="true">{{ with $p.Params.photoRealCaption }}{{ partial "refresh/upper.html" . }} · {{ end }}{{ partial "refresh/t.html" "photo" }}</span>
+        </figcaption>
+      {{ else }}
+        <figcaption class="rf-caption">
+          {{ partial "refresh/t.html" "fig" }} 01 —{{ with $p.Params.fig1 }} {{ partial "refresh/upper.html" . }} ·{{ end }} {{ $ai }}
+        </figcaption>
+      {{ end }}
+    </figure>
+  {{ end }}
+
+  {{ $specs := $p.Params.specs }}
+  <div class="rf-detail{{ if not $specs }} rf-detail--nospecs{{ end }}">
+    {{ with $specs }}
+      <aside class="rf-specs">
+        {{ range . }}
+          <div class="rf-spec">
+            <div class="rf-key">{{ .k }}</div>
+            <div class="rf-spec-value">{{ .v }}</div>
+          </div>
+        {{ end }}
+      </aside>
+    {{ end }}
+
+    <div class="rf-detail-body">
+      <div class="rf-prose rf-prose--detail{{ if $lead }} rf-has-lead-deck{{ end }}{{ if $p.Params.photo }} rf-has-fig1{{ end }}">
+        {{ $p.Content }}
+      </div>
+    </div>
+
+    <aside class="rf-rail">
+      <div class="rf-rail-inner">
+        {{ partial "refresh/rail.html" $p }}
+        {{ with $p.Params.cta }}
+          <a class="rf-cta" href="{{ .url }}" target="_blank" rel="noopener">{{ .label }} →</a>
+        {{ end }}
+      </div>
+    </aside>
+  </div>
+
+  {{ $prev := false }}
+  {{ $next := false }}
+  {{ if gt $idx 0 }}{{ $prev = index $projects (sub $idx 1) }}{{ end }}
+  {{ if lt (add $idx 1) (len $projects) }}{{ $next = index $projects (add $idx 1) }}{{ end }}
+  <nav class="rf-prevnext" aria-label="{{ partial "refresh/t.html" "projects_count" }}">
+    {{ with $prev }}
+      <a class="rf-pn rf-pn--prev" href="{{ .RelPermalink }}">
+        <div class="rf-pn-kicker">← {{ partial "refresh/t.html" "prev" }} · {{ printf "%02d" $idx }}</div>
+        <div class="rf-pn-title">{{ .Title | emojify }}</div>
+      </a>
+    {{ else }}
+      <span class="rf-pn rf-pn--prev rf-pn--empty"></span>
+    {{ end }}
+    {{ with $next }}
+      <a class="rf-pn rf-pn--next" href="{{ .RelPermalink }}">
+        <div class="rf-pn-kicker">{{ partial "refresh/t.html" "next" }} · {{ printf "%02d" (add $idx 2) }} →</div>
+        <div class="rf-pn-title">{{ .Title | emojify }}</div>
+      </a>
+    {{ else }}
+      <span class="rf-pn rf-pn--next rf-pn--empty"></span>
+    {{ end }}
+  </nav>
+{{ end }}

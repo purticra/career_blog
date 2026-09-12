@@ -1,0 +1,14 @@
+{{/* Visual refresh — `layout: "simple"` pages (Resume): page header + full-width prose. */}}
+{{ define "main" }}
+  {{ $meta := slice }}
+  {{ if .Params.showDateUpdated | default (site.Params.article.showDateUpdated | default false) }}
+    {{ $meta = $meta | append (printf "%s %s" (partial "refresh/t.html" "updated") (.Lastmod.Format "2006.01.02")) }}
+  {{ end }}
+  {{ partial "refresh/pagehead.html" (dict
+      "label" (partial "refresh/upper.html" .LinkTitle)
+      "title" (.Title | emojify)
+      "meta" $meta) }}
+  <article class="rf-simple">
+    <div class="rf-prose rf-prose--wide">{{ .Content }}</div>
+  </article>
+{{ end }}

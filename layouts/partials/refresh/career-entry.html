@@ -1,0 +1,13 @@
+{{- /* One Career entry row: date badge | category-ruled body | category label. */ -}}
+<article class="rf-entry rf-cat-{{ .cat }}" data-cat="{{ .cat }}">
+  <div class="rf-entry-date">{{ .badge }}</div>
+  <div class="rf-entry-main">
+    <h3 class="rf-entry-title">{{ .header }}</h3>
+    {{ with .sub }}<div class="rf-entry-sub">{{ . }}</div>{{ end }}
+    <div class="rf-entry-body">{{ .body }}</div>
+    {{ with .target }}
+      <a class="rf-entry-link" href="{{ .RelPermalink }}">{{ partial "refresh/upper.html" .Title }} →</a>
+    {{ end }}
+  </div>
+  <div class="rf-entry-cat">{{ partial "refresh/t.html" (printf "cat_%s" .cat) }}</div>
+</article>

@@ -6,6 +6,22 @@ description: "微型复合能量采集集成模块化能量再生阵列——将
 showTableOfContents: true
 showBreadcrumbs: true
 tags: ["能量采集", "PCB 设计", "物联网", "硬件"]
+# 视觉改版（见 layouts/projects/list.html）
+photo: "uchimera"
+photoReal: "pcb-boards.jpg"
+photoRealCaption: "μCHIMERA PCB 系列——主板、子板及开发模块"
+featured: true
+kindLabel: "能量采集"
+field: "能量采集"
+status: "INVENTURE PRIZE 2026"
+fig1: "可堆叠采集模块与控制 PCB"
+fig2: "带太阳能与热电顶盖的采集模块"
+specs:
+  - { k: "角色", v: "压电发电模块与整体机械设计" }
+  - { k: "赛事", v: "Inventure Prize 2026" }
+  - { k: "能量来源", v: "热电、太阳能、压电" }
+  - { k: "储能", v: "最多 4 通道，可堆叠" }
+  - { k: "PCB 设计", v: "Peijie Liu" }
 ---
 
 {{< lead >}}
@@ -19,6 +35,8 @@ tags: ["能量采集", "PCB 设计", "物联网", "硬件"]
 **μCHIMERA**（微型复合能量采集集成模块化能量再生阵列）将环境能量转化为可靠电源，使设备无需充电、无线缆、无维护即可持续运行。
 
 每一个"始终在线"的设备都有同一个隐患：不是传感器，不是芯片——而是能量供应。工业系统、可穿戴设备和医疗植入物充电基础设施的结构性低效导致停机和安全风险。μCHIMERA 从根本上消除了这种依赖。
+
+{{< plate >}}
 
 ## 问题所在
 

@@ -1,0 +1,4 @@
+{{/* Visual refresh — a single taxonomy term (e.g. /tags/robotics/). */}}
+{{ define "main" }}
+  {{ partial "refresh/list-body.html" (dict "page" . "label" (partial "refresh/upper.html" .Parent.Title)) }}
+{{ end }}

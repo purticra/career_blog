@@ -1,0 +1,15 @@
+{{/* Visual refresh — a taxonomy index (e.g. /tags/): hairline chips with counts. */}}
+{{ define "main" }}
+  {{ $terms := .Data.Terms.Alphabetical }}
+  {{ partial "refresh/pagehead.html" (dict
+      "label" (partial "refresh/t.html" "index")
+      "title" (.Title | emojify)
+      "meta" (slice (printf "%02d %s" (len $terms) (partial "refresh/t.html" "items")))) }}
+  <div class="rf-termlist">
+    {{ range $terms }}
+      <a class="rf-tag rf-tag--count" href="{{ .Page.RelPermalink }}">
+        {{ .Page.LinkTitle }}{{ if site.Params.taxonomy.showTermCount | default true }}<span>{{ .Count }}</span>{{ end }}
+      </a>
+    {{ end }}
+  </div>
+{{ end }}

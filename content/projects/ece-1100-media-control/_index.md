@@ -6,6 +6,23 @@ description: "A hardware media control module built as part of ECE 1100"
 showTableOfContents: true
 showBreadcrumbs: true
 tags: ["ECE", "Hardware", "Embedded Systems", "BLE", "3D Printing"]
+# Visual refresh (see layouts/projects/list.html)
+photo: "media-module"
+photoReal: "product_photo.jpg"
+photoRealCaption: "The finished Media Control Module"
+featured: true
+kindLabel: "COURSEWORK"
+field: "Embedded"
+status: "OPEN SOURCE"
+fig1: "Three-key media controller: previous, play / pause, next"
+fig2: "The hand-labelled keys, close up"
+specs:
+  - { k: "ROLE", v: "Personal project" }
+  - { k: "PERIOD", v: "Mar – Apr 2026" }
+  - { k: "CONTEXT", v: "ECE 1100 Discovery Project" }
+  - { k: "TOOLS", v: "ESP32, Fusion 360, 3D printing" }
+  - { k: "STATUS", v: "Open-sourced" }
+cta: { label: "Source on GitHub", url: "https://github.com/purticra/ESPKeyboard" }
 ---
 
 {{< lead >}}
@@ -19,6 +36,8 @@ A hardware media control module — designed and built as part of ECE 1100.
 Georgia Tech is known for its intensive, career-oriented curriculum — and keeping pace with the Institute demands real adjustment. For first-year students in the ECE department, **ECE 1100** serves as that entry point: a course designed to ease the transition by guiding us through campus exploration and early career planning.
 
 This page documents one of those exploration tasks — the **Discovery Project**.
+
+{{< plate >}}
 
 ## Project Roadmap
 

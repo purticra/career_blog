@@ -1,0 +1,14 @@
+{{- /* Right rail: CONTENTS (top-level headings, scroll-spied by refresh.js) and TAGS. */ -}}
+{{- $p := . -}}
+{{- $toc := $p.TableOfContents -}}
+{{- $showToc := $p.Params.showTableOfContents | default (site.Params.article.showTableOfContents | default false) -}}
+{{- if and $showToc (in $toc "<li") }}
+  <div class="rf-rail-label">{{ partial "refresh/t.html" "contents" }}</div>
+  <div class="rf-toc" data-rf-toc>{{ $toc | emojify }}</div>
+{{- end }}
+{{- with $p.GetTerms "tags" }}
+  <div class="rf-rail-label">{{ partial "refresh/t.html" "tags" }}</div>
+  <div class="rf-tags">
+    {{- range . }}<a class="rf-tag" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end -}}
+  </div>
+{{- end }}

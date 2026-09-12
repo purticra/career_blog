@@ -2,10 +2,28 @@
 title: "Tachy🪳Astroach: MoonLine"
 date: 2026-02-15
 draft: false
-description: "A mother-daughter rover system built in 36 hours at GT IEEE Robotech Hackathon â€” 1st Place, $1,000 Prize"
+description: "A mother-daughter rover system built in 36 hours at GT IEEE Robotech Hackathon — 1st Place, $1,000 Prize"
 showTableOfContents: true
 showBreadcrumbs: true
 tags: ["Robotics", "Mechanical Design", "Hackathon", "Fusion 360"]
+# Visual refresh (see layouts/projects/list.html)
+photo: "tachy"
+photoReal: "/posts/technical-updates/tachyastroach-hackathon/rover-overview.jpg"
+photoRealCaption: "The complete TachyAstroach rover system — mother rover, daughter sub-unit, and custom joystick controller"
+featured: true
+kindLabel: "1ST PLACE"
+field: "Robotics"
+status: "1ST PLACE · $1,000"
+fig1: "Mother unit, daughter rover, and controller board · GT IEEE Robotech"
+fig2: "Leg linkages and the daughter unit at working distance"
+specs:
+  - { k: "ROLE", v: "Mechanical Design Lead" }
+  - { k: "DURATION", v: "36 hours" }
+  - { k: "EVENT", v: "GT IEEE Robotech Hackathon" }
+  - { k: "TOOLS", v: "Fusion 360" }
+  - { k: "TEAM", v: "4 people" }
+  - { k: "RESULT", v: "1st place · $1,000" }
+cta: { label: "View on Devpost", url: "https://devpost.com/software/moonline" }
 ---
 
 {{< lead >}}
@@ -24,19 +42,25 @@ TachyAstroach: MoonLine is a mother-daughter rover system where the primary unit
 
 I led the **mechanical design** of the rover system using **Fusion 360**, collaborating closely with teammates on electronics, control algorithms, and communication systems. Throughout the hackathon, we CAD'd, cut, soldered, coded, and debugged through the night to bring the rover to life.
 
+{{< plate >}}
+
 ## Technical Details
 
+{{< rows >}}
 - **Design Tool:** Fusion 360 for full mechanical design
 - **Materials:** Tough 2000 resin, ISO bolts
 - **Systems:** Attitude control systems, bus communication protocols
 - **Integration:** Mechanical engineering, electronics, and software working in concert to enable wireless coordination between the mother and daughter units
+{{< /rows >}}
 
 ## Team
 
+{{< rows >}}
 - **Hongyi Lyu** Mechanical Design Lead
 - **Peijie Liu** Electronics
 - **Zerun Wang** Control Algorithms
 - **Aimee Yu Ting Zheng** Submission Documentation
+{{< /rows >}}
 
 ## Result
 

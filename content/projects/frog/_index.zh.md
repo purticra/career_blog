@@ -6,6 +6,24 @@ description: "基于气动软体执行器的轻量级仿生蛙机器人——在
 showTableOfContents: true
 showBreadcrumbs: true
 tags: ["机器人", "软体机器人", "气动", "ISEF", "仿生设计"]
+# 视觉改版（见 layouts/projects/list.html）
+photo: "frog"
+photoReal: "robot-photo.jpg"
+photoRealCaption: "仿生蛙机器人原型——气动软体四肢与控制电子设备"
+featured: true
+kindLabel: "ISEF 2024"
+field: "软体机器人"
+status: "ISEF 2024 · ROBO029"
+fig1: "气动主体、储气针筒与百叶式蹼板"
+fig2: "主体内的控制电路与气路"
+specs:
+  - { k: "角色", v: "学生开发者" }
+  - { k: "周期", v: "2022年12月 – 2024年5月" }
+  - { k: "单位", v: "华东师范大学物理学院" }
+  - { k: "赛事", v: "ISEF 2024，洛杉矶" }
+  - { k: "工具", v: "Fusion 360、ABAQUS 有限元、Arduino" }
+  - { k: "速度", v: "静水中约 0.04 m/s" }
+cta: { label: "GitHub 源码", url: "https://github.com/purticra/bionic-frog" }
 ---
 
 {{< lead >}}
@@ -29,6 +47,8 @@ tags: ["机器人", "软体机器人", "气动", "ISEF", "仿生设计"]
 - **顺应性** — 与水生环境的安全交互
 - **轻量结构** — 适合水面操作
 - **仿生运动** — 受真实青蛙启发的高效游泳步态
+
+{{< plate >}}
 
 ## 系统架构
 

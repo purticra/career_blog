@@ -1,0 +1,26 @@
+{{- /* FIG plate: the page's `photo` 3:2 crop at full column width with a numbered caption.
+       Usage: {{< plate >}}   caption comes from front matter `fig2`, or {{< plate caption="…" >}}.
+       With `photoReal`, the camera photo (and `photoRealCaption`) fades in on hover.
+       Renders nothing when the page has no `photo`. */ -}}
+{{- $p := .Page -}}
+{{- $ai := partial "refresh/t.html" "ai_render" -}}
+{{- with $p.Params.photo -}}
+{{- $real := partial "refresh/real-src.html" $p -}}
+{{- $cap := $.Get "caption" | default $p.Params.fig2 -}}
+<figure class="rf-plate">
+  <div class="rf-plate-media{{ if $real }} rf-swap{{ end }}">
+    {{ partial "refresh/photo.html" (dict "slug" . "ratio" "3x2" "widths" (slice 800 1200 1600) "sizes" "(min-width: 1100px) 760px, 100vw" "alt" (printf "%s — %s" $p.Title $ai) "class" "rf-plate-img") }}
+    {{ with $real }}{{ partial "refresh/real.html" (dict "img" . "ratio" "3x2" "widths" (slice 800 1200 1600) "sizes" "(min-width: 1100px) 760px, 100vw") }}{{ end }}
+  </div>
+  {{- if $real }}
+  <figcaption class="rf-caption-pre rf-cap">
+    <span class="rf-src-ai">{{ with $cap }}{{ partial "refresh/upper.html" . }} · {{ end }}{{ $ai }}</span>
+    <span class="rf-src-real" aria-hidden="true">{{ with $p.Params.photoRealCaption }}{{ partial "refresh/upper.html" . }} · {{ end }}{{ partial "refresh/t.html" "photo" }}</span>
+  </figcaption>
+  {{- else }}
+  <figcaption class="rf-caption-pre">
+    {{- with $cap }}{{ partial "refresh/upper.html" . }} · {{ end }}{{ $ai -}}
+  </figcaption>
+  {{- end }}
+</figure>
+{{- end -}}

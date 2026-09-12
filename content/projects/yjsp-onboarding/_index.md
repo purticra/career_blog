@@ -6,6 +6,17 @@ description: "Design of STM32 Dual Channel High Precision RTD Temperature Acquis
 showTableOfContents: true
 showBreadcrumbs: true
 tags: ["ECE", "Hardware", "Embedded Systems", "PCB Design", "Altium Designer"]
+# Visual refresh (see layouts/projects/list.html) — no photography yet
+kindLabel: "PCB"
+field: "Avionics"
+status: "PASSED DESIGN REVIEW"
+specs:
+  - { k: "PROGRAM", v: "YJSP Avionics onboarding" }
+  - { k: "BOARD", v: "2-layer rapid test board" }
+  - { k: "MCU", v: "STM32H573RIT6" }
+  - { k: "ADC", v: "ADS114S06, four-wire PT100 RTD" }
+  - { k: "POWER", v: "24 V in, MAX17503 buck to 3.3 V" }
+  - { k: "TOOLS", v: "Altium Designer, Altium 365" }
 ---
 
 {{< lead >}}
