@@ -59,6 +59,18 @@
  pageRef = "/projects/yjsp-onboarding"
  weight = -500
 
+[[main]]
+ name = "参数化发声相控阵"
+ parent = "projects"
+ pageRef = "/projects/ultrasonic-array"
+ weight = -700
+
+[[main]]
+ name = "BONG Mk. III 数字铜管乐器"
+ parent = "projects"
+ pageRef = "/projects/bong"
+ weight = -600
+
 # [[subnavigation]]
  # identifier = "journal"
  # name = "◹"

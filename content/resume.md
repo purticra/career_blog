@@ -2,7 +2,7 @@
 title: "Resume"
 description: ""
 date: 2025-02-01T23:00:00-05:00
-lastmod: 2025-02-01T23:00:00-05:00
+lastmod: 2026-09-01T12:00:00-04:00
 layout: "simple"
 showDate: false
 showDateUpdated: true
@@ -15,7 +15,7 @@ sharingLinks: false
 ---
 
 {{< lead >}}
-Electrical Engineering student with hands-on experience in PCB design, embedded systems, and RF/microwave engineering. Seeking undergraduate research opportunities in electronic design, signal processing, or related areas.
+Electrical Engineering student researching ultrasonic phased arrays and parametric audio at the Flavin Neuromachines Lab, with hands-on experience in PCB design, embedded systems, and RF/microwave engineering. Seeking Summer 2027 internships and research opportunities in acoustics, mechatronics, and hardware prototyping, with a longer-term interest in graduate research.
 {{< /lead >}}
 
 {{< button href="/pdf/Lyu_Resume_Spring_2026.pdf" target="_blank" >}}
@@ -28,6 +28,22 @@ View / Download PDF Resume
 
 {{< tab label="Experience" icon="list-check" >}}
 
+### Flavin Neuromachines Lab — Ultrasonic Phased Array & Parametric Audio
+**Undergraduate Researcher** · Georgia Institute of Technology · May 2026 – Present
+
+- Researching parametric loudspeakers built on ultrasonic phased arrays, where modulated ultrasound demodulates in air so audio is rendered inside a narrow, electronically steerable beam
+- Surveyed the parametric acoustics and phased-array beamforming literature and distilled the design trade-offs into an architecture proposal for the drive chain
+- Selected the system architecture, defining where modulation happens in the signal chain and the channel count, timing, and resolution budget required per transducer element
+- Building multichannel drive signal generation with per-element phase control, paired with GPU-accelerated acoustic field computation so beam steering runs in real time
+- Adding real-time interactive input so the beam can respond to a listener rather than staying fixed
+
+{{< btnrow >}}
+{{< btn href="/projects/ultrasonic-array" >}}Parametric Audio Phased Array{{< /btn >}}
+{{< btn href="https://flavinlab.io" target="_blank" >}}Flavin Neuromachines Lab{{< /btn >}}
+{{< /btnrow >}}
+
+---
+
 ### Vertically Integrated Projects — Interacting with Sound and Space (L42i)
 **Undergraduate Researcher — BONG Sub-team** · Georgia Institute of Technology · Jan 2026 – Present
 
@@ -36,28 +52,24 @@ View / Download PDF Resume
 - Prototyped speaker bell enclosures via FDM 3D printing and prepared DXF files for laser-cut stacked-ring plywood fabrication as an alternative manufacturing path
 - Co-authoring a semester paper documenting PCB design practices, bell acoustics research, and manufacturing workflows
 
-<div style="display:flex; gap:0.5rem; margin-top:0.5rem;">
-<a class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="/projects/bong" role="button">
-BONG
-</a>
-<a class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="https://l42i.music.gatech.edu/projects/bong" target="_blank" role="button">
-L42i BONG Project Page
-</a>
-</div>
+{{< btnrow >}}
+{{< btn href="/projects/bong" >}}BONG{{< /btn >}}
+{{< btn href="https://l42i.music.gatech.edu/projects/bong" target="_blank" >}}L42i BONG Project Page{{< /btn >}}
+{{< /btnrow >}}
 
 ---
 
 ### Yellow Jacket Space Program — Avionics Department
-**Avionics Hardware Designer** · Georgia Institute of Technology · Aug 2025 – Present
+**Avionics Hardware Designer** · Georgia Institute of Technology · Feb 2026 – Aug 2026
 
-- Implemented a 2-layer avionics PCB onboarding project using Altium Designer, integrated STM32H573 MCU with ADS114S06 ADC for four-wire PT100 RTD temperature measurement
-- Entered Hardware-in-the-Loop (HITL) department as an avionics member. 
+- Joined the Hardware-in-the-Loop (HITL) department as an avionics member, designing a sensor and valve controller PCB in Altium Designer
+- Integrated STM32H573 MCU with ADS114S06 ADC for four-wire PT100 RTD temperature measurement
 - Implemented power regulation (24 V input, Buck converter, LDO), relay driving, INA228 current monitoring, and PCF8575 GPIO expansion
 - Iterated schematic and layout through team design reviews; transplanted components for Altium library integration and compatibility
 
-<a class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="projects/yjsp-onboarding"  role="button">
-YJSP Onboarding Project Page
-</a>
+{{< btnrow >}}
+{{< btn href="/projects/yjsp-onboarding" >}}YJSP Onboarding Project Page{{< /btn >}}
+{{< /btnrow >}}
 
 ---
 
@@ -90,9 +102,9 @@ YJSP Onboarding Project Page
 - Developed firmware for BLE keyboard emulation with play/pause, track skip, volume control, and mute functions
 - Designed and 3D-printed a custom enclosure in Fusion 360; open-sourced code and CAD files on GitHub
 
-<a class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="/projects/ece-1100-media-control" role="button">
-Media Control Keypad Project Page
-</a>
+{{< btnrow >}}
+{{< btn href="/projects/ece-1100-media-control" >}}Media Control Keypad Project Page{{< /btn >}}
+{{< /btnrow >}}
 
 ---
 
@@ -103,33 +115,33 @@ Media Control Keypad Project Page
 - Built biomimetic robot with Fusion 360 modeling and Arduino-based control
 - Validated wireless sensing and maneuvering performance; showcased project at ISEF 2024 in Los Angeles
 
-<a class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="/projects/frog" role="button">
-Bionic Frog Project Page
-</a>
+{{< btnrow >}}
+{{< btn href="/projects/frog" >}}Bionic Frog Project Page{{< /btn >}}
+{{< /btnrow >}}
 
 {{< /tab >}}
 
 {{< tab label="Activities" icon="globe" >}}
 
 ### Hive Makerspace — Peer Instructor
-Starting Fall 2026
+Fall 2026 – Present
 
 Certified volunteer instructor for 3D printing, laser cutting, and electronic benchtop areas.
 
 ---
 
 ### RoboRambler — Georgia Tech RoboMaster Robotics Club
-Spring 2026 – Present
+Jan 2026 – Present
 
-Eletrical department member contributing to mechanical and electrical system design for competition robots.
+Electrical department member contributing to electrical system design for competition robots.
 
 ---
 
 ### Yellow Jacket Space Program — Avionics Department
-Aug 2025 – Present
+Aug 2025 – Aug 2026
 
-- Designing avionics PCBs for rocket hardware-in-the-loop (HITL) testing using Altium Designer
-- Developing power regulation circuits and sensor interfacing for embedded flight electronics
+- Completed the department onboarding project, a Rapid Test Board designed in Altium Designer, passing schematic and layout review
+- Progressed into the Hardware-in-the-Loop group as an avionics hardware designer
 
 ---
 
@@ -147,9 +159,9 @@ General Electrical Engineer.
 
 Chief mechanical designer of parent-subunit moon surface rover MoonLine.
 
-<a class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="/projects/tachyastroach" role="button">
-MoonLine Project Page
-</a>
+{{< btnrow >}}
+{{< btn href="/projects/tachyastroach" >}}MoonLine Project Page{{< /btn >}}
+{{< /btnrow >}}
 
 ---
 
@@ -158,9 +170,9 @@ MoonLine Project Page
 
 Designer of PZT nano-power generating module & overall mechanical designer.
 
-<a class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="/projects/uchimera" role="button">
-μChimera Project Page
-</a>
+{{< btnrow >}}
+{{< btn href="/projects/uchimera" >}}μChimera Project Page{{< /btn >}}
+{{< /btnrow >}}
 
 {{< /tab >}}
 
@@ -191,6 +203,15 @@ Designer of PZT nano-power generating module & overall mechanical designer.
 {{< keyword >}} Ansys HFSS {{< /keyword >}}
 {{< /keywordList >}}
 
+**Acoustics**
+
+{{< keywordList >}}
+{{< keyword >}} Acoustic Field Simulation {{< /keyword >}}
+{{< keyword >}} Phased Array Beamforming {{< /keyword >}}
+{{< keyword >}} Parametric Audio {{< /keyword >}}
+{{< keyword >}} Ultrasonic Transducer Arrays {{< /keyword >}}
+{{< /keywordList >}}
+
 **Digital Design**
 
 {{< keywordList >}}
@@ -201,17 +222,16 @@ Designer of PZT nano-power generating module & overall mechanical designer.
 **Programming**
 
 {{< keywordList >}}
-{{< keyword >}} C++ {{< /keyword >}}
 {{< keyword >}} Python {{< /keyword >}}
-{{< keyword >}} Java {{< /keyword >}}
+{{< keyword >}} C / C++ {{< /keyword >}}
 {{< keyword >}} MATLAB {{< /keyword >}}
 {{< /keywordList >}}
 
 **Languages**
 
 {{< keywordList >}}
-{{< keyword >}} Native Chinese {{< /keyword >}}
-{{< keyword >}} Fluent English {{< /keyword >}}
+{{< keyword >}} Mandarin (Native) {{< /keyword >}}
+{{< keyword >}} English (Professional Working Proficiency) {{< /keyword >}}
 {{< /keywordList >}}
 
 {{< /tab >}}
@@ -222,7 +242,7 @@ Designer of PZT nano-power generating module & overall mechanical designer.
 **Bachelor of Science in Electrical Engineering** · Atlanta, GA · Aug 2025 – Present
 
 - GPA: 4.00
-- Expected Graduation: Dec 2028
+- Expected Graduation: May 2028
 
 {{< /tab >}}
 

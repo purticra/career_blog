@@ -16,3 +16,55 @@ html:not(.dark) a[role="button"] {
 html:not(.dark) a[role="button"]:hover {
   background-color: rgb(30, 41, 59) !important; /* slate-800 */
 }
+
+/* ---- Buttons: outline pill ---------------------------------------------- */
+/* Applies to the btn shortcode and to Blowfish's own {{< button >}}.         */
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+a[role="button"] {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.4rem 0.95rem !important;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(100, 116, 139, 0.55) !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  color: rgb(51, 65, 85) !important;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+a[role="button"]:hover {
+  background-color: rgb(51, 65, 85) !important;
+  border-color: rgb(51, 65, 85) !important;
+  color: #fff !important;
+}
+
+html.dark a[role="button"] {
+  border-color: rgba(148, 163, 184, 0.4) !important;
+  color: rgb(203, 213, 225) !important;
+}
+
+html.dark a[role="button"]:hover {
+  background-color: rgb(226, 232, 240) !important;
+  border-color: rgb(226, 232, 240) !important;
+  color: rgb(15, 23, 42) !important;
+}
+
+a[role="button"] .btn-ext {
+  font-size: 0.8em;
+  line-height: 1;
+  opacity: 0.65;
+}
