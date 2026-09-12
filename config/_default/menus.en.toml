@@ -69,6 +69,18 @@
  pageRef = "/projects/yjsp-onboarding"
  weight = -500
 
+[[main]]
+ name = "Parametric Audio Phased Array"
+ parent = "projects"
+ pageRef = "/projects/ultrasonic-array"
+ weight = -700
+
+[[main]]
+ name = "BONG Mk. III"
+ parent = "projects"
+ pageRef = "/projects/bong"
+ weight = -600
+
 # [[subnavigation]]
  # identifier = "journal"
  # name = "◹"

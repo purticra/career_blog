@@ -1,0 +1,7 @@
+{{- $href := .Get "href" -}}
+{{- $url := $href -}}
+{{- if not (or (hasPrefix $href "http") (hasPrefix $href "mailto:") (hasPrefix $href "#")) -}}
+{{- $url = relLangURL $href -}}
+{{- end -}}
+{{- $target := .Get "target" -}}
+<a class="btn-pill" href="{{ $url }}"{{ with $target }} target="{{ . }}" rel="noopener noreferrer"{{ end }} role="button">{{- .Inner | strings.TrimSpace -}}{{- if $target }}<span class="btn-ext" aria-hidden="true">&#8599;</span>{{ end -}}</a>

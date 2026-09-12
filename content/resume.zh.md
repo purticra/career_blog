@@ -2,7 +2,7 @@
 title: "简历"
 description: ""
 date: 2025-02-01T23:00:00-05:00
-lastmod: 2025-02-01T23:00:00-05:00
+lastmod: 2026-09-01T12:00:00-04:00
 layout: "simple"
 showDate: false
 showDateUpdated: true
@@ -15,7 +15,7 @@ sharingLinks: false
 ---
 
 {{< lead >}}
-电气工程学生，具备 PCB 设计、嵌入式系统和射频/微波工程的实践经验。寻求电子设计、信号处理或相关领域的本科研究机会。
+电气工程学生，现于 Flavin Neuromachines Lab 从事超声相控阵与参数化发声研究，同时具备 PCB 设计、嵌入式系统和射频/微波工程的实践经验。正在寻找 2027 年夏季声学、机电一体化与硬件原型方向的实习与科研机会，并有意在更长期上继续从事研究工作。
 {{< /lead >}}
 
 {{< button href="/pdf/Lyu_Resume_Spring_2026.pdf" target="_blank" >}}
@@ -28,6 +28,22 @@ sharingLinks: false
 
 {{< tab label="工作经历" icon="list-check" >}}
 
+### Flavin Neuromachines Lab — 超声相控阵与参数化发声
+**本科研究员** · 佐治亚理工学院 · 2026年5月 – 至今
+
+- 研究基于超声相控阵的参数化扬声器：被调制的超声波在空气中自解调，使可听声只出现在一道窄而可电子偏转的声束内
+- 系统梳理参数化声学与相控阵波束赋形的文献，将其中的设计取舍归纳为驱动链路的架构方案
+- 完成系统架构选型，确定调制环节在信号链中的位置，以及每个换能器单元所需的通道数、时序与分辨率预算
+- 搭建具备逐单元相位控制的多通道驱动信号生成，并配合 GPU 加速的声场计算，使波束偏转可实时运行
+- 引入实时交互输入，使声束能够对听者作出响应，而不是固定不动
+
+{{< btnrow >}}
+{{< btn href="/projects/ultrasonic-array" >}}参数化发声相控阵{{< /btn >}}
+{{< btn href="https://flavinlab.io" target="_blank" >}}Flavin Neuromachines Lab 官网{{< /btn >}}
+{{< /btnrow >}}
+
+---
+
 ### 垂直整合项目 — 声音与空间的交互（L42i）
 **本科研究员 — BONG 子团队** · 佐治亚理工学院 · 2026年1月 – 至今
 
@@ -36,28 +52,24 @@ sharingLinks: false
 - 通过 FDM 3D 打印制作扬声器喇叭外壳原型；准备 DXF 文件，探索激光切割叠层胶合板的替代制造路径
 - 合著学期论文，记录 PCB 设计实践、喇叭声学研究及制造工作流程
 
-<div style="display:flex; gap:0.5rem; margin-top:0.5rem;">
-<a class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="/projects/bong" role="button">
-BONG
-</a>
-<a class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="https://l42i.music.gatech.edu/projects/bong" target="_blank" role="button">
-L42i BONG 项目页面
-</a>
-</div>
+{{< btnrow >}}
+{{< btn href="/projects/bong" >}}BONG{{< /btn >}}
+{{< btn href="https://l42i.music.gatech.edu/projects/bong" target="_blank" >}}L42i BONG 项目页面{{< /btn >}}
+{{< /btnrow >}}
 
 ---
 
 ### 黄夹克太空计划 — 航电部门
-**航电硬件设计师** · 佐治亚理工学院 · 2025年8月 – 至今
+**航电硬件设计师** · 佐治亚理工学院 · 2026年2月 – 2026年8月
 
-- 使用 Altium Designer 完成 2 层航电 PCB 入职项目，将 STM32H573 MCU 与 ADS114S06 ADC 集成，用于四线制 PT100 RTD 温度测量
-- 加入硬件在环（HITL）部门，担任航电成员
+- 加入硬件在环（HITL）部门担任航电硬件设计师，使用 Altium Designer 设计传感与阀门控制 PCB
+- 将 STM32H573 MCU 与 ADS114S06 ADC 集成，用于四线制 PT100 RTD 温度测量
 - 实现电源调节（24V 输入、Buck 转换器、LDO）、继电器驱动、INA228 电流监测和 PCF8575 GPIO 扩展
 - 通过团队设计评审迭代电路图和布局；移植元器件以实现 Altium 库集成与兼容性
 
-<a class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="projects/yjsp-onboarding" role="button">
-YJSP 入职项目页面
-</a>
+{{< btnrow >}}
+{{< btn href="/projects/yjsp-onboarding" >}}YJSP 入职项目页面{{< /btn >}}
+{{< /btnrow >}}
 
 ---
 
@@ -90,9 +102,9 @@ YJSP 入职项目页面
 - 开发了支持播放/暂停、切曲、音量控制和静音功能的 BLE 键盘仿真固件
 - 在 Fusion 360 中设计并 3D 打印了定制外壳；在 GitHub 上开源了代码和 CAD 文件
 
-<a class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="/projects/ece-1100-media-control" role="button">
-媒体控制键盘项目页面
-</a>
+{{< btnrow >}}
+{{< btn href="/projects/ece-1100-media-control" >}}媒体控制键盘项目页面{{< /btn >}}
+{{< /btnrow >}}
 
 ---
 
@@ -103,33 +115,33 @@ YJSP 入职项目页面
 - 基于 Fusion 360 建模和 Arduino 控制构建仿生机器人
 - 验证无线传感和机动性能；在 2024 年洛杉矶 ISEF 上展示项目
 
-<a class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="/projects/frog" role="button">
-仿生蛙项目页面
-</a>
+{{< btnrow >}}
+{{< btn href="/projects/frog" >}}仿生蛙项目页面{{< /btn >}}
+{{< /btnrow >}}
 
 {{< /tab >}}
 
 {{< tab label="课外活动" icon="globe" >}}
 
 ### Hive Makerspace — 同伴讲师
-2026年秋季起
+2026年秋季 – 至今
 
 3D 打印、激光切割和电子工作台区域的认证志愿讲师。
 
 ---
 
 ### RoboRambler — Georgia Tech RoboMaster 机器人俱乐部
-2026年春季 – 至今
+2026年1月 – 至今
 
-电气部门成员，参与竞赛机器人的机械与电气系统设计。
+电气部门成员，参与竞赛机器人的电气系统设计。
 
 ---
 
 ### 黄夹克太空计划 — 航电部门
-2025年8月 – 至今
+2025年8月 – 2026年8月
 
-- 使用 Altium Designer 设计用于火箭硬件在环（HITL）测试的航电 PCB
-- 开发电源调节电路和嵌入式飞行电子的传感器接口
+- 完成部门入职项目：使用 Altium Designer 设计快速测试板（RTB），原理图与布局均通过评审
+- 随后进入硬件在环（HITL）组，担任航电硬件设计师
 
 ---
 
@@ -147,9 +159,9 @@ YJSP 入职项目页面
 
 母子月球车 MoonLine 的首席机械设计师。
 
-<a class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="/projects/tachyastroach" role="button">
-MoonLine 项目页面
-</a>
+{{< btnrow >}}
+{{< btn href="/projects/tachyastroach" >}}MoonLine 项目页面{{< /btn >}}
+{{< /btnrow >}}
 
 ---
 
@@ -158,9 +170,9 @@ MoonLine 项目页面
 
 PZT 纳功率发电模块设计师及整体机械设计师。
 
-<a class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="/projects/uchimera" role="button">
-μCHIMERA 项目页面
-</a>
+{{< btnrow >}}
+{{< btn href="/projects/uchimera" >}}μCHIMERA 项目页面{{< /btn >}}
+{{< /btnrow >}}
 
 {{< /tab >}}
 
@@ -191,6 +203,15 @@ PZT 纳功率发电模块设计师及整体机械设计师。
 {{< keyword >}} Ansys HFSS {{< /keyword >}}
 {{< /keywordList >}}
 
+**声学**
+
+{{< keywordList >}}
+{{< keyword >}} 声场仿真 {{< /keyword >}}
+{{< keyword >}} 相控阵波束赋形 {{< /keyword >}}
+{{< keyword >}} 参数化发声 {{< /keyword >}}
+{{< keyword >}} 超声换能器阵列 {{< /keyword >}}
+{{< /keywordList >}}
+
 **数字化设计**
 
 {{< keywordList >}}
@@ -201,9 +222,8 @@ PZT 纳功率发电模块设计师及整体机械设计师。
 **编程语言**
 
 {{< keywordList >}}
-{{< keyword >}} C++ {{< /keyword >}}
 {{< keyword >}} Python {{< /keyword >}}
-{{< keyword >}} Java {{< /keyword >}}
+{{< keyword >}} C / C++ {{< /keyword >}}
 {{< keyword >}} MATLAB {{< /keyword >}}
 {{< /keywordList >}}
 
@@ -211,7 +231,7 @@ PZT 纳功率发电模块设计师及整体机械设计师。
 
 {{< keywordList >}}
 {{< keyword >}} 中文（母语）{{< /keyword >}}
-{{< keyword >}} 英语（流利）{{< /keyword >}}
+{{< keyword >}} 英语（专业工作水平）{{< /keyword >}}
 {{< /keywordList >}}
 
 {{< /tab >}}
@@ -222,7 +242,7 @@ PZT 纳功率发电模块设计师及整体机械设计师。
 **电气工程理学学士** · 美国佐治亚州亚特兰大 · 2025年8月 – 至今
 
 - GPA：4.00
-- 预计毕业时间：2028年12月
+- 预计毕业时间：2028年5月
 
 {{< /tab >}}
 
