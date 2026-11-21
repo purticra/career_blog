@@ -2,7 +2,7 @@
 title: "简历"
 description: ""
 date: 2025-02-01T23:00:00-05:00
-lastmod: 2026-09-01T12:00:00-04:00
+lastmod: 2026-11-20T20:00:00-05:00
 layout: "simple"
 showDate: false
 showDateUpdated: true
@@ -15,10 +15,10 @@ sharingLinks: false
 ---
 
 {{< lead >}}
-电气工程学生，现于 Flavin Neuromachines Lab 从事超声相控阵与参数化发声研究，同时具备 PCB 设计、嵌入式系统和射频/微波工程的实践经验。正在寻找 2027 年夏季声学、机电一体化与硬件原型方向的实习与科研机会，并有意在更长期上继续从事研究工作。
+佐治亚理工学院电气工程大三学生（EE '28）。我做 PCB 与混合信号硬件设计，同时在 Flavin Neuromachines Lab 研究超声相控阵与可穿戴触觉。正在寻找 2027 年春季或夏季的 PCB 与硬件设计实习。
 {{< /lead >}}
 
-{{< button href="/pdf/Lyu_Resume_Spring_2026.pdf" target="_blank" >}}
+{{< button href="/pdf/Lyu_Resume_Fall_2026.pdf" target="_blank" >}}
 查看 / 下载 PDF 简历
 {{< /button >}}
 
@@ -28,14 +28,30 @@ sharingLinks: false
 
 {{< tab label="工作经历" icon="list-check" >}}
 
-### Flavin Neuromachines Lab — 超声相控阵与参数化发声
-**本科研究员** · 佐治亚理工学院 · 2026年5月 – 至今
+### 黄夹克太空计划（YJSP）：航电部门
+**航电硬件设计师** · 美国佐治亚州亚特兰大 · 2026年1月 – 2026年8月
 
-- 研究基于超声相控阵的参数化扬声器：被调制的超声波在空气中自解调，使可听声只出现在一道窄而可电子偏转的声束内
-- 系统梳理参数化声学与相控阵波束赋形的文献，将其中的设计取舍归纳为驱动链路的架构方案
-- 完成系统架构选型，确定调制环节在信号链中的位置，以及每个换能器单元所需的通道数、时序与分辨率预算
-- 搭建具备逐单元相位控制的多通道驱动信号生成，并配合 GPU 加速的声场计算，使波束偏转可实时运行
-- 引入实时交互输入，使声束能够对听者作出响应，而不是固定不动
+- 设计了一块双层 RTD 测试板，核心是 STM32H573 和 TI ADS114S06 16 位 ΔΣ ADC，以比例测量方式读取两路四线制 PT100：每路由片上 IDAC 同时驱动 RTD 和 0.01% 参考电阻，电流误差因此相互抵消。
+- 在 ADC 输入端加了匹配的 RC 滤波，并在 ADC 附近用一个 0 Ω 单点连接 AGND 与 GND。
+- 24 V 输入端用自恢复 PTC 保险丝和 TVS 二极管做保护。3.3 V 轨选用 MAX17503 降压芯片，因为线性降压的效率只有约 14%；其内部稳压器为 ADC 提供 5 V 模拟电源。
+- 修改了团队大传感板上原有的 24 V 电源树，降低功耗。
+- 参与团队设计评审，并把验证过的封装和符号移植进共享的 Altium 库。
+
+{{< btnrow >}}
+{{< btn href="/projects/yjsp-onboarding" >}}YJSP 入职项目页面{{< /btn >}}
+{{< /btnrow >}}
+
+---
+
+### Flavin Neuromachines Lab：超声相控阵与可穿戴触觉
+**本科研究员** · 佐治亚理工学院 · 导师：Matthew Flavin 教授 · 2026年5月 – 至今
+
+- 正在调通 4 通道 40 kHz 驱动链路：EP4CE6 FPGA 输出方波相位控制，经 TC4427 驱动器以 12 V 单端方式驱动 MA40S4S 换能器，接收端换能器在示波器上可以看到正弦波。
+- 正在为 6×10（60 单元）换能器阵列画 PCB，用来替代 4 通道面包板原型。
+- 在柔性 PCB 上焊接小封装元件，制作可穿戴振动触觉节点，每个节点验证后再与主控配对。
+- 用 J-Link 为无线振动节点烧录并测试，再把它们接入 Jetson Nano 无人机，用于实验室的 Active Navigation 测试。
+- 正在开发胸挂式手部引导系统（Raspberry Pi 5、两颗 IMX219 摄像头、Ultraleap 2、MediaPipe），计算手到目标的向量并驱动触觉腕带；完成了它的 ChArUco 双目标定。
+- 评估了 DAC 方案（DAC80508 作为备选），并算出 1.17λ 的单元间距会让栅瓣出现在约 ±59° 处。
 
 {{< btnrow >}}
 {{< btn href="/projects/ultrasonic-array" >}}参数化发声相控阵{{< /btn >}}
@@ -44,13 +60,12 @@ sharingLinks: false
 
 ---
 
-### 垂直整合项目 — 声音与空间的交互（L42i）
-**本科研究员 — BONG 子团队** · 佐治亚理工学院 · 2026年1月 – 至今
+### L42i（Lab for Interaction and Immersion），佐治亚理工学院音乐学院
+**本科研究员** · VIP：Interacting with Sound and Space · 2026年1月 – 至今
 
-- 参与 BONG Mk. III 版本的迭代开发——这是 L42i 互动与沉浸实验室研发的一款数字铜管乐器，正在从控制器界面演进为集板载合成、功放和空间交互于一体的独立乐器
-- 在 EasyEDA 中设计 PCB 电路图改动，包括将模拟电位器替换为旋转编码器，并为麦克风放大器级别修正走线
-- 通过 FDM 3D 打印制作扬声器喇叭外壳原型；准备 DXF 文件，探索激光切割叠层胶合板的替代制造路径
-- 合著学期论文，记录 PCB 设计实践、喇叭声学研究及制造工作流程
+- 为四辆 BIKES 移动音频平台（Raspberry Pi 5）加装 Sony IMX500 AI 摄像头，把片上识别结果接入 SuperCollider 脚本，通过外接扬声器实时播报识别内容。
+- 在 EasyEDA 中修改 BONG 的 PCB 原理图（用旋转编码器替换电位器，修正麦克风放大器接线），并协助把 BONG 做成独立乐器。
+- 用 FDM 打印制作扬声器号口原型，绘制激光切割叠环胶合板号口的 DXF 文件，并以同等贡献作者身份合著 NIME 格式的学期报告。
 
 {{< btnrow >}}
 {{< btn href="/projects/bong" >}}BONG{{< /btn >}}
@@ -59,37 +74,18 @@ sharingLinks: false
 
 ---
 
-### 黄夹克太空计划 — 航电部门
-**航电硬件设计师** · 佐治亚理工学院 · 2026年2月 – 2026年8月
-
-- 加入硬件在环（HITL）部门担任航电硬件设计师，使用 Altium Designer 设计传感与阀门控制 PCB
-- 将 STM32H573 MCU 与 ADS114S06 ADC 集成，用于四线制 PT100 RTD 温度测量
-- 实现电源调节（24V 输入、Buck 转换器、LDO）、继电器驱动、INA228 电流监测和 PCF8575 GPIO 扩展
-- 通过团队设计评审迭代电路图和布局；移植元器件以实现 Altium 库集成与兼容性
-
-{{< btnrow >}}
-{{< btn href="/projects/yjsp-onboarding" >}}YJSP 入职项目页面{{< /btn >}}
-{{< /btnrow >}}
-
----
-
 ### 上海华泰自动化有限公司
-**学生实习生 — 机械与电气设计** · 上海，中国 · 2025年7月
+**学生实习生，机械与电气设计** · 中国上海 · 2025年7月
 
-- 开发了一款模仿学习夹爪，为传统制造工艺提供创新解决方案
-- 使用 LCEDA 设计末端关节控制；完成"拨轮"和"两级按钮"两种配置
-- 在 Fusion 360 中修改机械结构，以容纳电气元件并提升手动兼容性
-- 在 Fusion 360 中为夹爪头设计模块化轻量化摄像头支架
-- 通过 3D 打印制造零件并组装，确保螺钉、轴承和打印件的精确配合
+- 用 EasyEDA 完成两块夹爪控制板（PCF8574 I²C）从原理图到装配的全过程，并编写装配流程。
+- 在 Fusion 360 中修改夹爪结构以容纳电路板和线缆，设计模块化摄像头支架，并 3D 打印零件。
 
 ---
 
-### 宁波大学 — 智能无线技术实验室
-**实习研究员** · 宁波，中国 · 2024年7月 – 8月
+### 宁波大学智能无线技术实验室
+**研究实习生** · 中国宁波 · 2024年7月 – 2024年8月
 
-- 设计并制造了高 Q 值、低插入损耗的基片集成波导（SIW）微波微型滤波器
-- 在 FR4 和 Rogers 基板上构建原型，在 Fusion 360 中建模，并使用 Ansys HFSS 仿真优化
-- 使用矢量网络分析仪验证实验性能；测量数据与仿真结果高度吻合
+- 在 Ansys HFSS 中设计了两款 WLAN 频段 SIW 带通滤波器，分别基于 FR4 和 0.51 mm Rogers RO4350，并在 Agilent PNA 上测量；FR4 滤波器在 2.46 GHz 处回波损耗 23 dB，插入损耗 1.2 dB。
 
 {{< /tab >}}
 
@@ -111,9 +107,9 @@ sharingLinks: false
 ### 仿生蛙机器人
 **学生开发者** · 华东师范大学物理学院 · 2022年12月 – 2024年5月
 
-- 个人指导项目：设计使用气动柔性关节执行器的水面机器人
-- 基于 Fusion 360 建模和 Arduino 控制构建仿生机器人
-- 验证无线传感和机动性能；在 2024 年洛杉矶 ISEF 上展示项目
+- 个人指导项目：设计使用气动柔性关节执行器的游泳机器人
+- 在 Fusion 360 中建模，用 Abaqus 做有限元分析，并搭建基于 Arduino 的控制
+- 验证了无线传感和机动性能；作为决赛选手在 2024 年洛杉矶 Regeneron ISEF 上展示
 
 {{< btnrow >}}
 {{< btn href="/projects/frog" >}}仿生蛙项目页面{{< /btn >}}
@@ -123,21 +119,21 @@ sharingLinks: false
 
 {{< tab label="课外活动" icon="globe" >}}
 
-### Hive Makerspace — 同伴讲师
-2026年秋季 – 至今
+### Hive Makerspace：同伴讲师
+2026年8月 – 至今
 
-3D 打印、激光切割和电子工作台区域的认证志愿讲师。
+培训同学使用电子工作台、3D 打印机和激光切割机，并协助组织在 Hive 举办的志愿活动。
 
 ---
 
-### RoboRambler — Georgia Tech RoboMaster 机器人俱乐部
+### RoboRambler：Georgia Tech RoboMaster 机器人俱乐部
 2026年1月 – 至今
 
 电气部门成员，参与竞赛机器人的电气系统设计。
 
 ---
 
-### 黄夹克太空计划 — 航电部门
+### 黄夹克太空计划：航电入职项目
 2025年8月 – 2026年8月
 
 - 完成部门入职项目：使用 Altium Designer 设计快速测试板（RTB），原理图与布局均通过评审
@@ -145,7 +141,7 @@ sharingLinks: false
 
 ---
 
-### HyTech Racing — 电气控制部门
+### HyTech Racing：电气控制部门
 2025年8月 – 12月
 
 通用电气工程师。
@@ -154,7 +150,7 @@ sharingLinks: false
 
 {{< tab label="荣誉奖项" icon="star" >}}
 
-### GT IEEE Robotech 黑客马拉松 — 第一名
+### GT IEEE Robotech 黑客马拉松：第一名（1,000 美元）
 **TachyAstroach 团队** · 2026年1月
 
 母子月球车 MoonLine 的首席机械设计师。
@@ -165,7 +161,7 @@ sharingLinks: false
 
 ---
 
-### Inventure Prize 2026 — µCHIMERA
+### Inventure Prize 2026：µCHIMERA
 **多模态纳功率可堆叠发电装置** · 2026年1月
 
 PZT 纳功率发电模块设计师及整体机械设计师。
@@ -174,57 +170,69 @@ PZT 纳功率发电模块设计师及整体机械设计师。
 {{< btn href="/projects/uchimera" >}}μCHIMERA 项目页面{{< /btn >}}
 {{< /btnrow >}}
 
+---
+
+### Regeneron ISEF 2024：决赛选手
+**洛杉矶** · 2024年5月
+
+仿生游泳机器人，使用 Abaqus 有限元分析和 Arduino 控制。
+
+{{< btnrow >}}
+{{< btn href="/projects/frog" >}}仿生蛙项目页面{{< /btn >}}
+{{< /btnrow >}}
+
 {{< /tab >}}
 
 {{< tab label="技能" icon="code" >}}
+
+**硬件设计**
+
+{{< keywordList >}}
+{{< keyword >}} Altium Designer {{< /keyword >}}
+{{< keyword >}} EasyEDA {{< /keyword >}}
+{{< keyword >}} 混合信号接地 {{< /keyword >}}
+{{< keyword >}} Buck + LDO 电源 {{< /keyword >}}
+{{< keyword >}} 16 位 ΔΣ ADC {{< /keyword >}}
+{{< keyword >}} 小封装焊接 {{< /keyword >}}
+{{< /keywordList >}}
+
+**测试与验证**
+
+{{< keywordList >}}
+{{< keyword >}} 示波器 {{< /keyword >}}
+{{< keyword >}} 电子负载 {{< /keyword >}}
+{{< keyword >}} 台式电源 {{< /keyword >}}
+{{< keyword >}} J-Link {{< /keyword >}}
+{{< keyword >}} VNA S 参数测量 {{< /keyword >}}
+{{< keyword >}} Ansys HFSS {{< /keyword >}}
+{{< /keywordList >}}
+
+**数字与嵌入式**
+
+{{< keywordList >}}
+{{< keyword >}} FPGA（VHDL）{{< /keyword >}}
+{{< keyword >}} STM32 与 ESP32 上的 C 开发 {{< /keyword >}}
+{{< keyword >}} RISC-V 汇编 {{< /keyword >}}
+{{< keyword >}} I²C / SPI / UART {{< /keyword >}}
+{{< keyword >}} MIPI CSI {{< /keyword >}}
+{{< /keywordList >}}
+
+**软件**
+
+{{< keywordList >}}
+{{< keyword >}} Git {{< /keyword >}}
+{{< keyword >}} Linux 命令行 {{< /keyword >}}
+{{< keyword >}} Python（NumPy、PyTorch、OpenCV、MediaPipe）{{< /keyword >}}
+{{< keyword >}} MATLAB {{< /keyword >}}
+{{< keyword >}} Fusion 360 {{< /keyword >}}
+{{< /keywordList >}}
 
 **制造工艺**
 
 {{< keywordList >}}
 {{< keyword >}} 3D 打印 {{< /keyword >}}
-{{< keyword >}} 硅胶建模 {{< /keyword >}}
-{{< keyword >}} 电路焊接 {{< /keyword >}}
 {{< keyword >}} 激光切割 {{< /keyword >}}
 {{< keyword >}} 机械装配 {{< /keyword >}}
-{{< /keywordList >}}
-
-**仪器仪表**
-
-{{< keywordList >}}
-{{< keyword >}} 矢量网络分析仪 {{< /keyword >}}
-{{< keyword >}} 示波器 {{< /keyword >}}
-{{< /keywordList >}}
-
-**电子技术**
-
-{{< keywordList >}}
-{{< keyword >}} PCB 设计（Altium Designer、LCEDA）{{< /keyword >}}
-{{< keyword >}} 嵌入式系统（STM32、Arduino）{{< /keyword >}}
-{{< keyword >}} Ansys HFSS {{< /keyword >}}
-{{< /keywordList >}}
-
-**声学**
-
-{{< keywordList >}}
-{{< keyword >}} 声场仿真 {{< /keyword >}}
-{{< keyword >}} 相控阵波束赋形 {{< /keyword >}}
-{{< keyword >}} 参数化发声 {{< /keyword >}}
-{{< keyword >}} 超声换能器阵列 {{< /keyword >}}
-{{< /keywordList >}}
-
-**数字化设计**
-
-{{< keywordList >}}
-{{< keyword >}} Autodesk Fusion 360 {{< /keyword >}}
-{{< keyword >}} SIMULIA Abaqus FEA {{< /keyword >}}
-{{< /keywordList >}}
-
-**编程语言**
-
-{{< keywordList >}}
-{{< keyword >}} Python {{< /keyword >}}
-{{< keyword >}} C / C++ {{< /keyword >}}
-{{< keyword >}} MATLAB {{< /keyword >}}
 {{< /keywordList >}}
 
 **语言能力**
@@ -241,8 +249,9 @@ PZT 纳功率发电模块设计师及整体机械设计师。
 ### 佐治亚理工学院
 **电气工程理学学士** · 美国佐治亚州亚特兰大 · 2025年8月 – 至今
 
-- GPA：4.00
+- GPA：4.00 / 4.00
 - 预计毕业时间：2028年5月
+- 相关课程：数字设计（ECE 2020）、数字设计实验（ECE 2031）、软硬件系统（ECE 2035）、信号处理（ECE 2026）
 
 {{< /tab >}}
 
